@@ -1,0 +1,21 @@
+# clear screen
+clear
+
+# disable background monitor
+setopt no_monitor
+
+# compinit
+rm -f ~/.zcompdump &
+autoload -Uz compinit
+compinit 
+
+# load aliases
+source ~/.config/zsh/aliases.sh
+
+# load plugins
+source ~/.cache/antibody/plugins.sh
+
+# renable background monitor
+setopt monitor
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

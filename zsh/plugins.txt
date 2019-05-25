@@ -1,0 +1,6 @@
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+robbyrussell/oh-my-zsh path:lib
+robbyrussell/oh-my-zsh path:themes/agnoster.zsh-theme
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/sudo
