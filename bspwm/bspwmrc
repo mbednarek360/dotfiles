@@ -12,14 +12,14 @@ export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui"
 
 # Kill
-killall compton
+#killall compton
 killall feh
 killall dunst
 killall sxhkd
 killall polybar
 
 # Autostart
-compton -b &
+#compton -b &
 feh --bg-scale $HOME/Pictures/Wallpapers/background5.png &
 dunst &
 sxhkd &

@@ -53,7 +53,7 @@ colors:
     magenta: '0xB48EAD'
     cyan: '0x8FBCBB'
     white: '0xECEFF4'
-background_opacity: 0.99
+background_opacity: 1
 
 # bell settings
 visual_bell:
