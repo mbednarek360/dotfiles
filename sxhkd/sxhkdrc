@@ -12,8 +12,12 @@ super + Return
 super + shift + p
 	~/.config/sxhkd/power
 
+# calculator
+XF86Calculator
+    rofi -show calc -modi calc -no-show-match -no-sort -lines 2
+
 # screen/window/selection shot
-super + {_,shift +,ctrl +} + @Print
+{_,shift +,ctrl +} + @Print
     cd ~/Pictures/Screenshots && scrot {_,-u,-s} -e "notify-send 'Image saved as \n\$f'"
 
 # music controls
