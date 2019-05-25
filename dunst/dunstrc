@@ -6,7 +6,7 @@
     follow = mouse
 
     # The geometry of the window:
-    geometry = "350x5-25+55"
+    geometry = "360x5-25-25"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes

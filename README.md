@@ -1,1 +1,41 @@
-# dotfiles
+# **Dotfiles**
+## Personal dotfiles for my Arch / BSPWM install.
+![Screenshot](screenshot.png)
+
+---
+## **Description**
+
+This repo holds the configuration for most of my programs configured in the `~/.config` directory, including ones I no longer use. Just install the programs listed below, and clone the folders to your config directory. To get zsh to work you must link it to the config as shown below.
+
+`ln -s ~/.config/zsh/zshrc ~/.zshrc`
+
+---
+## **Programs**
+
+**Configured programs:**
+- alacritty
+- bspwm
+- compton
+- dunst
+- i3
+- i3blocks
+- nvim
+- polybar
+- rofi
+- sxhkd
+- zsh
+
+ 
+**Additional programs used:**
+- antibody
+- betterlockscreen
+- feh
+- firefox-developer-edition
+- gotop
+- mpv
+- neofetch
+- networkmanager
+- noto-fonts
+- pakku
+- ttf-hack
+- vim-plug

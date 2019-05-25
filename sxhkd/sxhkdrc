@@ -12,6 +12,26 @@ super + Return
 super + shift + p
 	~/.config/sxhkd/power
 
+# screen/window/selection shot
+super + {_,shift +,ctrl +} + @Print
+    cd ~/Pictures/Screenshots && scrot {_,-u,-s} -e "notify-send 'Image saved as \n\$f'"
+
+# music controls
+XF86AudioRaiseVolume
+  pactl set-sink-volume 0 '+5%'
+XF86AudioLowerVolume
+  pactl set-sink-volume 0 '-5%'
+XF86AudioMute
+  pactl set-sink-mute 0 toggle
+XF86AudioPrev
+  playerctl previous
+XF86AudioNext
+  playerctl next
+XF86AudioPlay
+  playerctl play-pause
+XF86AudioStop
+  playerctl stop
+ 
 
 
 ####### BSPWM Hotkeys ########
@@ -45,8 +65,12 @@ super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 # focus the node in the given direction
-super + {_,shift + }{Left, Down, Up, Right}
-	bspc node -{f,s --follow} {west,south,north,east}
+super + {Left, Down, Up, Right}
+	bspc node -f {west,south,north,east}
+
+# move the node in the given direction
+super + shift+ {Left, Down, Up, Right}
+    bspc node -s {west,south,north,east} --follow
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -112,21 +136,6 @@ super + ctrl + alt + {Right, Up, Down, Left}
 super + shift + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# music controls
-XF86AudioRaiseVolume
-  pactl set-sink-volume 0 '+5%'
-XF86AudioLowerVolume
-  pactl set-sink-volume 0 '-5%'
-XF86AudioMute
-  pactl set-sink-mute 0 toggle
-XF86AudioPrev
-  playerctl previous
-XF86AudioNext
-  playerctl next
-XF86AudioPlay
-  playerctl play-pause
-XF86AudioStop
-  playerctl stop
 
 
 
