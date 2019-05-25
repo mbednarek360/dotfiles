@@ -35,7 +35,8 @@ font-2 = Hack:pixelsize=12;1
 modules-left = bspwm
 modules-center = 
 modules-right = pulseaudio cpu wlan eth battery temperature date
-tray-padding = 2
+wm-restack = bspwm
+override-redirect = false
 cursor-click = pointer
 cursor-scroll = ns-resize
 
