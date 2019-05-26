@@ -1,5 +1,5 @@
 # **Dotfiles**
-## Personal dotfiles for my Arch / BSPWM install.
+## Personal dotfiles for my Void / BSPWM install.
 ![Screenshot](screenshot.png)
 
 ---
@@ -15,7 +15,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
 **Configured programs:**
 - alacritty
 - bspwm
-- compton
 - dunst
 - i3
 - i3blocks
@@ -30,7 +29,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - antibody
 - betterlockscreen
 - feh
-- firefox-developer-edition
+- firefox
 - gotop
 - mpv
 - neofetch
