@@ -20,7 +20,7 @@ killall polybar
 
 # Autostart
 #compton -b &
-feh --bg-scale $HOME/Pictures/Wallpapers/background5.png &
+feh --bg-scale $HOME/Pictures/Wallpapers/background7.png &
 dunst &
 sxhkd &
 
@@ -52,6 +52,7 @@ bspc config gapless_monocle      true
 # Color config
 bspc config normal_border_color		"#4c566a"
 bspc config focused_border_color	"#5e81ac"
+bspc config active_border_color     "#4c566a"
 bspc config presel_feedback_color	"#5e81ac"
 
 # Misc

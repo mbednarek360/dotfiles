@@ -3,7 +3,7 @@
 
 chosen=$(echo -e "Lock\nShutdown\nReboot\nSuspend\nHibernate" | rofi -dmenu -i -lines 5)
 if [ $chosen = "Lock" ]; then
-    betterlockscreen --lock blur -- --timestr '%l:%H:%S'
+    betterlockscreen --lock -- --timestr '%l:%H:%S'
 elif [ $chosen = "Shutdown" ]; then
     systemctl poweroff
 elif [ $chosen = "Reboot" ]; then
