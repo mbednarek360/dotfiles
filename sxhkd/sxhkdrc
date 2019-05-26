@@ -114,6 +114,10 @@ super + shift + {1-9}
 super + shift + KP_{1-9}
     bspc node -d '{1-9}' --follow
 
+# rotate node
+super + shift + r
+    bspc node @/ -R 90
+
 # preselect the direction
 super + ctrl + {Left, Down, Up, Right}
 	bspc node -p {west,south,north,east}
