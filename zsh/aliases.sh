@@ -51,6 +51,7 @@ mblock() {
 
 # plugin update
 plug-update() {
+    mkdir ~/.cache/antibody
     rm ~/.cache/antibody/plugins.sh
     antibody bundle < ~/.config/zsh/plugins.txt > ~/.cache/antibody/plugins.sh
     source ~/.zshrc
