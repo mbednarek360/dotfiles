@@ -34,13 +34,13 @@
     active-foreground:           @foreground;
     selected-active-foreground:  @foreground;
     alternate-active-background: @nord0;
-    bordercolor:                 @nord10;
+    bordercolor:                 @nord9;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     selected-normal-background:  @nord3;
-    border-color:                @nord10;
+    border-color:                @nord9;
     spacing:                     2;
-    separatorcolor:              @blue;
+    separatorcolor:              @nord9;
     urgent-background:           @background;
     selected-urgent-background:  @nord3;
     alternate-urgent-foreground: @urgent-foreground;
