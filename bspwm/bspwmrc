@@ -3,9 +3,9 @@
 # App settings
 export TERM="alacritty"
 export LAUNCH="rofi -show run"
-export BROWSE="firefox-developer-edition"
-export MUSIC="spotify"
-export DISCORD="discord"
+export BROWSE="firefox"
+export MUSIC="$BROWSE https://open.spotify.com/browse/featured"
+export DISCORD="$BROWSE https://discordapp.com/activity"
 export CONF="$TERM -e nvim ~/.config"
 export EDIT="code ~/Code"
 export SYS="$TERM -e gotop -p"

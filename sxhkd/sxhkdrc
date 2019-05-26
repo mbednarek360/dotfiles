@@ -22,9 +22,9 @@ XF86Calculator
 
 # music controls
 XF86AudioRaiseVolume
-  pactl set-sink-volume 0 '+5%'
+  pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) '+5%'
 XF86AudioLowerVolume
-  pactl set-sink-volume 0 '-5%'
+  pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) '-5%'
 XF86AudioMute
   pactl set-sink-mute 0 toggle
 XF86AudioPrev

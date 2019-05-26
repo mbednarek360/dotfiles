@@ -1,15 +1,15 @@
 #!/bin/sh
 # rofi power menu
 
-chosen=$(echo -e "Lock\nShutdown\nReboot\nSuspend\nHibernate" | rofi -dmenu -i -lines 5)
+chosen=$(echo "Lock\nShutdown\nReboot\nSuspend\nHibernate" | rofi -dmenu -i -lines 5)
 if [ $chosen = "Lock" ]; then
-    betterlockscreen --lock -- --timestr '%l:%H:%S'
+    betterlockscreen --lock blur -- --timestr '%l:%H:%S'
 elif [ $chosen = "Shutdown" ]; then
-    systemctl poweroff
+    sudo shutdown -h now
 elif [ $chosen = "Reboot" ]; then
-    systemctl reboot
+    sudo shutdown -r now
 elif [ $chosen = "Suspend" ]; then
-    systemctl suspend
+    sudo zzz
 elif [ $chosen = "Hibernate" ]; then
-    systemctl hibernate
+    sudo ZZZ
 fi
