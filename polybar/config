@@ -55,16 +55,6 @@ label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
-[module/xbacklight]
-type = internal/xbacklight
-format = <label>
-label = BL
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -117,6 +107,7 @@ format-discharging-underline = ${colors.blue}
 
 [module/temperature]
 type = internal/temperature
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 thermal-zone = 0
 warn-temperature = 75
 format = <label>

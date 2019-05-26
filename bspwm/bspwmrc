@@ -4,10 +4,10 @@
 export TERM="alacritty"
 export LAUNCH="rofi -show run"
 export BROWSE="firefox"
-export MUSIC="$BROWSE https://open.spotify.com/browse/featured"
+export MUSIC="spotify"
 export DISCORD="$BROWSE https://discordapp.com/activity"
 export CONF="$TERM -e nvim ~/.config"
-export EDIT="code ~/Code"
+export EDIT="$TERM -e nvim ~/Code"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui"
 
