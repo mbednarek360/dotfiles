@@ -26,7 +26,7 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
   pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) '-5%'
 XF86AudioMute
-  pactl set-sink-mute 0 toggle
+  pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle
 XF86AudioPrev
   playerctl previous
 XF86AudioNext
