@@ -16,8 +16,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - alacritty
 - bspwm
 - dunst
-- i3
-- i3blocks
 - nvim
 - polybar
 - rofi
@@ -35,6 +33,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - neofetch
 - networkmanager
 - noto-fonts
-- pakku
 - ttf-hack
 - vim-plug
+- vpm
