@@ -154,12 +154,12 @@ super + shift + f
   sh -c "$BROWSE"
 
 # config editor
-super + shift + e
+super + shift + v
   sh -c "$CONF"
 
 # visual editor
-super + shift + v
-  sh -c "$EDIT"
+super + shift + e
+  sh -c "$CODE"
 
 # network manager
 super + shift + w
@@ -176,6 +176,9 @@ super + shift + s
 # communication
 super + shift + d
   sh -c "$DISCORD"
+
+super + shift + b
+  sh -c "$FILE"
 
 # mblock status
 super + l
