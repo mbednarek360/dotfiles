@@ -1,17 +1,3 @@
-# pakku clean
-pakku() {
-    if [[ $@ == "-C" ]]; then
-	o=$(pakku -Qtdq)
-	if [[ $o == "" ]]; then	
-		echo "No orphaned packages. Nothing to do."		
-	else
-		command pakku -Rns $o
-	fi
-    else
-        command pakku "$@"
-    fi
-}
-
 # mount nas
 nas-mount() {
     mkdir ~/NAS
