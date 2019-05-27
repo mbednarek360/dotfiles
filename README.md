@@ -33,7 +33,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - neofetch
 - networkmanager
 - nnn
-- noto-fonts
+- noto-fonts-ttf
 - ttf-hack
 - vim-plug
 - vpm

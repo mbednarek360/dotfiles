@@ -80,10 +80,6 @@ super + shift+ {Left, Down, Up, Right}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local
-
 # focus the next/previous monitor
 super + bracket{left,right}
 	bspc monitor -f {prev,next}
@@ -154,10 +150,10 @@ super + shift + f
   sh -c "$BROWSE"
 
 # config editor
-super + shift + v
+super + shift + c  
   sh -c "$CONF"
 
-# visual editor
+# code editor
 super + shift + e
   sh -c "$CODE"
 
