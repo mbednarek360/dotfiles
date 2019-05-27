@@ -24,18 +24,17 @@ killall polybar
 feh --bg-scale $HOME/Pictures/Wallpapers/background7.png &
 dunst &
 sxhkd &
+for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar main &
+done 
 
 # Monitor
 if [ "$(hostname)" = "michael-desktop" ]
-then
-    for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar main &
-    done
+then   
     bspc monitor DP-4 -d 1 2 3
     bspc monitor HDMI-0 -d 4 5 6
     bspc monitor DP-3 -d 7 8 9
 else 
-    polybar main &
     bspc monitor -d 1 2 3 4 5 6 7 8 9
 fi
 

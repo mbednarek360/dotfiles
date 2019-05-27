@@ -63,7 +63,7 @@ label = %percentage:2%%
 
 [module/wlan]
 type = internal/network
-interface = wlp5s0
+interface = wlp2s0
 interval = 3.0
 format-connected = <label-connected>
 format-connected-underline = ${colors.cyan}

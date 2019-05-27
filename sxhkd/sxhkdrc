@@ -21,21 +21,21 @@ XF86Calculator
     cd ~/Pictures/Screenshots && scrot {_,-u,-s} -e "notify-send 'Image saved as \n\$f'"
 
 # music controls
-XF86AudioRaiseVolume
-  pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) '+5%'
-XF86AudioLowerVolume
-  pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) '-5%'
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+	pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) {'+5%', '-5%'}
 XF86AudioMute
-  pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle
-XF86AudioPrev
-  playerctl previous
-XF86AudioNext
-  playerctl next
+	pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle
+{XF86AudioNext, XF86AudioPrev}
+	playerctl {next, previous}
 XF86AudioPlay
-  playerctl play-pause
+	playerctl play-pause
 XF86AudioStop
-  playerctl stop
+	playerctl stop
  
+# backlight
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	xbacklight {-inc, -dec} 5
+
 
 
 ####### BSPWM Hotkeys ########
