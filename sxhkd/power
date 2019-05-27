@@ -12,6 +12,6 @@ elif [ $chosen = "Suspend" ]; then
     betterlockscreen --lock -- --timestr '%l:%H:%S'
     sudo zzz
 elif [ $chosen = "Hibernate" ]; then
-    betterlockscreen --lock -- --timestr '%l:%H:%S'<Paste>
+    betterlockscreen --lock -- --timestr '%l:%H:%S'
     sudo ZZZ
 fi
