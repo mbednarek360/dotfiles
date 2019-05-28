@@ -14,7 +14,7 @@ super + shift + p
 
 # calculator
 XF86Calculator
-    rofi -show calc -modi calc -no-show-match -no-sort -lines 2
+   sh -c "$CALC"
 
 # screen/window/selection shot
 {_,shift +,ctrl +} + @Print
@@ -114,6 +114,10 @@ super + shift + KP_{1-9}
 super + shift + r
     bspc node @/ -R 90
 
+# cycle node focus
+super + {_, shift} + a
+    bspc node -f {next,prev}.local
+
 # preselect the direction
 super + ctrl + {Left, Down, Up, Right}
 	bspc node -p {west,south,north,east}
@@ -139,8 +143,7 @@ super + ctrl + alt + {Right, Up, Down, Left}
 # move a floating window
 super + shift + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-
+                        
 
 
 ####### Application Hotkeys ########

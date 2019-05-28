@@ -3,6 +3,7 @@
 # App settings
 export TERM="alacritty"
 export LAUNCH="rofi -show run"
+export CALC="rofi -show calc -modi calc -no-show-match -no-sort -lines 2"
 export BROWSE="firefox"
 export MUSIC="spotify"
 export DISCORD="$BROWSE https://discordapp.com/activity"
