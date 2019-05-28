@@ -10,10 +10,10 @@ autoload -Uz compinit
 compinit 
 
 # load aliases
-source ~/.config/zsh/aliases.sh
+source /home/mbednarek360/.config/zsh/aliases.sh
 
 # load plugins
-source ~/.cache/antibody/plugins.sh
+source /home/mbednarek360/.cache/antibody/plugins.sh
 
 # renable background monitor
 setopt monitor

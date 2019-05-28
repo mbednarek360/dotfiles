@@ -37,10 +37,10 @@ mblock() {
 
 # plugin update
 plug-update() {
-    mkdir ~/.cache/antibody
-    rm ~/.cache/antibody/plugins.sh
-    antibody bundle < ~/.config/zsh/plugins.txt > ~/.cache/antibody/plugins.sh
-    source ~/.zshrc
+    mkdir /home/mbednarek360/cache/antibody
+    rm /home/mbednarek360/.cache/antibody/plugins.sh
+    antibody bundle < /home/mbednarek360/.config/zsh/plugins.txt > /home/mbednarek360/.cache/antibody/plugins.sh
+    source /home/mbednarek360/.zshrc
 }
 
 # neofetch
