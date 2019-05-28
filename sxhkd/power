@@ -9,9 +9,7 @@ elif [ $chosen = "Shutdown" ]; then
 elif [ $chosen = "Reboot" ]; then
     sudo shutdown -r now
 elif [ $chosen = "Suspend" ]; then
-    betterlockscreen --lock -- --timestr '%l:%H:%S' &
     sudo zzz
 elif [ $chosen = "Hibernate" ]; then
-    betterlockscreen --lock -- --timestr '%l:%H:%S' &
     sudo ZZZ
 fi

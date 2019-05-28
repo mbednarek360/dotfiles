@@ -14,6 +14,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 
 **Configured programs:**
 - alacritty
+- betterlockscreen
 - bspwm
 - dunst
 - nvim
@@ -25,7 +26,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
  
 **Additional programs used:**
 - antibody
-- betterlockscreen
 - feh
 - firefox
 - gotop
