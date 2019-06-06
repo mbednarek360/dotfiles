@@ -3,7 +3,7 @@
 
 chosen=$(echo "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -lines 4)
 if [ $chosen = "Lock" ]; then
-    betterlockscreen --lock -- --timestr '%l:%H:%S'
+    betterlockscreen --lock
 elif [ $chosen = "Suspend" ]; then
     sudo zzz
 elif [ $chosen = "Reboot" ]; then
