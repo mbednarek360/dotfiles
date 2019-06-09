@@ -17,7 +17,6 @@ export NET="$TERM -e nmtui"
 #killall compton
 killall feh
 killall dunst
-killall sh
 killall sxhkd
 killall polybar
 
@@ -25,7 +24,6 @@ killall polybar
 #compton -b &
 feh --bg-scale $HOME/Pictures/Wallpapers/background7.png &
 dunst &
-sh batmon.sh &
 sxhkd &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
