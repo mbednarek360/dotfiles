@@ -11,7 +11,7 @@ export CONF="$TERM -e nvim ~/.config"
 export CODE="$TERM -e nvim ~/Code"
 export FILE="$TERM -e nnn"
 export SYS="$TERM -e gotop -p"
-export NET="$TERM -e nmtui"
+export NET="$TERM -e nmtui-connect"
 
 # Kill
 #killall compton
