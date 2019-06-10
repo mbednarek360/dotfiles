@@ -1,4 +1,5 @@
 zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
 hcgraf/zsh-sudo
 romkatv/powerlevel10k
