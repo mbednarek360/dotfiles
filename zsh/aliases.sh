@@ -37,7 +37,7 @@ mblock() {
 
 # plugin update
 plug-update() {
-    mkdir /home/mbednarek360/cache/antibody
+    mkdir /home/mbednarek360/.cache/antibody
     rm /home/mbednarek360/.cache/antibody/plugins.sh
     antibody bundle < /home/mbednarek360/.config/zsh/plugins.txt > /home/mbednarek360/.cache/antibody/plugins.sh
     source /home/mbednarek360/.zshrc

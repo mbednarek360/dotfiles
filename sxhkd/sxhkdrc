@@ -14,7 +14,9 @@ super + shift + p
 
 # calculator
 XF86Calculator
-   sh -c "$CALC"
+    sh -c "$CALC"
+super + c
+    sh -c "$CAL"              
 
 # screen/window/selection shot
 {_,shift +,ctrl +} + @Print
