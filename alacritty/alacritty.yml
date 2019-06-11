@@ -2,6 +2,12 @@
 env:
   WINIT_HIDPI_FACTOR: 1
 
+# window settings
+window:
+    padding:
+        x: 4
+        y: 4
+
 # scroll settings
 scrolling:
   history: 10000

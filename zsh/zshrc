@@ -1,8 +1,16 @@
+# zsh home directory
+if [[ "$(hostname)" == *"mbpw3"* ]]
+then
+    ZHOME="/root"
+else
+    ZHOME="/home/mbednarek360"
+fi
+
 # load aliases
-source /home/mbednarek360/.config/zsh/aliases.sh
+source $ZHOME/.config/zsh/aliases.sh
 
 # load plugins
-source /home/mbednarek360/.cache/antibody/plugins.sh
+source $ZHOME/.cache/zsh/plugins.sh
 
 # load options
-source /home/mbednarek360/.config/zsh/options.sh
+source $ZHOME/.config/zsh/options.sh

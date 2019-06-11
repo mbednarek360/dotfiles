@@ -13,7 +13,7 @@ nas-unmount() {
 # code sync
 code-sync() {
     clear
-    if bsync -b /home/mbednarek360/Code root@mbstorage.us.to:/data/mbednarek360/files/Code
+    if bsync -b $ZHOME/Code root@mbstorage.us.to:/data/mbednarek360/files/Code
     then
         clear
         echo "Sync completed successfully."
@@ -37,10 +37,9 @@ mblock() {
 
 # plugin update
 plug-update() {
-    mkdir /home/mbednarek360/.cache/antibody
-    rm /home/mbednarek360/.cache/antibody/plugins.sh
-    antibody bundle < /home/mbednarek360/.config/zsh/plugins.txt > /home/mbednarek360/.cache/antibody/plugins.sh
-    source /home/mbednarek360/.zshrc
+    rm $ZHOME/.cache/zsh/plugins.sh
+    antibody bundle < $ZHOME/.config/zsh/plugins.txt > $ZHOME/.cache/zsh/plugins.sh
+    source $ZHOME/.config/zsh/zshrc
 }
 
 # neofetch
