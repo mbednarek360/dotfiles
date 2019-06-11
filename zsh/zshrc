@@ -1,5 +1,5 @@
 # zsh home directory
-if [[ "$(hostname)" == *"mbpw3"* ]]
+if [[ "$(hostname)" == *"MBPW3"* ]]
 then
     ZHOME="/root"
 else
