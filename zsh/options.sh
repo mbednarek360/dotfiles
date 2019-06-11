@@ -2,7 +2,7 @@
 ZDOTDIR=$ZHOME/.cache/zsh
 
 # history
-HISTFILE=.zsh_history
+HISTFILE=$ZDOTDIR/zsh_history
 SAVEHIST=50
 HISTSIZE=50
 bindkey '^[[A' history-substring-search-up
