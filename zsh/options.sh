@@ -9,14 +9,19 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=false
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=false
-                                   
+
 # powerlevel9k
 ZLE_RPROMPT_INDENT=1
 POWERLEVEL9K_STATUS_CROSS=true
 POWERLEVEL9K_VCS_HIDE_TAGS=true
 POWERLEVEL9K_HIDE_BRANCH_ICON=true
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="white"
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="black"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs command_execution_time)
 
 # selection
 shift-arrow() {
@@ -39,6 +44,9 @@ bindkey $terminfo[kind] shift-down
 # navigation
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# delete word
+bindkey '^H' backward-kill-word
 
 # menu
 autoload -Uz compinit 

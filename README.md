@@ -32,7 +32,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - mpv
 - neofetch
 - networkmanager
-- nnn
 - noto-fonts-ttf
 - ttf-hack
 - vim-plug
