@@ -1,5 +1,6 @@
-# directory
+# cache directories
 ZDOTDIR=$ZHOME/.cache/zsh
+export ANTIBODY_HOME=$ZDOTDIR
 
 # history
 HISTFILE=$ZDOTDIR/zsh_history
