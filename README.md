@@ -36,3 +36,4 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - ttf-hack
 - vim-plug
 - vpm
+- vscode
