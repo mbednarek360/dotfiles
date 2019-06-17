@@ -286,10 +286,6 @@
                         "id": "vscode.menubar.separator"
                     },
                     {
-                        "id": "workbench.action.toggleMultiCursorModifier",
-                        "label": "Switch to Ctrl+Click for Multi-Cursor"
-                    },
-                    {
                         "id": "editor.action.insertCursorAbove",
                         "label": "&&Add Cursor Above"
                     },
@@ -532,7 +528,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -541,7 +538,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1348,10 +1346,6 @@
                 "label": "Ctrl+\\",
                 "userSettingsLabel": "ctrl+\\"
             },
-            "workbench.action.tasks.build": {
-                "label": "Ctrl+Shift+B",
-                "userSettingsLabel": "ctrl+shift+b"
-            },
             "workbench.action.toggleDevTools": {
                 "label": "Ctrl+Shift+I",
                 "userSettingsLabel": "ctrl+shift+i"
@@ -1367,9 +1361,9 @@
             "uiState": {
                 "mode": 1,
                 "x": 3207,
-                "y": 42,
+                "y": 742,
                 "width": 1261,
-                "height": 1386
+                "height": 686
             }
         },
         "openedWindows": []
