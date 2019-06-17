@@ -21,6 +21,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - polybar
 - rofi
 - sxhkd
+- vscode
 - zsh
 
  
@@ -36,4 +37,3 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - ttf-hack
 - vim-plug
 - vpm
-- vscode
