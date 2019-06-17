@@ -1,7 +1,7 @@
 # mount nas
 nas-mount() {
     mkdir ~/NAS
-    sshfs mbednarek360@mbstorage.us.to:/files/ ~/NAS
+    sshfs mbednarek360@mbpw3.us.to:/files/ ~/NAS
 }
 
 # unmount nas
@@ -13,7 +13,7 @@ nas-unmount() {
 # code sync
 code-sync() {
     clear
-    if bsync -b $ZHOME/Code root@mbstorage.us.to:/data/mbednarek360/files/Code
+    if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code
     then
         clear
         echo "Sync completed successfully."

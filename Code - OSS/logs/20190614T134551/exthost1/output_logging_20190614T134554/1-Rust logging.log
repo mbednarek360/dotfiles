@@ -1,4 +1,0 @@
-DEBUG: RlsMode: start: enter
-DEBUG: RlsMode: start: no RLS executable
-DEBUG: RlsMode: start: no rustup
-DEBUG: RlsMode: informUserThatModeCannotBeUsedAndAskToSwitchToAnotherMode: reason=neither RLS executable path is specified nor rustup is installed

@@ -1,0 +1,35 @@
+[2019-06-16 22:17:56.122] [renderer1] [error] Error: Error: ENOENT: no such file or directory, stat '/home/mbednarek360/Code/.vscode'
+[2019-06-16 22:22:21.692] [renderer1] [error] Unable to move/copy when source path is equal or parent of target path: Error: Unable to move/copy when source path is equal or parent of target path
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3323:990)
+    at Generator.next (<anonymous>)
+    at file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:621
+    at new Promise (<anonymous>)
+    at n (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:398)
+    at b.doValidateMoveCopy (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3323:843)
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3322:553)
+    at Generator.next (<anonymous>)
+    at file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:621
+    at new Promise (<anonymous>)
+    at n (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:398)
+    at b.doMoveCopy (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3322:478)
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3321:962)
+    at Generator.next (<anonymous>)
+    at r (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:454)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-06-16 22:22:34.922] [renderer1] [error] Unable to move/copy when source path is equal or parent of target path: Error: Unable to move/copy when source path is equal or parent of target path
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3323:990)
+    at Generator.next (<anonymous>)
+    at file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:621
+    at new Promise (<anonymous>)
+    at n (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:398)
+    at b.doValidateMoveCopy (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3323:843)
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3322:553)
+    at Generator.next (<anonymous>)
+    at file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:621
+    at new Promise (<anonymous>)
+    at n (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:398)
+    at b.doMoveCopy (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3322:478)
+    at b.<anonymous> (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:3321:962)
+    at Generator.next (<anonymous>)
+    at r (file:///usr/lib/code-oss/resources/app/out/vs/workbench/workbench.main.js:34:454)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
