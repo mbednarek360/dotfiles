@@ -7,4 +7,12 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.visible": false,
     "files.autoSave": "onWindowChange",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.folders.color": "#81a1c1",
+    "files.exclude": {
+        "**/.bsync-snap-*": true
+    },
+    "terminal.explorerKind": "external",
+    "terminal.integrated.cursorStyle": "line",
 }

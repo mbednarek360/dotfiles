@@ -1,9 +1,8 @@
 {
-    "telemetry.machineId": "48b119bc1107ff184fa364393cb8662037429b8d5ca80cca738f42f58e6f51f7",
+    "telemetry.machineId": "4c00d3273f4af4a697ad083f39c621c73468f131ac8110ec0cd29a2123914354",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/mbednarek360/Code",
-            "file:///home/mbednarek360/Code/Projects/SLICK"
+            "file:///home/mbednarek360/Code"
         ],
         "files2": []
     },
@@ -57,17 +56,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Code"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/mbednarek360/Code/Projects/SLICK",
-                                        "path": "/home/mbednarek360/Code/Projects/SLICK",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Code/Projects/SLICK"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -827,8 +815,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1374,16 +1361,15 @@
     },
     "theme": "vs-dark",
     "themeBackground": "#2e3440",
-    "pickerWorkingDir": "/home/mbednarek360/Code/Projects",
     "windowsState": {
         "lastActiveWindow": {
             "folder": "file:///home/mbednarek360/Code",
             "backupPath": "/home/mbednarek360/.config/Code - OSS/Backups/9035e537627bf5507da66ea40d7d3880",
             "uiState": {
                 "mode": 1,
-                "x": 12,
+                "x": 3207,
                 "y": 42,
-                "width": 2536,
+                "width": 1261,
                 "height": 1386
             }
         },

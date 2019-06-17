@@ -1,4 +1,0 @@
-[2019-06-14 13:41:14.198] [renderer1] [error] spawn rustup ENOENT: Error: spawn rustup ENOENT
-	at Process.ChildProcess._handle.onexit (internal/child_process.js:229:19)
-	at onErrorNT (internal/child_process.js:406:16)
-	at process._tickCallback (internal/process/next_tick.js:63:19)
