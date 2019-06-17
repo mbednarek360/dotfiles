@@ -1,0 +1,13 @@
+[Error - 1:42:54 PM] Starting client failed
+Error: Command failed: rustup-init toolchain list
+error: Found argument 'toolchain' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    rustup-init [FLAGS] [OPTIONS]
+
+For more information try --help
+
+	at ChildProcess.exithandler (child_process.js:303:12)
+	at ChildProcess.emit (events.js:182:13)
+	at maybeClose (internal/child_process.js:961:16)
+	at Process.ChildProcess._handle.onexit (internal/child_process.js:248:5)

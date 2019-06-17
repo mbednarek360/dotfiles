@@ -1,0 +1,5 @@
+[2019-06-14 13:47:07.980] [renderer1] [info] Requested uninstalling the extension kalitaalexey.vscode-rust from window 1
+[2019-06-14 13:47:16.080] [renderer1] [error] spawn rustup ENOENT: Error: spawn rustup ENOENT
+	at Process.ChildProcess._handle.onexit (internal/child_process.js:229:19)
+	at onErrorNT (internal/child_process.js:406:16)
+	at process._tickCallback (internal/process/next_tick.js:63:19)

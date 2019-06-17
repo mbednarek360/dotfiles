@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "'Hack', 'Noto Sans'",
+    "workbench.colorTheme": "Nord",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": false,
+    "files.autoSave": "onWindowChange",
+}

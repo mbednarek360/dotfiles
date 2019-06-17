@@ -1,0 +1,36 @@
+[2019-06-14 13:45:55.003] [sharedprocess] [info] main {"machineId":"48b119bc1107ff184fa364393cb8662037429b8d5ca80cca738f42f58e6f51f7"}
+[2019-06-14 13:45:55.089] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:45:55.125] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:45:55.128] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:45:55.128] [sharedprocess] [info] Deleted from disk rust-lang.rust /home/mbednarek360/.vscode-oss/extensions/rust-lang.rust-0.6.1
+[2019-06-14 13:45:55.259] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:45:55.328] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:45:55.415] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:45:55.977] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:46:26.817] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:46:35.020] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-06-14 13:47:04.486] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.489] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.490] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.495] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.604] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:04.609] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:04.613] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:04.641] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.669] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.692] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:04.693] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:04.742] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:04.755] [sharedprocess] [info] Scanned system extensions: 72
+[2019-06-14 13:47:07.994] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:07.995] [sharedprocess] [info] Uninstalling extension: kalitaalexey.vscode-rust
+[2019-06-14 13:47:08.005] [sharedprocess] [info] Scanned user extensions: 3
+[2019-06-14 13:47:08.020] [sharedprocess] [info] Successfully uninstalled extension: kalitaalexey.vscode-rust
+[2019-06-14 13:47:12.938] [sharedprocess] [info] Installing extension: rust-lang.rust
+[2019-06-14 13:47:12.958] [sharedprocess] [info] Scanned user extensions: 2
+[2019-06-14 13:47:14.379] [sharedprocess] [info] Downloaded extension: rust-lang.rust /tmp/5588273b-a6d9-4f04-a877-f0ae65a2d844
+[2019-06-14 13:47:14.698] [sharedprocess] [info] Extracted extension to /home/mbednarek360/.vscode-oss/extensions/.rust-lang.rust-0.6.1: rust-lang.rust
+[2019-06-14 13:47:14.698] [sharedprocess] [info] Renamed to /home/mbednarek360/.vscode-oss/extensions/rust-lang.rust-0.6.1
+[2019-06-14 13:47:14.699] [sharedprocess] [info] Installation completed. rust-lang.rust
+[2019-06-14 13:47:14.706] [sharedprocess] [info] Extensions installed successfully: rust-lang.rust
+[2019-06-14 13:50:56.013] [sharedprocess] [info] Scanned user extensions: 3
