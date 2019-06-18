@@ -825,8 +825,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1374,13 +1373,13 @@
     "themeBackground": "#2e3440",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/mbednarek360/Code",
-            "backupPath": "/home/mbednarek360/.config/Code - OSS/Backups/9035e537627bf5507da66ea40d7d3880",
+            "folder": "file:///home/mbednarek360/Code/Projects/SLICK",
+            "backupPath": "/home/mbednarek360/.config/Code - OSS/Backups/57412753e2f291efabca8c9ba6f9c84d",
             "uiState": {
                 "mode": 1,
                 "x": 1932,
                 "y": 42,
-                "width": 1261,
+                "width": 2536,
                 "height": 1386
             }
         },

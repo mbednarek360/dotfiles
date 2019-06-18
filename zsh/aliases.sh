@@ -48,3 +48,11 @@ neofetch() {
     echo
     command neofetch
 }
+
+# finshir
+raze() {
+    ip=$1
+    port=$2
+    ((($TERM -e watch -n 1 nc -zv -w5 $ip $port) && clear; killall -s INT finshir) &)
+    finshir --wait 1s --write-periodicity 10s --receiver $ip:$port
+}
