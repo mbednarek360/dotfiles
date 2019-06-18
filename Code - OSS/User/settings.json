@@ -1,0 +1,25 @@
+// --------- Settings ---------
+{
+    "editor.fontFamily": "'Hack', 'Noto Sans'",
+    "workbench.colorTheme": "Nord",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": false,
+    "files.autoSave": "onWindowChange",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.folders.color": "#81a1c1",
+    "files.exclude": {
+        "**/.bsync-snap-*": true
+    },
+    "terminal.explorerKind": "external",
+    "terminal.integrated.cursorStyle": "line",
+}
+
+// --------- Extensions ---------
+// pkief.material-icon-theme
+// arcticicestudio.nord-visual-studio-code
+// rust-lang.rust
+
