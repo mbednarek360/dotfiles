@@ -2,6 +2,7 @@
     "telemetry.machineId": "4c00d3273f4af4a697ad083f39c621c73468f131ac8110ec0cd29a2123914354",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/mbednarek360/Code/Projects/SLICK",
             "file:///home/mbednarek360/Code"
         ],
         "files2": []
@@ -49,7 +50,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/mbednarek360/Code",
+                                        "fsPath": "/home/mbednarek360/Code/Projects/SLICK",
+                                        "external": "file:///home/mbednarek360/Code/Projects/SLICK",
+                                        "path": "/home/mbednarek360/Code/Projects/SLICK",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Code/Projects/SLICK"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/mbednarek360/Code",
                                         "path": "/home/mbednarek360/Code",
                                         "scheme": "file"
@@ -284,6 +296,10 @@
                     },
                     {
                         "id": "vscode.menubar.separator"
+                    },
+                    {
+                        "id": "workbench.action.toggleMultiCursorModifier",
+                        "label": "Switch to Ctrl+Click for Multi-Cursor"
                     },
                     {
                         "id": "editor.action.insertCursorAbove",
@@ -528,8 +544,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -538,8 +553,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1346,6 +1360,10 @@
                 "label": "Ctrl+\\",
                 "userSettingsLabel": "ctrl+\\"
             },
+            "workbench.action.tasks.build": {
+                "label": "Ctrl+Shift+B",
+                "userSettingsLabel": "ctrl+shift+b"
+            },
             "workbench.action.toggleDevTools": {
                 "label": "Ctrl+Shift+I",
                 "userSettingsLabel": "ctrl+shift+i"
@@ -1360,12 +1378,13 @@
             "backupPath": "/home/mbednarek360/.config/Code - OSS/Backups/9035e537627bf5507da66ea40d7d3880",
             "uiState": {
                 "mode": 1,
-                "x": 3207,
-                "y": 742,
+                "x": 1932,
+                "y": 42,
                 "width": 1261,
-                "height": 686
+                "height": 1386
             }
         },
         "openedWindows": []
-    }
+    },
+    "pickerWorkingDir": "/home/mbednarek360/Code/Projects"
 }

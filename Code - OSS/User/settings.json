@@ -1,3 +1,4 @@
+// --------- Settings ---------
 {
     "editor.fontFamily": "'Hack', 'Noto Sans'",
     "workbench.colorTheme": "Nord",
@@ -16,3 +17,8 @@
     "terminal.explorerKind": "external",
     "terminal.integrated.cursorStyle": "line",
 }
+
+// --------- Extensions ---------
+// pkief.material-icon-theme
+// arcticicestudio.nord-visual-studio-code
+// rust-lang.rust
