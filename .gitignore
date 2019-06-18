@@ -3,8 +3,7 @@
 !alacritty/
 !betterlockscreenrc
 !bspwm/
-!Code - OSS/
-Code - OSS/Cache/
+!Code - OSS/User/settings.json
 !dunst/
 !nvim/
 !polybar/

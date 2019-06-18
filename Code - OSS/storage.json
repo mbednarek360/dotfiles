@@ -2,7 +2,6 @@
     "telemetry.machineId": "4c00d3273f4af4a697ad083f39c621c73468f131ac8110ec0cd29a2123914354",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/mbednarek360/Code/Projects/SLICK",
             "file:///home/mbednarek360/Code"
         ],
         "files2": []
@@ -50,18 +49,7 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/mbednarek360/Code/Projects/SLICK",
-                                        "external": "file:///home/mbednarek360/Code/Projects/SLICK",
-                                        "path": "/home/mbednarek360/Code/Projects/SLICK",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Code/Projects/SLICK"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
+                                        "fsPath": "/home/mbednarek360/Code",
                                         "external": "file:///home/mbednarek360/Code",
                                         "path": "/home/mbednarek360/Code",
                                         "scheme": "file"
@@ -544,7 +532,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -553,7 +542,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -825,7 +815,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1370,20 +1361,5 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#2e3440",
-    "windowsState": {
-        "lastActiveWindow": {
-            "folder": "file:///home/mbednarek360/Code/Projects/SLICK",
-            "backupPath": "/home/mbednarek360/.config/Code - OSS/Backups/57412753e2f291efabca8c9ba6f9c84d",
-            "uiState": {
-                "mode": 1,
-                "x": 1932,
-                "y": 42,
-                "width": 2536,
-                "height": 1386
-            }
-        },
-        "openedWindows": []
-    },
-    "pickerWorkingDir": "/home/mbednarek360/Code/Projects"
+    "themeBackground": "#2e3440"
 }
