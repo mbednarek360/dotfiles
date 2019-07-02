@@ -1,6 +1,6 @@
 # scaling
 env:
-  WINIT_HIDPI_FACTOR: 1
+  WINIT_HIDPI_FACTOR: "1"
 
 # window settings
 window:
