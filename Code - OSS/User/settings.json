@@ -16,6 +16,7 @@
     },
     "terminal.explorerKind": "external",
     "terminal.integrated.cursorStyle": "line",
+    "window.zoomLevel": 0,
 }
 
 // --------- Extensions ---------

@@ -8,7 +8,7 @@ export BROWSE="firefox"
 export MUSIC="spotify"
 export DISCORD="$BROWSE https://discordapp.com/activity"
 export CONF="$TERM -e nvim ~/.config"
-export CODE="code-oss ~/Code"
+export CODE="code-oss"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui-connect"
 

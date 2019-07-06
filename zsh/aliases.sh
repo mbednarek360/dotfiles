@@ -56,3 +56,11 @@ raze() {
     ((($TERM -e watch -n 1 nc -zv -w5 $ip $port) && clear; killall -s INT finshir) &)
     finshir --wait 1s --write-periodicity 10s --receiver $ip:$port
 }
+
+# updates
+update() {
+    sudo vpm up
+    sudo vpm ar
+    sudo vpm cl
+    sudo vkpurge rm all
+}
