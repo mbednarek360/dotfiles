@@ -59,8 +59,19 @@ raze() {
 
 # updates
 update() {
-    sudo vpm up
+    
+    # packages
+    sudo vpm up -y
     sudo vpm ar
     sudo vpm cl
     sudo vkpurge rm all
+
+    # plugins
+    plug-update
+    nvim -c "PlugUpdate | qa"
+    sudo nvim -c "PlugUpdate | qa"
+
+    # done
+    clear
+    echo "Finished updating."
 }
