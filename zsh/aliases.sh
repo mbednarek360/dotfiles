@@ -61,7 +61,7 @@ raze() {
 update() {
     
     # packages
-    sudo vpm up -y
+    sudo xbps-install -Syu
     sudo vpm ar
     sudo vpm cl
     sudo vkpurge rm all
