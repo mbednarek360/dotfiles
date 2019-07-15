@@ -14,24 +14,30 @@ call plug#begin('~/.cache/nvim/plugged')
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'honza/vim-snippets'                         
 
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
     Plug 'bling/vim-airline'
     Plug 'arcticicestudio/nord-vim'
 call plug#end()
-            
+
 " key bindings
-map <C-left> <C-w>h
-map <C-down> <C-w>j
-map <C-up> <C-w>k
-map <C-right> <C-w>l
-map <C-S-f> :NERDTreeToggle<CR>
-map <C-S-d> :TagbarToggle<CR>
-map <C-S-r> :NERDTreeRefreshRoot<CR>
-map <C-S-p> :MarkdownPreview<CR>
-map <C-S-e> :call ToggleErrors()<CR>
+map <A-left> <C-w>h
+map <A-down> <C-w>j
+map <A-up> <C-w>k
+map <A-right> <C-w>l
+map <A-f> :NERDTreeToggle<CR>
+map <A-d> :TagbarToggle<CR>
+map <A-r> :NERDTreeRefreshRoot<CR>
+map <A-b> :!firefox % >/dev/null &<CR>
+map <A-e> :call ToggleErrors()<CR>
+map <A-g> :!xdot % >/dev/null &<CR>
+map <A-c> :so ~/.config/nvim/init.vim<CR>                               
+map ; :ProjectFiles<CR>
+map <C-down> 5j
+map <C-up> 5k
 
 " Syntastic config
 function! ToggleErrors()
@@ -42,12 +48,15 @@ function! ToggleErrors()
         lclose
     endif
 endfunction
-
 autocmd BufWritePost * Errors
 let g:syntastic_loc_list_height = 7
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-    
+
+" fzf
+let g:fzf_layout = { 'down': '3' }
+command! ProjectFiles execute 'Files' g:NERDTree.ForCurrentTab().getRoot().path.str()
+ 
 " ncm2 / ultisnip
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
@@ -66,7 +75,7 @@ augroup END
 autocmd VimEnter * NERDTree
 
 " tagbar config
-let g:tagbar_width= 32
+let g:tagbar_width = 32
 let g:tagbar_autoshowtag = 1
 let g:tagbar_autoclose = 1
 
@@ -95,8 +104,20 @@ set virtualedit=all
 " style config
 colorscheme nord
 let g:airline_powerline_fonts= 1
-set termguicolors
 hi! Normal ctermbg=NONE guibg=NONE
 autocmd VimEnter * silent! autocmd! verbose highlight GitGutterAdd
 autocmd VimEnter * silent! autocmd! verbose highlight DiffAdd
- 
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] } 

@@ -1,7 +1,7 @@
 # mount nas
 nas-mount() {
     mkdir ~/NAS
-    sshfs mbednarek360@mbpw3.us.to:/files/ ~/NAS
+    sshfs mbednarek360@mbpw3.us.to:/files/ ~/NAS -p 24
 }
 
 # unmount nas
@@ -10,10 +10,18 @@ nas-unmount() {
     rmdir ~/NAS
 }
 
+# sshs
+nas-ssh() {
+    ssh root@mbpw3.us.to -p 24
+}
+prime-ssh() {
+    ssh mbednarek360@mbpw3.us.to
+}
+
 # code sync
 code-sync() {
     clear
-    if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code
+    if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code -p 24
     then
         clear
         echo "Sync completed successfully."
