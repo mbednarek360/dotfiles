@@ -37,11 +37,15 @@ map <A-f> :NERDTreeToggle<CR>
 map <A-d> :TagbarToggle<CR>
 map <A-r> :NERDTreeRefreshRoot<CR>
 map <A-s> :vsp<CR>
+map <A-t> :silent !$TERM &<CR>
 map <A-q> :q<CR>
+map <A-k> :bd<CR>
 map <A-l> :e #<CR>
-map <A-b> :!firefox % >/dev/null &<CR>
+map <A-n> :bnext<CR>
+map <A-p> :bprevious<CR>
+map <A-b> :silent !firefox % &<CR>
 map <A-e> :call ToggleErrors()<CR>
-map <A-g> :!xdot % >/dev/null &<CR>
+map <A-g> :silent !xdot % &<CR>
 map <A-c> :so ~/.config/nvim/init.vim<CR>                               
 map ; :ProjectFiles<CR>
 map <C-down> 5j
@@ -62,7 +66,7 @@ function! ToggleErrors()
             return
         endif
     endfor
-    botright copen 8
+   bel copen 8
 endfunction
 
 " ctrlp
@@ -138,28 +142,10 @@ set virtualedit=all
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 0
 
 " style config
-let s:brown = "434C5E"
-let s:aqua =  "88C0D0"
-let s:blue = "81A1C1"
-let s:darkBlue = "5E81AC"
-let s:purple = "B48EAD"
-let s:lightPurple = "B48EAD"
-let s:red = "BF616A"
-let s:beige = "EBCB8B"
-let s:yellow = "EBCB8B"
-let s:orange = "irline#extensions#tabline#enabled = 1D08770"
-let s:darkOrange = "D08770"
-let s:pink = "B48EAD"
-let s:salmon = "D08770"
-let s:green = "A3BE8C"
-let s:lightGreen = "A3BE8C"
-let s:white = "E5E9F0"
-let s:rspec_red = 'BF616A'
-let s:git_orange = 'D08770'
 colorscheme nord
-let g:airline_powerline_fonts = 1
 hi! Normal ctermbg=NONE guibg=NONE
 autocmd VimEnter * silent! autocmd! verbose highlight GitGutterAdd
 autocmd VimEnter * silent! autocmd! verbose highlight DiffAdd
