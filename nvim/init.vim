@@ -1,3 +1,6 @@
+" reset buffer if directory
+autocmd VimEnter * if !filereadable(@%) | new | 1bw | endif
+
 " plugins
 call plug#begin('~/.cache/nvim/plugged')
     Plug 'scrooloose/nerdtree'
@@ -14,8 +17,7 @@ call plug#begin('~/.cache/nvim/plugged')
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'honza/vim-snippets'                         
 
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'airblade/vim-gitgutter'
@@ -34,6 +36,9 @@ map <A-right> <C-w>l
 map <A-f> :NERDTreeToggle<CR>
 map <A-d> :TagbarToggle<CR>
 map <A-r> :NERDTreeRefreshRoot<CR>
+map <A-s> :vsp<CR>
+map <A-q> :q<CR>
+map <A-l> :e #<CR>
 map <A-b> :!firefox % >/dev/null &<CR>
 map <A-e> :call ToggleErrors()<CR>
 map <A-g> :!xdot % >/dev/null &<CR>
@@ -57,20 +62,28 @@ function! ToggleErrors()
             return
         endif
     endfor
-
-    copen
+    botright copen 8
 endfunction
 
-" fzf
-let g:fzf_layout = { 'down': '3' }
-command! ProjectFiles execute 'Files' g:NERDTree.ForCurrentTab().getRoot().path.str()
+" ctrlp
+let g:ctrlp_buffer_func = {
+    \ 'enter': "EnterNull",
+    \ 'exit':  "ExitNull",
+    \ }
+func! EnterNull()
+    set laststatus=0
+endfunc
+func! ExitNull()
+    set laststatus=2
+endfunc
+let g:ctrlp_show_gidden = 1
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:1,results:1'
+command! ProjectFiles execute 'CtrlP' g:NERDTree.ForCurrentTab().getRoot().path.str()
 
 " ncm2 / ultisnip
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " NERDTree config
 autocmd BufEnter * lcd %:p:h
@@ -78,11 +91,11 @@ let g:NERDTreeWinSize = 32
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeHijackNetrw = 0
+autocmd BufEnter * if &modifiable | if filereadable(@%) | NERDTreeFind | wincmd p | endif | endif
 augroup NERDTreeHijackNetrw
     autocmd VimEnter * silent! autocmd! FileExplorer
 augroup END
 autocmd VimEnter * NERDTree
-
 
 " tagbar config
 let g:tagbar_width = 32
@@ -115,12 +128,16 @@ syntax on
 set nofoldenable
 set linebreak
 set showmatch
+set noshowmode
 set smartindent
 set smarttab
 set smartcase
 set hlsearch
 set spell
 set virtualedit=all 
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
 
 " style config
 let s:brown = "434C5E"
@@ -132,7 +149,7 @@ let s:lightPurple = "B48EAD"
 let s:red = "BF616A"
 let s:beige = "EBCB8B"
 let s:yellow = "EBCB8B"
-let s:orange = "D08770"
+let s:orange = "irline#extensions#tabline#enabled = 1D08770"
 let s:darkOrange = "D08770"
 let s:pink = "B48EAD"
 let s:salmon = "D08770"
