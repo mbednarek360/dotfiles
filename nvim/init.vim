@@ -17,6 +17,7 @@ call plug#begin('~/.cache/nvim/plugged')
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'honza/vim-snippets'                         
 
+    Plug 'scrooloose/nerdcommenter'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -40,13 +41,11 @@ map <A-s> :vsp<CR>
 map <A-t> :silent !$TERM &<CR>
 map <A-q> :q<CR>
 map <A-k> :bd<CR>
-map <A-l> :e #<CR>
-map <A-n> :bnext<CR>
-map <A-p> :bprevious<CR>
+map <A-c> \c 
+map <A-l> :bprevious<CR>
 map <A-b> :silent !firefox % &<CR>
 map <A-e> :call ToggleErrors()<CR>
 map <A-g> :silent !xdot % &<CR>
-map <A-c> :so ~/.config/nvim/init.vim<CR>                               
 map ; :ProjectFiles<CR>
 map <C-down> 5j
 map <C-up> 5k
@@ -95,7 +94,8 @@ let g:NERDTreeWinSize = 32
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeHijackNetrw = 0
-autocmd BufEnter * if &modifiable | if filereadable(@%) | NERDTreeFind | wincmd p | endif | endif
+let g:NERDTreeCascadeSingleChildDir = 0
+autocmd BufEnter * if &modifiable && filereadable(@%) | NERDTreeFind | wincmd p | endif
 augroup NERDTreeHijackNetrw
     autocmd VimEnter * silent! autocmd! FileExplorer
 augroup END
@@ -123,10 +123,11 @@ let g:NERDTreeDirArrowExpandable = "\u00a0"
 let g:NERDTreeDirArrowCollapsible = "\u00a0"
 if exists("webdevicons#refresh")
     call webdevicons#refresh()
-endif
+endif   
 
 " misc
 let g:mkdp_browser = 'firefox-developer-edition'
+filetype plugin on
 set number
 syntax on
 set nofoldenable
@@ -164,15 +165,15 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] } 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "M",
+    \ "Modified"  : "",
     \ "Staged"    : "+",
-    \ "Untracked" : "U",
+    \ "Untracked" : "",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "",
     \ "Deleted"   : "",
     \ "Dirty"     : "",
     \ "Clean"     : "",
     \ "Ignored"   : "﬒",
-    \ "Unknown"   : "?"
+    \ "Unknown"   : ""
     \ }
  
