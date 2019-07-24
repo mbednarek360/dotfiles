@@ -1,29 +1,22 @@
-" reset buffer if directory
-autocmd VimEnter * if !filereadable(@%) | new | 1bw | endif
-
 " plugins
 call plug#begin('~/.cache/nvim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'majutsushi/tagbar'
     Plug 'w0rp/ale'
     Plug 'jiangmiao/auto-pairs'
-
     Plug 'roxma/nvim-yarp'
     Plug 'ncm2/ncm2'
     Plug 'ncm2/ncm2-path'
     Plug 'ncm2/ncm2-racer' 
-    
     Plug 'SirVer/ultisnips'
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'honza/vim-snippets'                         
-
     Plug 'scrooloose/nerdcommenter'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-
     Plug 'bling/vim-airline'
     Plug 'arcticicestudio/nord-vim'
     Plug 'ryanoasis/vim-devicons'
