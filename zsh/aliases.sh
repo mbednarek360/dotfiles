@@ -21,14 +21,17 @@ prime-ssh() {
 # code sync
 code-sync() {
     clear
-    if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code -p 24
+    #if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code -p 24
+    phone-mount
+    if sudo bsync -b $ZHOME/Code ~/Phone/Code  
     then
         clear
         echo "Sync completed successfully."
     else
         clear
-        echo "Error syncing to NAS! Ensure proper connections and try again."
+        echo "Error syncing! Ensure proper connections and try again."
     fi
+    phone-unmount
 }
 
 # mblock
@@ -82,4 +85,19 @@ update() {
     # done
     clear
     echo "Finished updating."
+}
+
+
+# mount phone over mtpfs
+phone-mount() {
+    sudo mkdir /mnt/phone
+    sudo simple-mtpfs -o allow_other /mnt/phone
+    ln -s /mnt/phone/ext ~/Phone
+}
+
+# unmount phone
+phone-unmount() {
+    sudo umount /mnt/phone
+    sudo rmdir /mnt/phone
+    rm ~/Phone
 }

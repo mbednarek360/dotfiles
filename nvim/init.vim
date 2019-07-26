@@ -121,7 +121,7 @@ endif
 " misc
 let g:mkdp_browser = 'firefox-developer-edition'
 filetype plugin on
-set number
+set number rnu
 syntax on
 set nofoldenable
 set linebreak
