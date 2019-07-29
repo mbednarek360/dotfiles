@@ -169,4 +169,8 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Ignored"   : "﬒",
     \ "Unknown"   : ""
     \ }
- 
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = ''
+let g:gitgutter_sign_removed = ''
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
