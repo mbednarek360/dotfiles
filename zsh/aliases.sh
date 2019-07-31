@@ -22,8 +22,8 @@ prime-ssh() {
 code-sync() {
     clear
     #if bsync -b $ZHOME/Code root@mbpw3.us.to:/data/mbednarek360/files/Code -p 24
-    phone-mount
-    if sudo bsync -b $ZHOME/Code ~/Phone/Code  
+    ssd-mount
+    if sudo bsync -b $ZHOME/Code ~/SSD/Code  
     then
         clear
         echo "Sync completed successfully."
@@ -31,7 +31,7 @@ code-sync() {
         clear
         echo "Error syncing! Ensure proper connections and try again."
     fi
-    phone-unmount
+    ssd-unmount
 }
 
 # mblock
@@ -89,15 +89,13 @@ update() {
 
 
 # mount phone over mtpfs
-phone-mount() {
-    sudo mkdir /mnt/phone
-    sudo simple-mtpfs -o allow_other /mnt/phone
-    ln -s /mnt/phone/ext ~/Phone
+ssd-mount() {
+    mkdir ~/SSD
+    sudo mount /dev/sdc1 ~/SSD
 }
 
 # unmount phone
-phone-unmount() {
-    sudo umount /mnt/phone
-    sudo rmdir /mnt/phone
-    rm ~/Phone
+ssd-unmount() {
+    sudo umount ~/SSD
+    rmdir ~/SSD
 }
