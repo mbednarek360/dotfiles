@@ -18,26 +18,33 @@ prime-ssh() {
     ssh mbednarek360@mbpw3.us.to
 }
 
+batch-sync() {
+    if [[ $2 == "-m" ]]
+    then
+        sudo bsync $ZHOME/$1 ~/SSD/$1
+    else
+        sudo bsync -b $ZHOME/$1 ~/SSD/$1
+    fi
+}
+
 # generic sync
 sync() {
     clear
     ssd-mount
-    if sudo bsync -b $ZHOME/$1 ~/SSD/$1  
+    if batch-sync $1 $2
     then
         clear
         echo "Sync completed successfully."
-    else
-        echo "Error syncing! Ensure proper connections and try again."
     fi
     ssd-unmount
 }
 
 # sync implementations
 code-sync() {
-    sync Code
+    sync Code $1
 }
 doc-sync() {
-    sync Documents
+    sync Documents $1
 }
 
 
@@ -99,7 +106,7 @@ update() {
 ssd-mount() {
     mkdir ~/SSD
     sudo mount /dev/sdc1 ~/SSD
-    sudo chmod -r 0777 ~/SSD
+    sudo chmod 0777 -R ~/SSD
 }
 
 # unmount phone
