@@ -46,6 +46,11 @@ code-sync() {
 doc-sync() {
     sync Documents $1
 }
+conf-sync() {
+    ssd-mount
+    git -C ~/SSD/Config/Desktop pull origin master 
+    ssd-unmount
+}
 
 
 # mblock
@@ -100,7 +105,6 @@ update() {
     clear
     echo "Finished updating."
 }
-
 
 # mount phone over mtpfs
 ssd-mount() {

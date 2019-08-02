@@ -36,7 +36,7 @@ map <A-q> :q<CR>
 map <A-k> :bd<CR>
 map <A-c> \c 
 map <A-l> :bprevious<CR>
-map <A-b> :silent !firefox % &<CR>
+map <A-b> :silent !$BROWSE % &<CR>
 map <A-e> :call ToggleErrors()<CR>
 map <A-g> :silent !xdot % &<CR>
 map ; :ProjectFiles<CR>
