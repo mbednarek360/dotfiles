@@ -48,6 +48,7 @@ doc-sync() {
 }
 conf-sync() {
     ssd-mount
+    git -C ~/SSD/Config/Desktop reset --hard ORIG_HEAD
     git -C ~/SSD/Config/Desktop pull origin master 
     ssd-unmount
 }
