@@ -36,7 +36,7 @@ map <A-q> :q<CR>
 map <A-k> :bd<CR>
 map <A-c> \c 
 map <A-l> :bprevious<CR>
-map <A-b> :silent !$BROWSE % &<CR>
+map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <A-e> :call ToggleErrors()<CR>
 map <A-g> :silent !xdot % &<CR>
 map ; :ProjectFiles<CR>
@@ -119,7 +119,6 @@ if exists("webdevicons#refresh")
 endif   
 
 " misc
-let g:mkdp_browser = 'firefox-developer-edition'
 filetype plugin on
 set number rnu
 syntax on

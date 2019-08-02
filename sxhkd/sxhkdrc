@@ -162,6 +162,10 @@ super + shift + c
 super + shift + e
   sh -c "$CODE"
 
+# documents
+super + shift + n
+  sh -c "$DOCS"
+
 # network manager
 super + shift + w
   sh -c "$NET"

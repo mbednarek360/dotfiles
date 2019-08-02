@@ -9,6 +9,7 @@ export MUSIC="spotify"
 export DISCORD="$BROWSE https://discordapp.com/activity"
 export CONF="$TERM -e nvim ~/.config"
 export CODE="$TERM -e nvim ~/Code"
+export DOCS="$TERM -e nvim ~/Documents"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui-connect"
 
