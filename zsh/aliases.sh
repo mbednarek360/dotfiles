@@ -118,3 +118,14 @@ ssd-unmount() {
     sudo umount ~/SSD
     rmdir ~/SSD
 }
+
+# save screenshot
+scr-save() {
+    mv /tmp/scr.png ./screenshot.png
+    echo "Saved locally."
+}
+
+# delete screenshot
+scr-rm() {
+    rm /tmp/scr.png
+}

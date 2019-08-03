@@ -30,6 +30,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - firefox
 - gotop
 - mpv
+- maim
 - neofetch
 - networkmanager
 - noto-fonts-ttf

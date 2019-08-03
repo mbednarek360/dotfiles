@@ -19,9 +19,19 @@ super + c
     sh -c "$CALC"              
 
 # screen/window/selection shot
-{_,shift +,ctrl +} + @Print
-    cd ~/Pictures/Screenshots && scrot {_,-u,-s} -e "notify-send 'Image saved as \n\$f'"
+@Print
+    maim -u /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Screen Copied' 
 
+shift + @Print
+     maim -u -i $(xdotool getactivewindow) /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Window Copied'
+    
+# 
+ctrl + @Print
+    maim -u -s /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Selection Copied'
+
+# save screenshot
+alt + @Print
+    mv /tmp/scr.png ~/Pictures/Screenshots/$(date +%y-%m-%d_%H:%M:%S).png; notify-send "Saved to Pictures"
 # music controls
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
 	pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) {'+5%', '-5%'}
