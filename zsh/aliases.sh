@@ -129,3 +129,15 @@ scr-save() {
 scr-rm() {
     rm /tmp/scr.png
 }
+
+
+# save recording
+rec-save() {
+    mv /tmp/rec.mp4 ./recording.mp4
+    echo "Saved locally."
+}
+
+# delete recording
+rec-rm() {
+    rm /tmp/rec.mp4
+}
