@@ -141,3 +141,11 @@ rec-save() {
 rec-rm() {
     rm /tmp/rec.mp4
 }
+
+# weather
+wttr() {
+    clear
+    echo
+    curl wttr.in/$1
+    echo
+}
