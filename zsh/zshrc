@@ -1,10 +1,5 @@
-# zsh home directory
-if [[ "$(hostname)" == *"MBPW3"* ]]
-then
-    ZHOME="/root"
-else
-    ZHOME="/home/mbednarek360"
-fi
+# zsh config home
+ZHOME="/home/mbednarek360"
 
 # load aliases
 source $ZHOME/.config/zsh/aliases.sh
