@@ -3,10 +3,7 @@
 !alacritty/
 !betterlockscreenrc
 !bspwm/
-!Code - OSS/User/settings.json
-Code - OSS/User/globalStorage
-Code - OSS/User/snippets
-Code - OSS/User/workspaceStorage
+!vscode/
 !dunst/
 !nvim/
 !polybar/

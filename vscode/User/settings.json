@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Nord",
+    "window.menuBarVisibility": "hidden",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.fontFamily": "'Hack', 'Noto Sans'",
+    "window.zoomLevel": 0,
+    "files.exclude": {
+        "**/.bsync-snap-*": true
+    },
+    "editor.lineNumbers": "relative",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "onWindowChange",
+    "zenMode.hideLineNumbers": false,
+    "vim.easymotionMarkerFontFamily": "'Hack'",
+    "debug.console.fontFamily": "",
+    "terminal.integrated.cursorStyle": "line",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+    "terminal.integrated.letterSpacing": 1,
+    "workbench.activityBar.visible": false,
+    "terminal.explorerKind": "external",
+    "workbench.startupEditor": "newUntitledFile"
+}

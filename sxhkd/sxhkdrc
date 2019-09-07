@@ -184,6 +184,10 @@ super + shift + c
 super + shift + e
   sh -c "$CODE"
 
+# games
+super + shift + g
+  sh -c "$GAME"
+
 # documents
 super + shift + n
   sh -c "$DOCS"

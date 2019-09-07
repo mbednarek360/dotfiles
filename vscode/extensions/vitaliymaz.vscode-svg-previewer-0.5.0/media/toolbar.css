@@ -1,0 +1,130 @@
+
+.toolbar {
+    height: 35px;
+    flex-shrink: 0;
+    background-color: var(--vscode-tab-activeBackground);
+    border-bottom: 1px solid var(--vscode-editorGroup-border);
+    display: flex;
+    align-items: center;
+}
+
+.toolbar button[disabled] {
+    opacity: 0.6;
+}
+
+.toolbar .separator {
+    height: 16px;
+    border-left: 1px solid var(--vscode-editorGroup-border);
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.toolbar .btn-group {
+    margin-left: 12px;
+}
+
+.toolbar .btn-group .btn {
+    width: 16px;
+    height: 16px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+
+    margin-right: 8px;
+}
+
+.toolbar .btn-group .btn:last-of-type {
+    margin-right: 0;
+}
+
+.toolbar .btn-group .btn.active {
+    transform: scale(1.272019649);
+}
+
+body.vscode-high-contrast .toolbar .btn-group .btn.btn-plus,
+body.vscode-dark .toolbar .btn-group .btn.btn-plus {
+    background-image: url(vscode-resource:Icon_plus_inverse.svg);
+}
+
+body.vscode-high-contrast .toolbar .btn-group .btn.btn-minus,
+body.vscode-dark .toolbar .btn-group .btn.btn-minus {
+    background-image: url(vscode-resource:Icon_minus_inverse.svg);
+}
+
+body.vscode-high-contrast .toolbar .btn-group .btn.btn-one-to-one,
+body.vscode-dark .toolbar .btn-group .btn.btn-one-to-one {
+    background-image: url(vscode-resource:Icon_one_to_one_inverse.svg);
+}
+
+body.vscode-light .toolbar .btn-group .btn.btn-plus {
+    background-image: url(vscode-resource:Icon_plus.svg);
+}
+
+body.vscode-light .toolbar .btn-group .btn.btn-minus {
+    background-image: url(vscode-resource:Icon_minus.svg);
+}
+
+body.vscode-light .toolbar .btn-group .btn.btn-one-to-one {
+    background-image: url(vscode-resource:Icon_one_to_one.svg);
+}
+
+.toolbar .size {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.toolbar .bg-group {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar .bg-container {
+    border: 1px solid var(--vscode-editorGroup-border);
+    display: flex;
+    margin-right: 8px;
+}
+
+.toolbar .bg-container.selected {
+    transform: scale(1.2);
+}
+
+.toolbar .bg {
+    padding: 0;
+    width: 16px;
+    height: 16px;
+
+    background-position: 0 0, 4px 4px;
+    background-size: 8px 8px;
+}
+
+.toolbar .bg.transparent {
+    background-color: var(--vscode-editor-background);
+}
+
+
+body.vscode-high-contrast .toolbar .bg.dark,
+body.vscode-dark .toolbar .bg.dark {
+    background-image: linear-gradient(45deg,#141414 25%,transparent 0,transparent 75%,#141414 0,#141414),linear-gradient(45deg,#141414 25%,transparent 0,transparent 75%,#141414 0,#141414);
+    filter: brightness(3);
+}
+
+body.vscode-high-contrast .toolbar .bg.light,
+body.vscode-dark .toolbar .bg.light {
+    background-image: linear-gradient(45deg,#e6e6e6 25%,transparent 0,transparent 75%,#e6e6e6 0,#e6e6e6),linear-gradient(45deg,#e6e6e6 25%,#fff 0,#fff 75%,#e6e6e6 0,#e6e6e6);
+}
+
+body.vscode-light .toolbar .bg.dark {
+    background-image: linear-gradient(45deg,#141414 25%,transparent 0,transparent 75%,#141414 0,#141414),linear-gradient(45deg,#141414 25%,#1e1e1e 0,#1e1e1e 75%,#141414 0,#141414);
+    filter: brightness(3);
+}
+
+body.vscode-light .toolbar .bg.light {
+    background-image: linear-gradient(45deg,#e6e6e6 25%,transparent 0,transparent 75%,#e6e6e6 0,#e6e6e6),linear-gradient(45deg,#e6e6e6 25%,transparent 0,transparent 75%,#e6e6e6 0,#e6e6e6);
+}
+
+
+@media screen and (max-width: 245px) {
+    .toolbar .size {
+        display: none;
+    }
+}

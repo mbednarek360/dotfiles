@@ -1,0 +1,41 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "menu": {
+      "$id": "/properties/menu",
+      "type": "object",
+      "properties": {
+        "header": {
+          "$id": "/properties/menu/properties/header",
+          "type": "string",
+          "title": "The Header Schema ",
+          "default": "",
+          "examples": [
+            "SVG Viewer"
+          ]
+        },
+        "items": {
+          "$id": "/properties/menu/properties/items",
+          "type": "array",
+          "items": {
+            "$id": "/properties/menu/properties/items/items",
+            "type": "object",
+            "properties": {
+              "id": {
+                "$id": "/properties/menu/properties/items/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema ",
+                "default": "",
+                "examples": [
+                  "Open"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
