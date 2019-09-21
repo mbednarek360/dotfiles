@@ -20,5 +20,6 @@
     "terminal.integrated.letterSpacing": 1,
     "workbench.activityBar.visible": false,
     "terminal.explorerKind": "external",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.useSystemClipboard": true
 }

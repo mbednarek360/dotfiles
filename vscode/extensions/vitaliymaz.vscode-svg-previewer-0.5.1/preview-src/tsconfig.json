@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es6",
+        "allowJs": true,
+        "rootDir": ".",
+        "lib": ["es6", "es7", "dom"],
+        "sourceMap": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "jsx": "react",
+        "jsxFactory": "h"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

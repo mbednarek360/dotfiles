@@ -1,0 +1,29 @@
+@import './toolbar.css';
+@import './preview.css';
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+button[disabled] {
+    cursor: auto;
+}
+
+.reset-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}

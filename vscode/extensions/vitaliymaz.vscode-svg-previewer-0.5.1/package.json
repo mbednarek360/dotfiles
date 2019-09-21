@@ -1,0 +1,147 @@
+{
+	"name": "vscode-svg-previewer",
+	"displayName": "SVG Previewer",
+	"description": "Show SVG preview to the side panel",
+	"version": "0.5.1",
+	"publisher": "vitaliymaz",
+	"repository": "https://github.com/vitaliymaz/vscode-svg-previewer",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.26.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:xml",
+		"onWebviewPanel:svg-preview"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "svg.showPreview",
+				"title": "%svg.preview.title%",
+				"category": "Svg"
+			},
+			{
+				"command": "svg.showPreviewToSide",
+				"title": "%svg.previewSide.title%",
+				"category": "Svg",
+				"icon": {
+					"light": "./media/PreviewOnRightPane_16x.svg",
+					"dark": "./media/PreviewOnRightPane_16x_dark.svg"
+				}
+			},
+			{
+				"command": "svg.showSource",
+				"title": "%svg.showSource.title%",
+				"category": "Svg",
+				"icon": {
+					"light": "./media/ViewSource.svg",
+					"dark": "./media/ViewSource_inverse.svg"
+				}
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "svg.showPreviewToSide",
+					"when": "editorLangId == xml",
+					"alt": "svg.showPreviewToSide",
+					"group": "navigation"
+				},
+				{
+					"command": "svg.showSource",
+					"when": "svgPreviewFocus",
+					"alt": "svg.showSource",
+					"group": "navigation"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "svg.showPreview",
+					"when": "editorLangId == xml",
+					"group": "navigation"
+				},
+				{
+					"command": "svg.showPreviewToSide",
+					"when": "editorLangId == xml",
+					"group": "navigation"
+				},
+				{
+					"command": "svg.showSource",
+					"when": "svgPreviewFocus",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "svg.showPreview",
+					"group": "navigation",
+					"when": "resourceLangId == xml"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "SVG Previewer",
+			"properties": {
+				"svg.preview.autoOpen": {
+					"type": "boolean",
+					"default": false,
+					"description": "%svg.autoOpenPreview.dec%"
+				},
+				"svg.preview.boundingBox": {
+					"type": "boolean",
+					"default": false,
+					"description": "%svg.showSvgBoundingBox.dec%"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "svg.showPreview",
+				"key": "shift+ctrl+v",
+				"mac": "shift+cmd+v",
+				"when": "editorLangId == xml"
+			},
+			{
+				"command": "svg.showPreviewToSide",
+				"key": "ctrl+k v",
+				"mac": "cmd+k v",
+				"when": "editorLangId == xml"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./ && webpack",
+		"preextension:watch": "webpack",
+		"extension:watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && echo 'no tests yet'"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.0.43",
+		"ts-loader": "^5.3.0",
+		"tslint": "^5.8.0",
+		"tslint-react": "^3.6.0",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.36",
+		"webpack": "^4.23.1",
+		"webpack-cli": "^3.1.2"
+	},
+	"dependencies": {
+		"preact": "^8.3.1",
+		"redux-zero": "^4.15.0",
+		"vscode-extension-telemetry": "^0.1.1",
+		"vscode-nls": "^4.0.0"
+	},
+	"__metadata": {
+		"id": "27d96499-52df-4f8e-8905-275284e25ace",
+		"publisherId": "27dd6867-041b-4aaa-8f03-5702e1f7c2a1",
+		"publisherDisplayName": "Vitalii Mazurenko"
+	}
+}
