@@ -29,9 +29,9 @@ padding-left = 0
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = Hack:pixelsize=12;1
-font-1 = Hack:pixelsize=12;1
-font-2 = Hack:pixelsize=12;1
+font-0 = Hack Nerd Font:pixelsize=12;1
+font-1 = Hack Nerd Font:pixelsize=12;1
+font-2 = Hack Nerd Font:pixelsize=12;1
 modules-left = bspwm
 modules-center = 
 modules-right = pulseaudio cpu wlan eth battery temperature date

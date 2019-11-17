@@ -91,11 +91,9 @@ raze() {
 update() {
     
     # packages
-    sudo xbps-install -Syu
-    sudo vpm ar
-    sudo vpm cl
-    sudo vkpurge rm all
-
+    yay -Syu
+    yay -c
+        
     # plugins
     plug-update
     nvim -c "PlugUpdate | qa"

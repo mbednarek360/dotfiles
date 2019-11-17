@@ -4,9 +4,9 @@
 export TERM="alacritty"
 export LAUNCH="rofi -show run"
 export CALC="rofi -show calc -modi calc -no-show-match -no-sort -lines 2"
-export BROWSE="chromium"
+export BROWSE="vivaldi-stable"
 export MUSIC="spotify"
-export DISCORD="Discord"
+export DISCORD="discord"
 export CONF="$TERM -e nvim ~/.config"
 export CODE="code-oss ~/Code"
 export GAME="steam"
@@ -15,20 +15,22 @@ export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui-connect"
 
 # Kill
-#killall compton
+killall picom
 killall feh
 killall dunst
 killall sxhkd
 killall polybar
+killall xss-lock
 
 # Autostart
-#compton -b &
-feh --bg-scale $HOME/Pictures/Wallpapers/background7.png &
+xss-lock -l -- betterlockscreen --lock dimblur &
+feh --bg-fill $HOME/Pictures/Wallpapers/background5.png &
 dunst &
 sxhkd &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done 
+picom &
 /usr/bin/an2linux &
 
 # Monitor

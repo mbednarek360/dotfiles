@@ -1,13 +1,13 @@
 #!/bin/sh
 # rofi power menu
 
-chosen=$(echo "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -lines 4)
+chosen=$(echo -e "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -lines 4)
 if [ $chosen = "Lock" ]; then
-    betterlockscreen --lock
+    betterlockscreen --lock dimblur
 elif [ $chosen = "Suspend" ]; then
-    sudo zzz
+    systemctl suspend
 elif [ $chosen = "Reboot" ]; then
-    sudo shutdown -r now
+    systemctl reboot
 elif [ $chosen = "Shutdown" ]; then
-    sudo shutdown -h now
+    systemctl poweroff
 fi

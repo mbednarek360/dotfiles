@@ -6,7 +6,7 @@ configuration {
 	modi: 			"drun,run";
 	width: 			750;
 	lines: 			10;
-	font: 			"Hack 12";
+	font: 			"Hack Nerd Font 12";
 	show-match: 		false;
 	separator-style: 	"solid";
 	hide-scrollbar: 	true;

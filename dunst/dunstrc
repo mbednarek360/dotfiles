@@ -27,7 +27,7 @@
 
     ### Text ###
 
-    font = Hack 12
+    font = Hack Nerd Font 12
     ine_height = 5
     markup = full
     format = "<b>%s</b>\n%b"

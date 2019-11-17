@@ -1,5 +1,5 @@
 # **Dotfiles**
-## Personal dotfiles for my Void / BSPWM install.
+## Personal dotfiles for my Arch / BSPWM install.
 ![Screenshot](screenshot.png)
 
 ---
@@ -18,23 +18,23 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - bspwm
 - dunst
 - nvim
+- picom
 - polybar
 - rofi
 - sxhkd
 - vscode
+- yay
 - zsh
 
  
 **Additional programs used:**
 - antibody
 - feh
-- firefox
 - gotop
 - mpv
 - maim
 - neofetch
 - networkmanager
-- noto-fonts-ttf
-- ttf-hack
+- nerd-fonts-complete
 - vim-plug
-- vpm
+- vivaldi
