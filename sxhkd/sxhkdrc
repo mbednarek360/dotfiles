@@ -18,6 +18,10 @@ XF86Calculator
 super + c
     sh -c "$CALC"              
 
+# keyboard layout
+super + {alt, ctrl} + space
+    setxkbmap us {_, -variant colemak}
+
 # screen/window/selection shot
 @Print
     maim -u /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Screen Copied' 
