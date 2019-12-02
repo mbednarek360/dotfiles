@@ -65,6 +65,18 @@ mblock() {
 	fi	
 }
 
+# mbpw3 paste
+mbpw3() {
+    if [[ $1 == "-p" ]]
+    then
+        id=$(curl -s --data @$2 "mbpw3.us.to:81/paste/create?pass=$3")
+        echo "http://mbpw3.us.to/paste/$id" | xclip -selection clipboard
+    elif [[ $1 == "-r" ]]
+    then
+        [[ $(curl -s "http://mbpw3.us.to:81/paste/delete?id=$2&pass=$3") == "true" ]]
+    fi
+}
+
 # plugin update
 plug-update() {
     rm $ZHOME/.cache/zsh/plugins.sh
