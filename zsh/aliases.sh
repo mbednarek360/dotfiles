@@ -69,7 +69,7 @@ mblock() {
 mbpw3() {
     if [[ $1 == "-p" ]]
     then
-        id=$(curl -s --data @$2 "mbpw3.us.to:81/paste/create?pass=$3")
+        id=$(curl -s --data-binary @$2 "mbpw3.us.to:81/paste/create?pass=$3")
         echo "http://mbpw3.us.to/paste/$id" | xclip -selection clipboard
     elif [[ $1 == "-r" ]]
     then
