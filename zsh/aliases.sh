@@ -119,7 +119,7 @@ update() {
 # mount phone over mtpfs
 ssd-mount() {
     mkdir ~/SSD
-    sudo mount -U 18d5b4c1-86f3-4e38-b75b-a8e0dccada25 ~/SSD
+    sudo mount -U b9925f5a-47c0-4ba0-a8ff-87cb43532f97 ~/SSD
     sudo chmod 0777 -R ~/SSD
 }
 
