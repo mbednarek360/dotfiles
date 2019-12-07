@@ -3,7 +3,7 @@
     "window.menuBarVisibility": "hidden",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "editor.fontFamily": "'Hack', 'Noto Sans'",
+    "editor.fontFamily": "'Hack Nerd Font', 'Noto Sans Nerd Font'",
     "window.zoomLevel": 0,
     "files.exclude": {
         "**/.bsync-snap-*": true

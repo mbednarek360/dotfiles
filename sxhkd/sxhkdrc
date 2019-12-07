@@ -38,7 +38,7 @@ alt + @Print
 
 # record screen
 super + v
-    rm /tmp/rec.mp4; ffmpeg -video_size 2560x1440 -framerate 30 -f x11grab -i $(if [ "$(hostname)" = "michael-desktop" ]; then; echo :0.0+900,0; else; echo :0.0+0,0; fi) /tmp/rec.mp4 &; notify-send "Recording Started"
+    rm /tmp/rec.mp4; ffmpeg -video_size 2560x1440 -framerate 30 -f x11grab -i :0.0+$(xrandr --query | grep primary | cut -d"+" -f2-3 | cut -d" " -f1 | tr "+" ",") /tmp/rec.mp4 &; notify-send "Recording Started"
 
 super + ctrl + v
     killall -s INT ffmpeg; notify-send "Recording Stopped"
