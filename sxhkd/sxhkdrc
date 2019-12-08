@@ -46,7 +46,10 @@ super + ctrl + v
 # save recording
 super + alt + v
     mv /tmp/rec.mp4 ~/Pictures/Recordings/$(date +%y-%m-%d_%H:%M:%S).mp4; notify-send "Saved to Pictures"
-     
+
+# kill compositing
+super + alt + c
+    killall picom
 
 # music controls
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
