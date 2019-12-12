@@ -55,7 +55,7 @@ super + alt + c
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
 	pactl set-sink-volume $(pacmd list-sinks | grep index | tail -c 2) {'+5%', '-5%'}
 XF86AudioMute
-	pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle
+	pactl set-sink-mute $(pacmd list-sinks | grep index | tail -c 2) toggle & playerctl play-pause
 {XF86AudioNext, XF86AudioPrev}
 	playerctl {next, previous}
 XF86AudioPlay
