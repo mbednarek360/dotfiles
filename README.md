@@ -16,6 +16,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - alacritty
 - betterlockscreen
 - bspwm
+- cava
 - dunst
 - nvim
 - picom
