@@ -21,6 +21,5 @@
     "workbench.activityBar.visible": false,
     "terminal.explorerKind": "external",
     "workbench.startupEditor": "newUntitledFile",
-    "vim.useSystemClipboard": true,
-    "terminal.external.linuxExec": "alacritty"
+    "vim.useSystemClipboard": true
 }

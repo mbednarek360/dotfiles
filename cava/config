@@ -21,9 +21,9 @@ framerate = 165
 
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
-; bars = 0
-; bar_width = 1
-; bar_spacing = 1
+; bars = 200
+bar_width = 1
+; bar_spacing = 0
 
 
 # Lower and higher cutoff frequencies for lowest and highest bars
@@ -65,7 +65,8 @@ framerate = 165
 # 'noncurses' is for systems that does not suport ncurses.
 # 'raw' is a 16 bit data stream of the bar heights that can be used to send to other applications.
 # 'raw' defaults to 200 bars, which can be adjusted in the 'bars' option above.
-; method = ncurses
+method = ncurses
+
 
 # Visual channels. Can be 'stereo' or 'mono'.
 # 'stereo' mirrors both channels with low frequencies in center.
@@ -112,7 +113,7 @@ gradient_color_2 = '#88c0d0'
 
 # Percentage value for integral smoothing. Takes values from 0 - 100.
 # Higher values means smoother, but less precise. 0 to disable.
-integral = 32
+; integral = 32
 
 # Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable. 
 ; monstercat = 1
@@ -120,7 +121,7 @@ integral = 32
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".
-gravity = 1000
+gravity = 0
 
 
 # In bar height, bars that would have been lower that this will not be drawn.
@@ -132,8 +133,8 @@ gravity = 1000
 # This one is tricky. You can have as much keys as you want.
 # Remember to uncomment more then one key! More keys = more precision.
 # Look at readme.md on github for further explanations and examples.
-1 = 2 # bass
-2 = 2
-3 = 1 # midtone
-4 = 1
-5 = 1.5 # treble
+; 1 = 2 # bass
+; 2 = 2
+; 3 = 1 # midtone
+; 4 = 1
+; 5 = 1.5 # treble

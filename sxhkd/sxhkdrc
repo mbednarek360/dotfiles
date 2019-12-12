@@ -215,6 +215,9 @@ super + shift + s
 super + shift + d
   sh -c "$DISCORD"
 
+super + shift + v
+  sh -c "$VIS"
+
 # mblock status
 super + l
 	zsh -c "source ~/.config/zsh/aliases.sh && mblock -s"

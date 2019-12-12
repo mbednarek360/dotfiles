@@ -13,6 +13,7 @@ export GAME="steam"
 export DOCS="$TERM -e nvim ~/Documents"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e nmtui-connect"
+export VIS="$TERM -e cava"
 
 # Kill
 killall picom
