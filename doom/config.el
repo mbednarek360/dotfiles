@@ -62,6 +62,9 @@
 ;; Terminal
 (setq terminal-here-terminal-command (list "alacritty"))
 
+;; Discord presence
+(add-hook 'doom-load-theme-hook 'elcord-mode)
+
 ;; Keybinds
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
