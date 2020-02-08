@@ -99,6 +99,9 @@ raze() {
     finshir --wait 1s --write-periodicity 10s --receiver $ip:$port
 }
 
+# doom emacs
+alias doom="~/.emacs.d/bin/doom"
+
 # updates
 update() {
     
@@ -108,8 +111,7 @@ update() {
         
     # plugins
     plug-update
-    nvim -c "PlugUpdate | qa"
-    sudo nvim -c "PlugUpdate | qa"
+    doom upgrade
 
     # done
     clear
@@ -139,7 +141,6 @@ scr-save() {
 scr-rm() {
     rm /tmp/scr.png
 }
-
 
 # save recording
 rec-save() {

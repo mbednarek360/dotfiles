@@ -18,12 +18,11 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - bspwm
 - cava
 - dunst
-- nvim
+- emacs
 - picom
 - polybar
 - rofi
 - sxhkd
-- vscode
 - yay
 - zsh
 
@@ -37,5 +36,4 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - neofetch
 - networkmanager
 - nerd-fonts-complete
-- vim-plug
 - vivaldi

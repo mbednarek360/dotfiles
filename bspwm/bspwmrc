@@ -8,7 +8,7 @@ export BROWSE="vivaldi-stable"
 export MUSIC="spotify"
 export DISCORD="discord"
 export CONF="$TERM -e nvim ~/.config"
-export CODE="code-oss ~/Code"
+export CODE="emacs"
 export GAME="steam"
 export DOCS="$TERM -e nvim ~/Documents"
 export SYS="$TERM -e gotop -p"
@@ -43,6 +43,9 @@ else
     bspc monitor -d 1 2 3 4 5 6 7 8 9
     picom --backend glx &
 fi
+
+# Rules
+bspc rule -a Emacs state=tiled
 
 # Window config
 bspc config focus_follows_pointer true
