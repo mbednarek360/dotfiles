@@ -106,12 +106,14 @@ alias doom="~/.emacs.d/bin/doom"
 update() {
     
     # packages
-    yay -Syu
-    yay -c
+    yay -Syu --noconfirm
+    yay -c --noconfirm
         
     # plugins
     plug-update
-    doom upgrade
+    doom -y upgrade
+    doom -y clean
+    doom -y refresh
 
     # done
     clear
