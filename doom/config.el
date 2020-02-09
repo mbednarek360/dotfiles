@@ -32,7 +32,6 @@
 ;; `nil' to disable it:
 (setq display-line-numbers-type 'relative)
 
-
 ;; Enable transparency
 (set-frame-parameter (selected-frame) 'alpha '(98 98))
 (add-to-list 'default-frame-alist '(alpha 98 98))
