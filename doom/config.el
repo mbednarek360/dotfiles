@@ -62,9 +62,6 @@
 ;; Terminal
 (setq terminal-here-terminal-command (list "alacritty"))
 
-;; Discord presence
-(add-hook 'doom-load-theme-hook 'elcord-mode)
-
 ;; Keybinds
 (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
@@ -80,3 +77,4 @@
 (define-key global-map (kbd "C-c C-c") 'neotree-change-root)
 (define-key global-map (kbd "C-c C-p") 'neotree-copy-node)
 (define-key global-map (kbd "C-c C-o") 'terminal-here-launch)
+(define-key global-map (kbd "C-c C-e") 'elcord-mode)
