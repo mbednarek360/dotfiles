@@ -25,7 +25,7 @@ killall xss-lock
 
 # Autostart
 xss-lock -l -- betterlockscreen --lock dimblur &
-feh --bg-fill $HOME/Pictures/Wallpapers/background5.png &
+feh --bg-fill $HOME/.config/wallpaper.png &
 dunst &
 sxhkd &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do

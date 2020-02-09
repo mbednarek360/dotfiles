@@ -34,8 +34,8 @@
 
 
 ;; Enable transparency
-(set-frame-parameter (selected-frame) 'alpha '(97 97))
-(add-to-list 'default-frame-alist '(alpha 97 97))
+(set-frame-parameter (selected-frame) 'alpha '(98 98))
+(add-to-list 'default-frame-alist '(alpha 98 98))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
