@@ -52,3 +52,4 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 (package! terminal-here)
 (package! elcord)
+(package! org-preview-html)
