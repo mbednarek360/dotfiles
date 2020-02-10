@@ -65,7 +65,7 @@ XF86AudioStop
  
 # backlight
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-	xbacklight {-inc, -dec} 5
+	xbacklight {-inc, -dec} 2.5
 
 
 
