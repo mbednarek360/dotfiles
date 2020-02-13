@@ -115,6 +115,9 @@ update() {
     doom -y clean
     doom -y refresh
 
+    # rust
+    rustup update
+
     # done
     clear
     echo "Finished updating."
