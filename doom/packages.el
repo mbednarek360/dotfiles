@@ -53,3 +53,4 @@
 (package! terminal-here)
 (package! elcord)
 (package! org-preview-html)
+(package! graphviz-dot-mode)
