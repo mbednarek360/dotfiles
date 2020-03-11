@@ -92,7 +92,7 @@ super + g
 	bspc node -s biggest --follow
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,ctrl + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -217,6 +217,10 @@ super + shift + d
 
 super + shift + v
   sh -c "$VIS"
+
+# sync code
+super + ctrl + s
+  sh -c "$SYNC"
 
 # mblock status
 super + l

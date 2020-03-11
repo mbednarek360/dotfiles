@@ -29,14 +29,27 @@ batch-sync() {
 
 # generic sync
 sync() {
+    if [[ $2 == "-x" ]]
+    then
+        bspc node -t floating
+    fi
     clear
     ssd-mount
     if batch-sync $1 $2
     then
+        ssd-unmount
         clear
         echo "Sync completed successfully."
+    else
+        ssd-unmount
+        clear
+        echo "Error during sync!"
     fi
-    ssd-unmount
+    if [[ $2 == "-x" ]]
+    then
+        sh -c "read -n 1 -s -r -p 'Press any key to continue...'"
+        echo
+    fi
 }
 
 # sync implementations
@@ -126,7 +139,7 @@ update() {
 # mount phone over mtpfs
 ssd-mount() {
     mkdir ~/SSD
-    sudo mount -U b9925f5a-47c0-4ba0-a8ff-87cb43532f97 ~/SSD
+    sudo mount -L MB-SSD ~/SSD
     sudo chmod 0777 -R ~/SSD
 }
 
