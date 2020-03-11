@@ -19,11 +19,11 @@ prime-ssh() {
 }
 
 batch-sync() {
-    if [[ $2 == "-m" ]]
+    if [[ $2 == "-b" ]]
     then
-        sudo bsync $ZHOME/$1 ~/SSD/$1
-    else
         sudo bsync -b $ZHOME/$1 ~/SSD/$1
+    else
+        sudo bsync $ZHOME/$1 ~/SSD/$1
     fi
 }
 
