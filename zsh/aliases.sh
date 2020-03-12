@@ -42,7 +42,7 @@ sync() {
         echo "Sync completed successfully."
     else
         ssd-unmount
-        clear
+        #clear
         echo "Error during sync!"
     fi
     if [[ $2 == "-x" ]]
@@ -139,13 +139,14 @@ update() {
 # mount phone over mtpfs
 ssd-mount() {
     mkdir ~/SSD
-    sudo mount -L MB-SSD ~/SSD
-    sudo chmod 0777 -R ~/SSD
+    sudo losetup --offset $((0x00100000)) /dev/loop0 $(blkid -L MB-SSD | rev | cut -c 2- | rev)
+    sudo mount -o rw,uid=$USER /dev/loop0 ~/SSD > /dev/null
 }
 
 # unmount phone
 ssd-unmount() {
     sudo umount ~/SSD
+    sudo losetup -d /dev/loop0
     rmdir ~/SSD
 }
 
