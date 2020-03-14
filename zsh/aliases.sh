@@ -23,7 +23,7 @@ batch-sync() {
     then
         sudo bsync -b $ZHOME/$1 ~/SSD/$1
     else
-        sudo bsync $ZHOME/$1 ~/SSD/$1
+        sudo bsync -v $ZHOME/$1 ~/SSD/$1
     fi
 }
 
@@ -64,6 +64,24 @@ conf-sync() {
     git -C ~/SSD/Config/Desktop reset --hard ORIG_HEAD
     git -C ~/SSD/Config/Desktop pull origin master 
     ssd-unmount
+}
+
+# scrub code dir for replacable files
+code-clean() {
+    find $ZHOME/Code -type d -name target -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name nimcache -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name node_modules -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name __pycache__ -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name bin -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name packages -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name obj -exec rm -vr {} \;
+    find $ZHOME/Code -type d -name libraries -exec rm -vr {} \;
+    find $ZHOME/Code -name '*tmp*' -exec rm -vr {} \;
+    find $ZHOME/Code -name '*temp*' -exec rm -vr {} \;
+    find $ZHOME/Code -name '*.out' -exec rm -v {} \;
+    find $ZHOME/Code -name '*.class' -exec rm -v {} \;
+    find $ZHOME/Code -name Cargo.lock -exec rm -v {} \;
+    find $ZHOME/Code -type l -exec rm -v {} \;
 }
 
 # mblock
@@ -136,14 +154,14 @@ update() {
     echo "Finished updating."
 }
 
-# mount phone over mtpfs
+# mount ssd
 ssd-mount() {
     mkdir ~/SSD
     sudo losetup --offset $((0x00100000)) /dev/loop0 $(blkid -L MB-SSD | rev | cut -c 2- | rev)
     sudo mount -o rw,uid=$USER /dev/loop0 ~/SSD > /dev/null
 }
 
-# unmount phone
+# unmount ssd
 ssd-unmount() {
     sudo umount ~/SSD
     sudo losetup -d /dev/loop0
