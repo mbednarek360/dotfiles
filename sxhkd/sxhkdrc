@@ -227,5 +227,5 @@ super + l
 	zsh -c "source ~/.config/zsh/aliases.sh && mblock -s"
 
 # mblock toggle
-super + shift + l
+super + ctrl + l
 	zsh -c "source ~/.config/zsh/aliases.sh && mblock -t"
