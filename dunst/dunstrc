@@ -28,9 +28,9 @@
     ### Text ###
 
     font = Hack Nerd Font 12
-    ine_height = 5
+    line_height = 5
     markup = full
-    format = " <b>%s</b>\n%b"
+    format = "<span foreground='#88c0d0'><big></big></span> <b>%s</b>\n%b"
 
     # Alignment of message text.
     alignment = left
@@ -65,8 +65,7 @@
 
 [urgency_critical]
     background = "#2e3440"
-    foreground = "#ffffff"
-    frame_color = "#bf616a"
+    foreground = "#d8dee9"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon

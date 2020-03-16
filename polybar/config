@@ -10,7 +10,7 @@ green = #A3BE8C
 yellow = #EBCB8B
 blue = #81a1c1
 cyan = #88c0d0
-primary = #88c0d0
+primary = ${colors.cyan}
 background-alt = ${colors.dark-gray}
 foreground-alt = ${colors.light-gray}
 alert = ${colors.yellow}
@@ -71,8 +71,6 @@ label-empty-font = 2
 ws-icon-default = ■
 ws-icon-default-font = 2
 
-padding-bottom
-
 [module/wlan]
 type = internal/network
 interface = wlp2s0
@@ -116,7 +114,7 @@ label-muted-foreground = ${colors.foreground-alt}
 format-volume-prefix = "墳 "
 format-muted-prefix = "婢 "
 format-volume-prefix-foreground = ${colors.primary}
-format-muted-prefix-foreground - ${colors.primary}
+format-muted-prefix-foreground = ${colors.primary}
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]

@@ -13,7 +13,7 @@ export DOCS="emacs --chdir ~/Documents"
 export GAME="steam"
 export SYNC="$TERM -e zsh -i -c 'code-sync -x'"
 export SYS="$TERM -e gotop -p"
-export NET="$TERM -e nmtui-connect"
+export NET="$TERM -e sh -c 'bspc node -t floating; sleep 0.1; nmtui-connect'"
 export VIS="$TERM -e cava"
 
 # Kill
