@@ -29,7 +29,7 @@ xss-lock -l -- betterlockscreen --lock dimblur &
 feh --bg-fill $HOME/.config/wallpaper.png &
 dunst &
 sxhkd &
-picom &
+picom --experimental-backends &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done 
