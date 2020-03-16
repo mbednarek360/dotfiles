@@ -33,7 +33,7 @@
 (setq display-line-numbers-type 'relative)
 
 ;; Enable transparency
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
+; (set-frame-parameter (selected-frame) 'alpha '(100 100))
 (add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
