@@ -59,8 +59,8 @@
 ;; Setup neotree config and autoload
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(add-hook 'doom-load-theme-hook (lambda () (neotree-show) (centaur-tabs-local-mode) (ace-window nil)))
-(add-hook 'find-file-hook (lambda () (neotree-toggle) (neotree-toggle) (neotree-enter)))
+(add-hook 'doom-load-theme-hook (lambda () (centaur-tabs-local-mode) (ace-window nil)))
+(add-hook 'find-file-hook (lambda () (neotree-show) (neotree-enter)))
 
 ;; Terminal
 (setq terminal-here-terminal-command (list "alacritty"))

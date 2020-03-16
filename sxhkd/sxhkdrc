@@ -183,21 +183,13 @@ super + shift + ctrl + {Left,Down,Up,Right}
 super + shift + f
   sh -c "$BROWSE"
 
-# config editor
-super + shift + c  
-  sh -c "$CONF"
-
-# code editor
+# editor
 super + shift + e
-  sh -c "$CODE"
+  sh -c "$EDIT"
 
 # games
 super + shift + g
   sh -c "$GAME"
-
-# documents
-super + shift + n
-  sh -c "$DOCS"
 
 # network manager
 super + shift + w
