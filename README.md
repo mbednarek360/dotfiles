@@ -21,6 +21,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - emacs
 - picom
 - polybar
+- redshift
 - rofi
 - sxhkd
 - yay

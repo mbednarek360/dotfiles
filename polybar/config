@@ -13,28 +13,31 @@ cyan = #88c0d0
 primary = #88c0d0
 background-alt = ${colors.dark-gray}
 foreground-alt = ${colors.light-gray}
+alert = ${colors.yellow}
 
 [bar/main]
 monitor = ${env:MONITOR:}
-width = 100%
-height = 25
+width = 100%:-24
+height = 30
 radius = 0
-fixed-center = false
+fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-line-size = 2
+line-size = 3
+offset-x = 12
+offset-y = 10
 border-size = 0
 border-color = #00000000
-padding-left = 0
-padding-right = 1
+padding-left = 1
+padding-right = 2
 module-margin-left = 1
-module-margin-right = 1
-font-0 = Hack Nerd Font:pixelsize=12;1
-font-1 = Hack Nerd Font:pixelsize=12;1
-font-2 = Hack Nerd Font:pixelsize=12;1
+module-margin-right = 2
+font-0 = Hack Nerd Font:pixelsize=12;3
+font-1 = Hack Nerd Font:pixelsize=12;2
+font-2 = Hack Nerd Font:pixelsize=12;3
 modules-left = bspwm
-modules-center = 
-modules-right = pulseaudio cpu wlan eth battery temperature date
+modules-center = time
+modules-right = pulseaudio wlan eth battery temperature date
 wm-restack = bspwm
 override-redirect = false
 cursor-click = pointer
@@ -42,58 +45,79 @@ cursor-scroll = ns-resize
 
 [module/bspwm]
 type = internal/bspwm
-label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 1
-label-occupied = %name%
-label-occupied-padding = 1
-label-urgent = %name%!
-label-urgent-background = ${colors.yellow}
-label-urgent-padding = 1
-label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-underline = ${colors.green}
-label = %percentage:2%%
+label-focused = %icon%
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.primary}
+label-focused-padding = 1
+label-focused-font = 2
+
+label-occupied = ■
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.foreground}
+label-occupied-font = 2
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-font = 2
+
+label-empty = %icon%
+label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
+label-empty-font = 2
+
+ws-icon-default = ■
+ws-icon-default-font = 2
+
+padding-bottom
 
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 format-connected = <label-connected>
-format-connected-underline = ${colors.cyan}
+format-connected-prefix = "直 "
+format-connected-prefix-foreground = ${colors.primary}
 label-connected = %essid%
 
 [module/eth]
 type = internal/network
 interface = enp0s31f6
 interval = 3.0
-format-connected-underline = ${colors.cyan}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.primary}
 label-connected = %local_ip%
+
+[module/time]
+type = internal/date
+interval = 5
+time = %H:%M
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %time%
 
 [module/date]
 type = internal/date
-interval = 1
-time = %H:%M:%S
-time-alt = %Y-%m-%d
-format-underline = ${colors.blue}
-label = %time%
+interval = 5
+date = "%d/%m"
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <label-volume>
-label-volume = VOL %percentage%%
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 label-muted = MUTE
 label-muted-foreground = ${colors.foreground-alt}
+format-volume-prefix = "墳 "
+format-muted-prefix = "婢 "
+format-volume-prefix-foreground = ${colors.primary}
+format-muted-prefix-foreground - ${colors.primary}
 bar-volume-empty-foreground = ${colors.foreground-alt}
-format-muted-underline = ${colors.green}
-format-volume-underline = ${colors.blue}
 
 [module/battery]
 type = internal/battery
@@ -101,24 +125,27 @@ battery = BAT0
 adapter = ADP1
 full-at = 100
 format-charging = <label-charging>
-format-charging-underline = ${colors.yellow}
 format-discharging = <label-discharging>
-format-discharging-underline = ${colors.blue}
+format-charging-prefix = " "
+format-discharging-prefix = " "
+format-charging-prefix-color = ${colors.primary}
+format-discharging-prefix-color = ${colors.primary}
 
 [module/temperature]
 type = internal/temperature
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 thermal-zone = 0
 warn-temperature = 75
 format = <label>
-format-underline = ${colors.green}
 format-warn = <label-warn>
-format-warn-underline = ${colors.yellow}
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
 label = %temperature-c%
 
 [settings]
 screenchange-reload = true
+pseudo-transparency = true
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0

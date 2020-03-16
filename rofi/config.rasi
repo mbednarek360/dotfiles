@@ -4,11 +4,13 @@
 
 configuration {
 	modi: 			"drun,run";
+	lines: 			5;
 	width: 			750;
-	lines: 			10;
-	font: 			"Hack Nerd Font 12";
+	fullscreen:     true;
+	bw:             0;
+	font: 			"Hack Nerd Font 14";
 	show-match: 		false;
-	separator-style: 	"solid";
+	separator-style: 	none;
 	hide-scrollbar: 	true;
 	theme:			"nord";
 }

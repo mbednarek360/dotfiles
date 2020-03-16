@@ -7,14 +7,14 @@
 //----------------------
 
 * {
-    nord0:			 #2E3440;
-    nord1: 			 #3B4252;
-    nord2: 			 #434C5E;
-    nord3: 			 #4C566A;
-    nord4: 			 #D8DEE9;
+    nord0:               #2E3440EE;
+    nord1:               #3B4252;
+    nord2:               #434C5E;
+    nord3:               #4C566A;
+    nord4:               #D8DEE9;
     nord5:  			 #E5E9F0;
     nord6:  			 #ECEFF4;
-    nord7: 			 #8FBCBB;
+    nord7: 			     #8FBCBB;
     nord8:   			 #88C0D0;
     nord9:  			 #81A1C1;
     nord10: 			 #5E81AC;
@@ -25,7 +25,7 @@
     nord15: 			 #B48EAD;
     background:                  @nord0;
     foreground:                  @nord4;
-    selected-normal-foreground:  @nord4;
+    selected-normal-foreground:  @nord8;
     normal-foreground:           @foreground;
     alternate-normal-background: @nord0;
     selected-urgent-foreground:  @nord4;
@@ -37,7 +37,7 @@
     bordercolor:                 @nord9;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
-    selected-normal-background:  @nord3;
+    selected-normal-background:  @nord0;
     border-color:                @nord9;
     spacing:                     2;
     separatorcolor:              @nord9;
@@ -47,7 +47,7 @@
     background-color:            @background;
     alternate-active-foreground: @active-foreground;
     active-background:           @background;
-    selected-active-background:  @nord3;
+    selected-active-background:  @nord0;
 }
 
 //----------------------
@@ -55,105 +55,103 @@
 //----------------------
 
 #window {
-    background-color: @background;
+    padding: 40% 40% 40% 42%;
 }
 
 #mainbox {
-    border:  2;
-    padding: 10;
+    border:  0;
+    background-color: #00000000;
 }
 
 #message {
-    border:       2px 2px 2px ;
+    border:       0px 0px 0px ;
     border-color: @separatorcolor;
-    padding:      10 ;
+    padding:      10;
+    background-color: #00000000;
 }
 
 #textbox {
     text-color: @foreground;
+
+   background-color: #00000000;
 }
 
 #listview {
     fixed-height: 0;
-    padding:	  5 0 0;
     spacing:      5px ;
+    background-color: #00000000;
+
 }
 
 #element {
     border:  0;
-    padding: 5px ;
+    padding: 5px;
+    background-color: #00000000;
 }
 
 #element.normal.normal {
-    background-color: @normal-background;
     text-color:       @normal-foreground;
 }
 
 #element.normal.urgent {
-    background-color: @urgent-background;
     text-color:       @urgent-foreground;
 }
 
 #element.normal.active {
-    background-color: @active-background;
     text-color:       @active-foreground;
 }
 
 #element.selected.normal {
-    background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 
 #element.selected.urgent {
-    background-color: @selected-urgent-background;
     text-color:       @selected-urgent-foreground;
 }
 
 #element.selected.active {
-    background-color: @selected-active-background;
     text-color:       @selected-active-foreground;
 }
 
 #element.alternate.normal {
-    background-color: @alternate-normal-background;
     text-color:       @alternate-normal-foreground;
 }
 
 #element.alternate.urgent {
-    background-color: @alternate-urgent-background;
     text-color:       @alternate-urgent-foreground;
 }
 
 #element.alternate.active {
-    background-color: @alternate-active-background;
     text-color:       @alternate-active-foreground;
 }
 
 #button.selected {
-    background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 
 #inputbar {
+    background-color: #00000000;
     spacing:    5;
     text-color: @normal-foreground;
-    padding:    5px ;
-    border:	0 0 1;
+    padding:    0px 0px 10px;
+    border:	0 0 0;
     border-color: @separatorcolor;
 }
 
 #case-indicator {
+    background-color: #00000000;
     spacing:    0;
     text-color: @normal-foreground;
 }
 
 #entry {
+    background-color: #00000000;
     spacing:    0;
     text-color: @normal-foreground;
 }
 
 #prompt {
+    background-color: #00000000;
     spacing:    0;
     text-color: @normal-foreground;
 }
-

@@ -18,7 +18,7 @@
     separator_height = 2
     padding = 10
     horizontal_padding = 10
-    frame_width = 2
+    frame_width = 0
     frame_color = "#81a1c1"
     separator_color = frame
     sort = yes
@@ -30,7 +30,7 @@
     font = Hack Nerd Font 12
     ine_height = 5
     markup = full
-    format = "<b>%s</b>\n%b"
+    format = " <b>%s</b>\n%b"
 
     # Alignment of message text.
     alignment = left
