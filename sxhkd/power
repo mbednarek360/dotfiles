@@ -1,7 +1,7 @@
 #!/bin/sh
 # rofi power menu
 
-chosen=$(echo -e " Lock\n鈴 Suspend\n漏 Reboot\n襤 Shutdown" | rofi -dmenu -i -lines 4)
+chosen=$(echo -e " Lock\n鈴 Suspend\n漏 Reboot\n襤 Shutdown" | rofi -p power -dmenu -i -lines 4)
 if [[ $chosen == *"Lock"* ]]; then
     betterlockscreen --lock dimblur
 elif [[ $chosen == *"Suspend"* ]]; then
