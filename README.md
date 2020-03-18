@@ -23,6 +23,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - polybar
 - redshift
 - rofi
+- spicetify
 - sxhkd
 - yay
 - zsh
@@ -30,6 +31,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
  
 **Additional programs used:**
 - antibody
+- betterdiscord
 - feh
 - firefox
 - gotop
