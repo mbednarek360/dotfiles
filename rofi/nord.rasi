@@ -7,7 +7,7 @@
 //----------------------
 
 * {
-    nord0:               #2E344088;
+    nord0:               #2E3440BB;
     nord1:               #3B4252;
     nord2:               #434C5E;
     nord3:               #4C566A;
@@ -25,7 +25,7 @@
     nord15: 			 #B48EAD;
     background:                  @nord0;
     foreground:                  @nord4;
-    selected-normal-foreground:  @nord8;
+    selected-normal-foreground:  @nord9;
     normal-foreground:           @foreground;
     alternate-normal-background: @nord0;
     selected-urgent-foreground:  @nord4;
