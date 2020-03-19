@@ -32,9 +32,9 @@ padding-left = 1
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
-font-0 = Hack Nerd Font:pixelsize=12;3
-font-1 = Hack Nerd Font:pixelsize=12;2
-font-2 = Hack Nerd Font:pixelsize=12;3
+font-0 = Fira Code Nerd Font:pixelsize=12;3
+font-1 = Fira Code Nerd Font:pixelsize=12;2
+font-2 = Fira Code Nerd Font:pixelsize=12;3
 modules-left = bspwm
 modules-center = time
 modules-right = pulseaudio wlan eth battery temperature date
