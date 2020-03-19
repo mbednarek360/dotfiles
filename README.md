@@ -13,13 +13,13 @@ This repo holds the configuration for most of my programs configured in the `~/.
 ## **Programs**
 
 **Configured programs:**
-- alacritty
 - betterdiscord
 - betterlockscreen
 - bspwm
 - cava
 - dunst
 - emacs
+- kitty
 - picom
 - polybar
 - redshift
@@ -39,4 +39,4 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - maim
 - neofetch
 - networkmanager
-- nerd-fonts-complete
+- nerd-fonts-fira-code
