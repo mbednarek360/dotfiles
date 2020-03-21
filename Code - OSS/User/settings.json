@@ -15,6 +15,7 @@
     "files.autoSave": "onWindowChange",
     "window.restoreWindows": "none",
     "window.zoomLevel": 0.5,
+    "discord.silent": true,
 }
 
 /* Extensions:
