@@ -27,7 +27,7 @@
 
     ### Text ###
 
-    font = Fira Code Nerd Font 12
+    font = JetBrainsMono Nerd Font 12
     line_height = 5
     markup = full
     format = "<span foreground='#81a1c1'><big></big></span> <b>%s</b>\n%b"

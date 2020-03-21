@@ -8,7 +8,7 @@ configuration {
 	width: 			750;
 	fullscreen:     true;
 	bw:             0;
-	font: 			"Fira Code Nerd Font 14";
+	font: 			"JetBrainsMono Nerd Font 14";
 	show-match: 		false;
 	separator-style: 	none;
 	hide-scrollbar: 	true;

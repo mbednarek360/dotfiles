@@ -32,9 +32,8 @@ padding-left = 1
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
-font-0 = Fira Code Nerd Font:pixelsize=12;3
-font-1 = Fira Code Nerd Font:pixelsize=12;2
-font-2 = Fira Code Nerd Font:pixelsize=12;3
+font-0 = JetBrainsMono Nerd Font:pixelsize=12;3
+font-1 = JetBrainsMono Nerd Font:pixelsize=10;3
 modules-left = bspwm
 modules-center = time
 modules-right = pulseaudio wlan eth battery temperature date
@@ -52,7 +51,7 @@ label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
 label-focused-font = 2
 
-label-occupied = ■
+label-occupied = %icon%
 label-occupied-padding = 1
 label-occupied-foreground = ${colors.foreground}
 label-occupied-font = 2
@@ -68,7 +67,7 @@ label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
 label-empty-font = 2
 
-ws-icon-default = ■
+ws-icon-default = ﱢ
 ws-icon-default-font = 2
 
 [module/wlan]
