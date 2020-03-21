@@ -142,12 +142,12 @@ update() {
         
     # plugins
     plug-update
-    doom -y upgrade
-    doom -y clean
-    doom -y refresh
 
     # rust
     rustup update
+
+    # betterdiscord
+    betterdiscordctl update
 
     # done
     clear

@@ -17,6 +17,11 @@ Code\ -\ OSS/User/*
 !rofi/
 !spicetify/config.ini
 !spicetify/Themes/
+!spotifyd/
+spotifyd/passwd.txt
+!spotify-tui/
+spotify-tui/*
+!spotify-tui/config.yml
 !sxhkd/
 !zsh/
 !screenshots
