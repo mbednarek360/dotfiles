@@ -8,7 +8,7 @@ export BROWSE="firefox-developer-edition"
 export DISCORD="discord"
 export EDIT="code-oss"
 export GAME="steam"
-export MUSIC="$TERM -e spt"
+export MUSIC="spotify"
 export SYNC="$TERM -e zsh -i -c 'code-sync -x'"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e sh -c 'bspc node -t floating; sleep 0.1; nmtui-connect'"
@@ -31,8 +31,6 @@ picom --experimental-backends &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done
-an2linuxserver.py &
-spotifyd --no-daemon &
 
 
 # Monitor
