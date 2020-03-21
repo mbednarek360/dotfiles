@@ -17,8 +17,8 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - betterlockscreen
 - bspwm
 - cava
+- code-oss
 - dunst
-- emacs
 - kitty
 - picom
 - polybar
@@ -39,4 +39,4 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - maim
 - neofetch
 - networkmanager
-- nerd-fonts-fira-code
+- nerd-fonts-jetbrains-mono

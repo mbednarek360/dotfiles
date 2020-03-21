@@ -5,11 +5,12 @@
 !betterlockscreenrc
 !bspwm/
 !cava/
-!Code\ -\ OSS/User/
-Code\ -\ OSS/User/User
-Code\ -\ OSS/User/logs
-Code\ -\ OSS/User/workspaceStorage
-Code\ -\ OSS/User/globalStorage
+!Code\ -\ OSS/
+Code\ -\ OSS/*
+!Code\ -\ OSS/User
+Code\ -\ OSS/User/*
+!Code\ -\ OSS/User/keybindings.json
+!Code\ -\ OSS/User/settings.json
 !dunst/
 !picom/
 !polybar/

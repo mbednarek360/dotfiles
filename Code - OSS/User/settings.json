@@ -1,0 +1,29 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Nord",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Sans'",
+    "editor.fontLigatures": true,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "hidden",
+    "window.enableMenuBarMnemonics": false,
+    "vim.useSystemClipboard": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.lineNumbers": "relative",
+    "zenMode.hideLineNumbers": false,
+    "terminal.explorerKind": "external",
+    "files.autoSave": "onWindowChange",
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 0,
+}
+
+/* Extensions:
+    arcticicestudio.nord-visual-studio-code
+    be5invis.toml
+    EFanZh.graphviz-preview
+    icrawl.discord-vscode
+    PKief.material-icon-theme
+    rust-lang.rust
+    vscode-org-mode.org-mode
+    vscodevim.vim
+*/
