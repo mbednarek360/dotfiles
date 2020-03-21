@@ -80,6 +80,7 @@ code-clean() {
     find $ZHOME/Code -name '*temp*' -exec rm -vr {} \;
     find $ZHOME/Code -name '*.out' -exec rm -v {} \;
     find $ZHOME/Code -name '*.class' -exec rm -v {} \;
+    find $ZHOME/Code -name '*.vscode*' -exec rm -v {} \;
     find $ZHOME/Code -name Cargo.lock -exec rm -v {} \;
     find $ZHOME/Code -type l -exec rm -v {} \;
 }
