@@ -17,6 +17,7 @@ Code\ -\ OSS/User/*
 !picom/
 !polybar/
 !ranger/
+ranger/plugins/
 !redshift/
 !rofi/
 !spicetify/config.ini
