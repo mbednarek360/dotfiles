@@ -13,8 +13,10 @@ Code\ -\ OSS/User/*
 !Code\ -\ OSS/User/settings.json
 !dunst/
 !kitty/
+!nvim/
 !picom/
 !polybar/
+!ranger/
 !redshift/
 !rofi/
 !spicetify/config.ini

@@ -142,7 +142,7 @@ super + shift + KP_{1-9}
     bspc node -d '{1-9}' --follow
 
 # rotate node
-super + shift + r
+super + ctrl + r
     bspc node @/ -R 90
 
 # cycle node focus
@@ -182,6 +182,10 @@ super + shift + ctrl + {Left,Down,Up,Right}
 # browser
 super + shift + f
   sh -c "$BROWSE"
+
+# editor
+super + shift + r
+  sh -c "$FILE"
 
 # editor
 super + shift + e
