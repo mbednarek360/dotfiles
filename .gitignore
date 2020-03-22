@@ -12,6 +12,7 @@ Code\ -\ OSS/User/*
 !Code\ -\ OSS/User/keybindings.json
 !Code\ -\ OSS/User/settings.json
 !dunst/
+!kitty/
 !picom/
 !polybar/
 !redshift/

@@ -1,6 +1,7 @@
 # **Dotfiles**
 ## Personal dotfiles for my Arch / BSPWM install.
-![Screenshot](screenshots/main.png)
+![main](screenshots/main.png)
+![power](screenshots/power.png)
 
 ---
 ## **Description**
