@@ -54,6 +54,7 @@ sync() {
 
 # sync implementations
 code-sync() {
+    code-clean
     sync Code $1
 }
 doc-sync() {
