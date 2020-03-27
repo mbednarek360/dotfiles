@@ -20,6 +20,8 @@ Code\ -\ OSS/User/*
 ranger/plugins/
 !redshift/
 !rofi/
+!spicetify/
+spicetify/*
 !spicetify/config.ini
 !spicetify/Themes/
 !sxhkd/
