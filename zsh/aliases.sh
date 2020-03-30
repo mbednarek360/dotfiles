@@ -132,8 +132,17 @@ raze() {
     finshir --wait 1s --write-periodicity 10s --receiver $ip:$port
 }
 
-# doom emacs
-alias doom="~/.emacs.d/bin/doom"
+# encryption
+encrypt() {
+    openssl enc -aria-256-cbc -pbkdf2 -in $1 -out $1.256
+    rm $1
+}
+
+# decryption
+decrypt() {
+    openssl enc -aria-256-cbc -pbkdf2 -d -in $1 > "${1%.*}"
+    rm $1
+}
 
 # updates
 update() {
