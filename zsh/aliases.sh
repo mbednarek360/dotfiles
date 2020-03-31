@@ -134,7 +134,7 @@ raze() {
 
 # encryption
 encrypt() {
-    openssl enc -aria-256-cbc -pbkdf2 -in $1 -out $1.256
+    openssl enc -aria-256-cbc -pbkdf2 -in $1 -out $1.256 $2 $3
     rm $1
 }
 
@@ -143,6 +143,20 @@ decrypt() {
     openssl enc -aria-256-cbc -pbkdf2 -d -in $1 > "${1%.*}"
     rm $1
 }
+
+# update encrypted vault
+bw-update() {
+    ssd-mount
+    echo -n "Master Password: "
+    echo 
+    read -s pass
+    bw export $pass --format json --output vault.json
+    encrypt vault.json -pass pass:$pass
+    rm ~/SSD/Config/vault.json.256
+    mv vault.json.256 ~/SSD/Config/
+    ssd-unmount
+}
+
 
 # updates
 update() {

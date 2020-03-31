@@ -14,7 +14,7 @@
     "terminal.explorerKind": "external",
     "files.autoSave": "onWindowChange",
     "window.restoreWindows": "none",
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 0,
     "discord.silent": true,
 }
 
