@@ -150,6 +150,7 @@ bw-update() {
     echo -n "Master Password: "
     echo 
     read -s pass
+    bw sync $pass
     bw export $pass --format json --output vault.json
     encrypt vault.json -pass pass:$pass
     rm ~/SSD/Config/vault.json.256
