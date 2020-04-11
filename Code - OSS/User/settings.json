@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Nord",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Sans'",
     "editor.fontLigatures": true,
     "workbench.activityBar.visible": false,
@@ -16,6 +15,8 @@
     "window.restoreWindows": "none",
     "window.zoomLevel": 0,
     "discord.silent": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Nord",
 }
 
 /* Extensions:
@@ -26,4 +27,5 @@
     PKief.material-icon-theme
     rust-lang.rust
     vscodevim.vim
+    lunaryorn.fish-ide
 */
