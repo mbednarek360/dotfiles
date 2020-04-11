@@ -152,7 +152,7 @@ function ssd-mount
 end
 
 # unmount ssd
-function sdd-unmount
+function ssd-unmount
     sudo umount ~/SSD
     sudo losetup -d /dev/loop0
     rmdir ~/SSD
