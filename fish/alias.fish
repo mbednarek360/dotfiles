@@ -1,42 +1,22 @@
-# mount nas
-nas-mount() {
-    mkdir ~/NAS
-    sshfs mbednarek360@mbpw3.us.to:/files/ ~/NAS -p 24
-}
+set -x ZHOME /home/mbednarek360
 
-# unmount nas
-nas-unmount() {
-    fusermount -u ~/NAS
-    rmdir ~/NAS
-}
-
-# sshs
-nas-ssh() {
-    ssh root@mbpw3.us.to -p 24
-}
-prime-ssh() {
-    ssh mbednarek360@mbpw3.us.to
-}
-
-batch-sync() {
-    if [[ $2 == "-b" ]]
-    then
-        sudo bsync -b $ZHOME/$1 ~/SSD/$1
+# main sync function
+function batch-sync
+    if test $argv[2] = "-b"
+        sudo bsync -b $ZHOME/$argv[1] ~/SSD/$argv[1]
     else
-        sudo bsync -v $ZHOME/$1 ~/SSD/$1
-    fi
-}
+        sudo bsync -v $ZHOME/$argv[1] ~/SSD/$argv[1]
+    end
+end
 
 # generic sync
-sync() {
-    if [[ $2 == "-x" ]]
-    then
+function sync
+    if test $argv[2] = "-x"
         bspc node -t floating
-    fi
+    end
     clear
     ssd-mount
-    if batch-sync $1 $2
-    then
+    if batch-sync $argv[1] $argv[2]
         ssd-unmount
         clear
         echo "Sync completed successfully."
@@ -44,31 +24,30 @@ sync() {
         ssd-unmount
         #clear
         echo "Error during sync!"
-    fi
-    if [[ $2 == "-x" ]]
-    then
+    end
+    if test $argv[2] = "-x"
         sh -c "read -n 1 -s -r -p 'Press any key to continue...'"
         echo
-    fi
-}
+    end
+end
 
 # sync implementations
-code-sync() {
+function code-sync
     code-clean
-    sync Code $1
-}
-doc-sync() {
-    sync Documents $1
-}
-conf-sync() {
+    sync Code $argv[1]
+end
+function doc-sync
+    sync Documents $argv[1]
+end
+function conf-sync
     ssd-mount
     git -C ~/SSD/Config/dotfiles reset --hard ORIG_HEAD
     git -C ~/SSD/Config/dotfiles pull origin master
     ssd-unmount
-}
+end
 
 # scrub code dir for replacable files
-code-clean() {
+function code-clean
     find $ZHOME/Code -type d -name target -exec rm -vr {} \;
     find $ZHOME/Code -type d -name nimcache -exec rm -vr {} \;
     find $ZHOME/Code -type d -name node_modules -exec rm -vr {} \;
@@ -84,68 +63,54 @@ code-clean() {
     find $ZHOME/Code -name '*.class' -exec rm -v {} \;
     find $ZHOME/Code -name Cargo.lock -exec rm -v {} \;
     find $ZHOME/Code -type l -exec rm -v {} \;
-}
+end
 
 # mblock
-mblock() {
-    if [[ $@ == "-t" ]]
-    then
+function mblock
+    if test $argv[1] = "-t"
         echo "toggle" | nc 192.168.1.9 1500
     	mblock -s
-	elif [[ $@ == "-s" ]]
-	then
-        notify-send "MBLock: $(echo "status" | nc 192.168.1.9 1500)"
-	fi	
-}
-
-# mbpw3 paste
-mbpw3() {
-    if [[ $1 == "-p" ]]
-    then
-        id=$(curl -s --data-binary @$2 "mbpw3.us.to:81/paste/create?pass=$3")
-        echo "http://mbpw3.us.to/paste/$id" | xclip -selection clipboard
-    elif [[ $1 == "-r" ]]
-    then
-        [[ $(curl -s "http://mbpw3.us.to:81/paste/delete?id=$2&pass=$3") == "true" ]]
-    fi
-}
+	else if test $argv[1] = "-s"
+        set stat (echo "status" | nc 192.168.1.9 1500)
+        notify-send "MBLock: $stat"
+	end	
+end
 
 # plugin update
-plug-update() {
-    rm $ZHOME/.cache/zsh/plugins.sh
-    antibody bundle < $ZHOME/.config/zsh/plugins.txt > $ZHOME/.cache/zsh/plugins.sh
-    source $ZHOME/.config/zsh/zshrc
-}
+function plug-update
+    fish ~/.config/fish/plugins.fish
+    fisher
+end
 
 # neofetch
-neofetch() {
+function neofetch
     clear
     echo
     command neofetch
-}
+end
 
 # finshir
-raze() {
-    ip=$1
-    port=$2
-    ((($TERM -e watch -n 1 nc -zv -w5 $ip $port) && clear; killall -s INT finshir) &)
+function raze
+    set ip $argv[1]
+    set port $argv[2]
+    $TERM -e watch -n 1 nc -zv -w5 $ip $port && clear; killall -s INT finshir &
     finshir --wait 1s --write-periodicity 10s --receiver $ip:$port
-}
+end
 
 # encryption
-encrypt() {
-    openssl enc -aria-256-cbc -pbkdf2 -in $1 -out $1.256 $2 $3
-    rm $1
-}
+function encrypt
+    openssl enc -aria-256-cbc -pbkdf2 -in $argv[1] -out $argv[1].256 $argv[2] $argv[3]
+    rm $argv[1]
+end
 
 # decryption
-decrypt() {
-    openssl enc -aria-256-cbc -pbkdf2 -d -in $1 > "${1%.*}"
-    rm $1
-}
+function decrypt
+    openssl enc -aria-256-cbc -pbkdf2 -d -in $argv[1] > "${1%.*}"
+    rm $argv[1]
+end
 
 # update encrypted vault
-bw-update() {
+function bw-update
     ssd-mount
     echo -n "Master Password: "
     echo 
@@ -156,11 +121,10 @@ bw-update() {
     rm ~/SSD/Config/vault.json.256
     mv vault.json.256 ~/SSD/Config/
     ssd-unmount
-}
-
+end
 
 # updates
-update() {
+function update
     
     # packages
     yay -Syu --noconfirm
@@ -178,48 +142,48 @@ update() {
     # done
     clear
     echo "Finished updating."
-}
+end
 
 # mount ssd
-ssd-mount() {
+function ssd-mount
     mkdir ~/SSD
-    sudo losetup --offset $((0x00100000)) /dev/loop0 $(blkid -L MB-SSD | rev | cut -c 2- | rev)
+    sudo losetup --offset 0x00100000 /dev/loop0 (blkid -L MB-SSD | rev | cut -c 2- | rev)
     sudo mount -o rw,uid=$USER /dev/loop0 ~/SSD > /dev/null
-}
+end
 
 # unmount ssd
-ssd-unmount() {
+function sdd-unmount
     sudo umount ~/SSD
     sudo losetup -d /dev/loop0
     rmdir ~/SSD
-}
+end
 
 # save screenshot
-scr-save() {
+function scr-save
     mv /tmp/scr.png ./screenshot.png
     echo "Saved locally."
-}
+end
 
 # delete screenshot
-scr-rm() {
+function scr-rm    
     rm /tmp/scr.png
-}
+end
 
 # save recording
-rec-save() {
+function rec-save    
     mv /tmp/rec.mp4 ./recording.mp4
     echo "Saved locally."
-}
+end
 
 # delete recording
-rec-rm() {
+function rec-rm
     rm /tmp/rec.mp4
-}
+end
 
 # weather
-wttr() {
+function wttr
     clear
     echo
-    curl wttr.in/$1
+    curl wttr.in/$argv[1]
     echo
-}
+end

@@ -12,6 +12,10 @@ Code\ -\ OSS/User/*
 !Code\ -\ OSS/User/keybindings.json
 !Code\ -\ OSS/User/settings.json
 !dunst/
+!fish/
+fish/*
+!fish/*.fish
+!fish/dir_colors
 !kitty/
 !nvim/
 !picom/
@@ -25,7 +29,6 @@ spicetify/*
 !spicetify/config.ini
 !spicetify/Themes/
 !sxhkd/
-!zsh/
 !screenshots
 !wallpaper.png
 !README.md

@@ -10,6 +10,7 @@
 ![banner](https://img.shields.io/static/v1?label=Menu&message=Rofi&style=flat-square&colorA=434c5e&colorB=81a1c1)
 ![banner](https://img.shields.io/static/v1?label=Font&message=JetBrainsMono&style=flat-square&colorA=434c5e&colorB=81a1c1)
 ![banner](https://img.shields.io/static/v1?label=Term&message=Kitty&style=flat-square&colorA=434c5e&colorB=81a1c1)
+![banner](https://img.shields.io/static/v1?label=Shell&message=Fish&style=flat-square&colorA=434c5e&colorB=81a1c1)
 ![banner](https://img.shields.io/static/v1?label=Editor&message=VSCode&style=flat-square&colorA=434c5e&colorB=81a1c1)
 
 </center>
@@ -17,9 +18,7 @@
 ---
 ## **Description**
 
-This repo holds the configuration for most of my programs configured in the `~/.config` directory. Just install the programs listed below, and clone the folders to your config directory. To get zsh to work you must link it to the config as shown below.
-
-`ln -s ~/.config/zsh/zshrc ~/.zshrc`
+This repo holds the configuration for most of my programs configured in the `~/.config` directory. Just install the programs listed below, and clone the folders to your config directory. 
 
 ---
 ## **Programs**
@@ -31,6 +30,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - cava
 - code-oss
 - dunst
+- fish
 - kitty
 - neovim
 - picom
@@ -38,16 +38,16 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - ranger
 - redshift
 - rofi
+- silver
 - spicetify
 - sxhkd
 - yay
-- zsh
 
  
 **Additional programs used:**
-- antibody
 - feh
 - firefox
+- fisher
 - gotop
 - mpv
 - maim

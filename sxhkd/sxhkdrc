@@ -220,8 +220,8 @@ super + ctrl + s
 
 # mblock status
 super + l
-	zsh -c "source ~/.config/zsh/aliases.sh && mblock -s"
+	fish -c "source ~/.config/fish/alias.fish && mblock -s"
 
 # mblock toggle
 super + ctrl + l
-	zsh -c "source ~/.config/zsh/aliases.sh && mblock -t"
+	fish -c "source ~/.config/fish/alias.fish && mblock -t"
