@@ -2,11 +2,7 @@ set -x ZHOME /home/mbednarek360
 
 # main sync function
 function batch-sync
-    if test $argv[2] = "-b"
-        sudo bsync -b $ZHOME/$argv[1] ~/SSD/$argv[1]
-    else
-        sudo bsync -v $ZHOME/$argv[1] ~/SSD/$argv[1]
-    end
+    sudo osync.sh $ZHOME/.config/osync/sync.conf --initiator="$ZHOME/$argv[1]" --target="$ZHOME/SSD/$argv[1]"
 end
 
 # generic sync
@@ -16,7 +12,7 @@ function sync
     end
     clear
     ssd-mount
-    if batch-sync $argv[1] $argv[2]
+    if batch-sync $argv[1]
         ssd-unmount
         clear
         echo "Sync completed successfully."
@@ -146,16 +142,14 @@ end
 
 # mount ssd
 function ssd-mount
-    mkdir ~/SSD
-    sudo losetup --offset 0x00100000 /dev/loop0 (blkid -L MB-SSD | rev | cut -c 2- | rev)
-    sudo mount -o rw,uid=$USER /dev/loop0 ~/SSD > /dev/null
+    mkdir $ZHOME/SSD
+    sudo mount (blkid -L MB-SSD) $ZHOME/SSD
 end
 
 # unmount ssd
 function ssd-unmount
-    sudo umount ~/SSD
-    sudo losetup -d /dev/loop0
-    rmdir ~/SSD
+    sudo umount $ZHOME/SSD
+    rmdir $ZHOME/SSD
 end
 
 # save screenshot

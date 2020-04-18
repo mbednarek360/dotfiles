@@ -33,6 +33,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - fish
 - kitty
 - neovim
+- osync
 - picom
 - polybar
 - ranger

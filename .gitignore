@@ -18,6 +18,7 @@ fish/*
 !fish/dir_colors
 !kitty/
 !nvim/
+!osync/
 !picom/
 !polybar/
 !ranger/
