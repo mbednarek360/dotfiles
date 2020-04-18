@@ -17,6 +17,9 @@
     "discord.silent": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Nord",
+    "files.exclude": {
+        "**/.osync_workdir": true
+    },
 }
 
 /* Extensions:
