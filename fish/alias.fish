@@ -29,7 +29,7 @@ end
 
 # sync implementations
 function code-sync
-    code-clean
+    #code-clean
     sync Code $argv[1]
 end
 function doc-sync
