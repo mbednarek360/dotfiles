@@ -78,13 +78,6 @@ function plug-update
     fisher
 end
 
-# neofetch
-function neofetch
-    clear
-    echo
-    command neofetch
-end
-
 # finshir
 function raze
     set ip $argv[1]

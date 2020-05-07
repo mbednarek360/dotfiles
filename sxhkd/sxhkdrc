@@ -211,9 +211,6 @@ super + shift + s
 super + shift + d
   sh -c "$DISCORD"
 
-super + shift + v
-  sh -c "$VIS"
-
 # sync code
 super + ctrl + s
   sh -c "$SYNC"

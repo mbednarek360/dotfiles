@@ -9,7 +9,16 @@ end
 set -x theme_color_scheme nord
 
 # greeting
-set fish_greeting
+function fish_greeting
+    neofetch\
+     --disable 'icons' --disable 'title'\
+     --disable 'uptime' --disable 'theme'\
+     --disable 'resolution' --disable 'memory'\
+     --disable 'packages' --disable 'cols'\
+     --disable 'term_font' --kitty --size '145'\
+     --disable 'underline' --gap '2'\
+     --source '/home/mbednarek360/.config/wallpaper.png'
+end
 
 # silver prompt
 set SILVER status:magenta:black cmdtime:black:yellow git:green:black dir:blue:black
