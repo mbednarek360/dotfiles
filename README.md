@@ -55,3 +55,5 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - neofetch
 - networkmanager
 - nerd-fonts-jetbrains-mono
+
+**A complete list of programs can be found [here](pkglist.txt).**
