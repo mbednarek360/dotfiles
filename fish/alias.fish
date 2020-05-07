@@ -112,12 +112,18 @@ function bw-update
     ssd-unmount
 end
 
+# update package list
+function pkg-update
+    yay -Qeq > $ZHOME/.config/pkglist.txt
+end
+
 # updates
 function update
     
     # packages
     yay -Syu --noconfirm
     yay -c --noconfirm
+    pkg-update
         
     # plugins
     plug-update

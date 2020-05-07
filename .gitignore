@@ -35,4 +35,5 @@ spicetify/*
 !README.md
 !LICENSE.md
 !.gitignore
+!pkglist.txt
 *.log
