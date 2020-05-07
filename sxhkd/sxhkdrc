@@ -10,7 +10,7 @@ super + Return
 
 # power menu
 super + shift + p
-	~/.config/sxhkd/power
+	~/.config/sxhkd/power.sh
 
 # calculator
 XF86Calculator
@@ -27,25 +27,25 @@ super + {alt, ctrl} + space
     maim -u /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Screen Copied' 
 
 shift + @Print
-     maim -u -i $(xdotool getactivewindow) /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Window Copied'
+     maim -u -i (xdotool getactivewindow) /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Window Copied'
     
 ctrl + @Print
     maim -u -s /tmp/scr.png; cat /tmp/scr.png | xclip -selection clipboard -t image/png; notify-send 'Selection Copied'
 
 # save screenshot
 alt + @Print
-    mv /tmp/scr.png ~/Pictures/Screenshots/$(date +%y-%m-%d_%H:%M:%S).png; notify-send "Saved to Pictures"
+    mv /tmp/scr.png ~/Pictures/Screenshots/(date +%y-%m-%d_%H:%M:%S).png; notify-send "Saved to Pictures"
 
 # record screen
 super + v
-    rm /tmp/rec.mp4; ffmpeg -video_size 2560x1440 -framerate 30 -f x11grab -i :0.0+$(xrandr --query | grep primary | cut -d"+" -f2-3 | cut -d" " -f1 | tr "+" ",") /tmp/rec.mp4 &; notify-send "Recording Started"
+    rm /tmp/rec.mp4; ffmpeg -video_size 2560x1440 -framerate 30 -f x11grab -i :0.0+(xrandr --query | grep primary | cut -d"+" -f2-3 | cut -d" " -f1 | tr "+" ",") /tmp/rec.mp4 &; notify-send "Recording Started"
 
 super + ctrl + v
     killall -s INT ffmpeg; notify-send "Recording Stopped"
 
 # save recording
 super + alt + v
-    mv /tmp/rec.mp4 ~/Pictures/Recordings/$(date +%y-%m-%d_%H:%M:%S).mp4; notify-send "Saved to Pictures"
+    mv /tmp/rec.mp4 ~/Pictures/Recordings/(date +%y-%m-%d_%H:%M:%S).mp4; notify-send "Saved to Pictures"
 
 # kill compositing
 super + alt + c
@@ -53,9 +53,9 @@ super + alt + c
 
 # music controls
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
-	pactl set-sink-volume $(pacmd list-sinks | grep "* index" | tail -c 2) {'+5%', '-5%'}
+	pactl set-sink-volume (pacmd list-sinks | grep "* index" | tail -c 2) {'+5%', '-5%'}
 XF86AudioMute
-	pactl set-sink-mute $(pacmd list-sinks | grep "* index" | tail -c 2) toggle & playerctl play-pause
+	pactl set-sink-mute (pacmd list-sinks | grep "* index" | tail -c 2) toggle & playerctl play-pause
 {XF86AudioNext, XF86AudioPrev}
 	playerctl {next, previous}
 XF86AudioPlay
