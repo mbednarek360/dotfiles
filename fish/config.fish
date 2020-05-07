@@ -15,7 +15,7 @@ function fish_greeting
      --disable 'uptime' --disable 'theme'\
      --disable 'resolution' --disable 'memory'\
      --disable 'packages' --disable 'cols'\
-     --disable 'term_font' --kitty --size '145'\
+     --disable 'term_font' --kitty --size '164'\
      --disable 'underline' --gap '2'\
      --source '/home/mbednarek360/.config/wallpaper.png'
 end
