@@ -36,7 +36,7 @@ font-0 = JetBrainsMono Nerd Font:pixelsize=12;3
 font-1 = JetBrainsMono Nerd Font:pixelsize=10;3
 modules-left = bspwm
 modules-center = time
-modules-right = pulseaudio wlan eth battery temperature date
+modules-right = pulseaudio updates wlan eth battery temperature date
 wm-restack = bspwm
 override-redirect = false
 cursor-click = pointer
@@ -140,6 +140,13 @@ format-warn-prefix = " "
 format-prefix-foreground = ${colors.primary}
 format-warn-prefix-foreground = ${colors.red}
 label = %temperature-c%
+
+[module/updates]
+type = custom/script
+exec = ~/.config/polybar/updates.sh
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+interval = 90
 
 [settings]
 screenchange-reload = true
