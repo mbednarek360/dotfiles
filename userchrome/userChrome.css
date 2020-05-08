@@ -34,6 +34,7 @@
   --panel-disabled-color: #4c566a;
   --toolbar-bgcolor: var(--mff-bg) !important;
   --urlbar-separator-color: transparent !important;
+  --toolbarbutton-border-radius: 2px !important;
 }
 
 /*
@@ -171,10 +172,6 @@ width: 50% !important;
   color: var(--mff-icon-color)  !important;
 }
 
-.toolbarbutton-icon {
-/* filter: drop-shadow(0 0 0.75rem crimson); */
-}
-
 #urlbar-results {
   font-family: var(--mff-urlbar-results-font-family);
   font-weight: var(--mff-urlbar-results-font-weight);
@@ -182,9 +179,10 @@ width: 50% !important;
   color: var(--mff-urlbar-results-color) !important;
 }
 
-:root {
---toolbarbutton-border-radius: 2px !important;
+#page-action-buttons {
+  display: none !important;
 }
+
 /*
 .urlbarView {
   position: absolute;
