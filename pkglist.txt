@@ -19,9 +19,9 @@ bluez-utils
 bootiso
 brother-hll2370dw
 bspwm
-bsync-git
 code
 ctags
+debtap
 dhcpcd
 dialog
 discord
@@ -44,6 +44,7 @@ gotop-bin
 gperftools
 graphviz
 groff
+iridium-rpm
 jdk-openjdk
 jre-openjdk
 jre8-openjdk

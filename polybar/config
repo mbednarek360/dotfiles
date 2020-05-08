@@ -17,15 +17,15 @@ alert = ${colors.yellow}
 
 [bar/main]
 monitor = ${env:MONITOR:}
-width = 100%:-24
+width = 100%:-48
 height = 30
 radius = 0
 fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 3
-offset-x = 12
-offset-y = 10
+offset-x = 24
+offset-y = 12
 border-size = 0
 border-color = #00000000
 padding-left = 1

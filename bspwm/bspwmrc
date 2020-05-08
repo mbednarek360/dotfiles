@@ -46,7 +46,7 @@ fi
 # Window config
 bspc config focus_follows_pointer true
 bspc config border_width         0
-bspc config window_gap          12
+bspc config window_gap          24
 
 # Layout config
 bspc config automatic_scheme alternate

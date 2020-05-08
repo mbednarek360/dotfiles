@@ -30,7 +30,8 @@ spicetify/*
 !spicetify/config.ini
 !spicetify/Themes/
 !sxhkd/
-!screenshots
+!screenshots/
+!userchrome/
 !wallpaper.png
 !README.md
 !LICENSE.md

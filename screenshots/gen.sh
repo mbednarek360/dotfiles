@@ -21,7 +21,7 @@ killall code-oss
 code-oss --folder-uri ~/.config --goto ~/.config/bspwm/bspwmrc:2:1
 sleep 1
 bspc node -o 0.5
-(kitty --detach -e zsh -i -c 'neofetch; zsh')
+kitty --detach
 sleep 0.5
 bspc node -p south
 bspc node -o 0.4
@@ -45,7 +45,7 @@ maim -u ~/.config/screenshots/spotify.png
 clear_desktop -k
 
 # firefox
-bspc -f 3
+bspc desktop -f 3
 firefox-developer-edition &
 sleep 3
 notify-send "Notification" "This is an example notification!"
@@ -55,10 +55,9 @@ sleep 3
 clear_desktop -k
 
 # power menu
-bspc desktop -f 4
 clear_desktop
 sleep 0.5
-sh ~/.config/sxhkd/power &
+sh ~/.config/sxhkd/power.sh &
 sleep 0.5
 maim -u ~/.config/screenshots/power.png
 killall rofi
@@ -68,3 +67,9 @@ betterlockscreen --lock dimblur &
 sleep 0.5
 maim -u ~/.config/screenshots/lock.png
 killall i3lock
+
+# crop all images
+for file in ~/.config/screenshots/*.png
+do
+    convert $file -crop 2560x1440+1440+240 $file
+done
