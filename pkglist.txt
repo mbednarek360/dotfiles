@@ -21,7 +21,6 @@ brother-hll2370dw
 bspwm
 code
 ctags
-debtap
 dhcpcd
 dialog
 discord
@@ -44,7 +43,6 @@ gotop-bin
 gperftools
 graphviz
 groff
-iridium-rpm
 jdk-openjdk
 jre-openjdk
 jre8-openjdk

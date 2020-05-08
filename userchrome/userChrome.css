@@ -129,6 +129,7 @@ width: 50% !important;
   margin-top: 4px !important;
   max-height: var(--mff-tab-height) !important;
   min-height: var(--mff-tab-height) !important;
+  cursor: pointer !important;
 }
 
 .tabbrowser-tab[soundplaying="true"] {
@@ -138,6 +139,7 @@ width: 50% !important;
 #tabs-newtab-button {
   list-style-image: url("add.svg") !important;
   opacity: 0.7;
+  cursor: pointer !important;
 }
 
 .tab-icon-sound {
@@ -167,7 +169,6 @@ width: 50% !important;
 }
 .urlbar-icon {
   color: var(--mff-icon-color)  !important;
-
 }
 
 .toolbarbutton-icon {
@@ -179,17 +180,21 @@ width: 50% !important;
   font-weight: var(--mff-urlbar-results-font-weight);
   font-size: var(--mff-urlbar-results-font-size) !important;
   color: var(--mff-urlbar-results-color) !important;
-
 }
 
+:root {
+--toolbarbutton-border-radius: 2px !important;
+}
+/*
 .urlbarView {
   position: absolute;
   text-align: center;
   margin: auto;
-  width: 52%;
+  width: 50%;
   border: none;
   padding: 5px;
 }
+*/
 
 .urlbarView-row[type="bookmark"] > span{
   color: #81a1c1 !important;
@@ -215,8 +220,7 @@ width: 50% !important;
   color: var(--mff-urlbar-color) !important;
   font-family: var(--mff-urlbar-font-family) !important;
   font-weight: var(--mff-urlbar-font-weight)!important;
-  text-align: center !important;
-
+  text-align: center !important; 
 }
 
 #tracking-protection-icon-container, #identity-box {
@@ -240,10 +244,6 @@ toolbar {
   background-image: none !important;
 }
 
-#urlbar-background {
-  opacity: .98 !important;
-}
-
 #navigator-toolbox, toolbaritem {
   border: none !important;
 }
@@ -251,6 +251,7 @@ toolbar {
 #urlbar-background {
   background-color: var(--mff-bg) !important;
   border: none !important;
+  box-shadow: none !important;
 }
 
 .toolbar-items {
@@ -266,16 +267,12 @@ box.panel-arrowbox {
 }
 
 box.panel-arrowcontent {
-  border-radius: 8px !important;
+  border-radius: 2px !important;
   border: none !important;
 }
 
 tab.tabbrowser-tab {
   overflow: hidden;
-}
-
-tab.tabbrowser-tab:hover {
-  box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 
 image#star-button {
@@ -310,6 +307,7 @@ toolbar#nav-bar {
 
 toolbarbutton {
   box-shadow: none !important;
+  cursor: pointer !important;
 }
 
 
