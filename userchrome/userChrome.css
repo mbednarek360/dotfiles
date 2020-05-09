@@ -32,11 +32,12 @@
   --default-arrowpanel-color: #d8dee9 !important;
   --lwt-toolbarbutton-icon-fill: var(--mff-icon-color) !important;
   --panel-disabled-color: #4c566a;
-  --urlbar-popup-url-color: #88c0d0;
-  --urlbar-popup-action-color: #88c0d0;
+
   --toolbar-bgcolor: var(--mff-bg) !important;
   --urlbar-separator-color: transparent !important;
   --toolbarbutton-border-radius: 2px !important;
+  --urlbar-popup-url-color: #88c0d0 !important;
+  --urlbar-popup-action-color: #88c0d0 !important;
 }
 
 /*
