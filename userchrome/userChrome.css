@@ -57,6 +57,7 @@
 /* This positions the tabs under the navaigator container */
 #titlebar {
   -moz-box-ordinal-group: 3 !important;
+
 }
 
 .tabbrowser-tab::after,
@@ -66,6 +67,8 @@
 
 .tab-background {
   border: none !important;
+
+
 }
 
 .tabbrowser-arrowscrollbox {
@@ -100,14 +103,13 @@ hbox.tab-content[pinned=true] .tab-text {
 
 #tabbrowser-tabs {
   --tab-loading-fill: #5e81ac !important;
-
 }
 
 .tab-label-container:not([textoverflow]) {
   display: flex;
   overflow: hidden;
   justify-content: center;
-width: 50% !important;
+  width: 50% !important;
   max-width: 50% !important;
   min-width: 50% !important;
 }
@@ -158,6 +160,16 @@ width: 50% !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
   padding-bottom: 5px !important;
+
+}
+
+/* fix the weird shift thing*/
+#nav-bar[urlbar-exceeds-toolbar-bounds="true"] #urlbar-input {
+  margin-right: -14px !important;
+  padding-right: -14px !important;
+}
+#nav-bar[urlbar-exceeds-toolbar-bounds="true"] #urlbar-background {
+  opacity: 0 !important;
 }
 
 .urlbar-icon > image {
@@ -168,8 +180,10 @@ width: 50% !important;
 .toolbarbutton-text {
   color: var(--mff-icon-color)  !important;
 }
+
 .urlbar-icon {
   color: var(--mff-icon-color)  !important;
+  display: none !important; 
 }
 
 #urlbar-results {
@@ -193,6 +207,10 @@ width: 50% !important;
   padding: 5px;
 }
 */
+
+#urlbar[open="true"] #urlbar-background {
+  opacity: 1 !important;
+}
 
 .urlbarView-row[type="bookmark"] > span{
   color: #81a1c1 !important;
