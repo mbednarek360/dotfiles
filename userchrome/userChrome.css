@@ -105,7 +105,7 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 #tabbrowser-tabs {
-  --tab-loading-fill: #5e81ac !important;
+  --tab-loading-fill: #2e3440;
 }
 
 .tab-label-container:not([textoverflow]) {
@@ -343,10 +343,6 @@ toolbarbutton {
 
 .sidebar-placesTree {
   color: var(--mff-sidebar-color) !important;
-}
-
-#sidebar-switcher-target {
-/*   color: white !important; */
 }
 
 #sidebar-box {
