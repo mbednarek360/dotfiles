@@ -70,8 +70,10 @@
 
 .tab-background {
   border: none !important;
+}
 
-
+#PanelUI-button {
+	margin-right: 3px !important;
 }
 
 .tabbrowser-arrowscrollbox {
