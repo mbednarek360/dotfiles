@@ -42,7 +42,7 @@ killall Discord
 discord &
 sleep 15
 maim -u ~/.config/screenshots/spotify.png
-clear_desktop -k
+clear_desktop
 
 # firefox
 bspc desktop -f 3

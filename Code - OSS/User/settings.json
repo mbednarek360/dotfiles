@@ -23,12 +23,14 @@
 }
 
 /* Extensions:
-    arcticicestudio.nord-visual-studio-code
-    be5invis.toml
-    EFanZh.graphviz-preview
+    alefragnani.bookmarks
+    streetsidesoftware.code-spell-checker
     icrawl.discord-vscode
-    PKief.material-icon-theme
-    rust-lang.rust
-    vscodevim.vim
     lunaryorn.fish-ide
+    skyapps.fish-vscode
+    pkief.material-icon-theme
+    arcticicestudio.nord-visual-studio-code
+    rust-lang.rust
+    be5invis.toml
+    vscodevim.vim
 */
