@@ -24,6 +24,7 @@ ctags
 dhcpcd
 dialog
 discord
+dos2unix
 dunst
 exfat-utils
 f2fs-tools
@@ -43,6 +44,7 @@ gotop-bin
 gperftools
 graphviz
 groff
+hydra
 jdk-openjdk
 jre-openjdk
 jre8-openjdk
@@ -103,6 +105,7 @@ rust-racer
 rustup
 spicetify-cli
 spotify
+sqlmap
 steam
 sudo
 sxhkd

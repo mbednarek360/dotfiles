@@ -222,3 +222,21 @@ super + l
 # mblock toggle
 super + ctrl + l
 	fish -c "source ~/.config/fish/alias.fish && mblock -t"
+
+
+
+####### Fancy Characters ########
+
+alt + {_, shift} + a
+	xdotool keyup Alt_L+Alt_R+a key {aring, Aring}
+
+alt + {_, shift} + e 
+	xdotool keyup Alt_L+Alt_R+e key {ae, AE}
+
+alt + {_, shift} + o
+	xdotool keyup Alt_L+Alt_R+o key {oslash, Oslash}
+
+alt + shift + comma
+	xdotool keyup Alt_L+Alt_R+comma key guillemotleft
+alt + shift + period
+	xdotool keyup Alt_L+Alt_R+period key guillemotright
