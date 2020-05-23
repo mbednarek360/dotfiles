@@ -236,7 +236,7 @@ alt + {_, shift} + e
 alt + {_, shift} + o
 	xdotool keyup Alt_L+Alt_R+o key {oslash, Oslash}
 
-alt + shift + comma
+alt + comma
 	xdotool keyup Alt_L+Alt_R+comma key guillemotleft
-alt + shift + period
+alt + period
 	xdotool keyup Alt_L+Alt_R+period key guillemotright
