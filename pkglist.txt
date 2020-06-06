@@ -9,6 +9,7 @@ betterlockscreen
 binutils
 bison
 bitwarden-cli
+blender
 blueman
 bluez
 bluez-hcitool

@@ -1,0 +1,6 @@
+[Bookmarks]
+[Recent]
+/home/mbednarek360/Pictures/Blender/
+/home/mbednarek360/
+/usr/share/fonts/TTF/
+/usr/share/fonts/noto/

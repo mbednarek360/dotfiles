@@ -26,6 +26,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 **Configured programs:**
 - betterdiscord
 - betterlockscreen
+- blender
 - bspwm
 - cava
 - code-oss
