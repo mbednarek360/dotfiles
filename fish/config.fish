@@ -10,14 +10,16 @@ set -x theme_color_scheme nord
 
 # greeting
 function fish_greeting
-    neofetch\
-     --disable 'icons' --disable 'title'\
-     --disable 'uptime' --disable 'theme'\
-     --disable 'resolution' --disable 'memory'\
-     --disable 'packages' --disable 'cols'\
-     --disable 'term_font' --kitty --size '164'\
-     --disable 'underline' --gap '2'\
-     --source '/home/mbednarek360/.config/wallpaper.png'
+    if test $TERM = "xterm-kitty" 
+        neofetch\
+        --disable 'icons' --disable 'title'\
+        --disable 'uptime' --disable 'theme'\
+        --disable 'resolution' --disable 'memory'\
+        --disable 'packages' --disable 'cols'\
+        --disable 'term_font' --kitty --size '164'\
+        --disable 'underline' --gap '2'\
+        --source '/home/mbednarek360/.config/wallpaper.png'
+    end
 end
 
 # silver prompt

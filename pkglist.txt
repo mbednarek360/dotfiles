@@ -57,6 +57,7 @@ lib32-libva
 lib32-libvdpau
 lib32-libxtst
 lib32-nvidia-utils
+libclc
 libnotify
 libtool
 linux
@@ -81,8 +82,10 @@ nvidia
 nvidia-prime
 nvidia-settings
 obs-studio
+ocl-icd
 oculus-udev
 ookla-speedtest-bin
+opencl-nvidia
 openssh
 pacman-contrib
 papirus-icon-theme

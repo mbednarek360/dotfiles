@@ -5,6 +5,15 @@ BetterDiscord/*
 !BetterDiscord/bdstorage.json
 !betterlockscreenrc
 !blender/
+blender/*
+!blender/2.83/
+blender/2.83/*
+!blender/2.83/scripts/
+blender/2.83/scripts/*
+!blender/2.83/scripts/presets
+!blender/2.83/config
+blender/2.83/config/*
+!blender/2.83/config/userpref.blend
 !bspwm/
 !Code\ -\ OSS/
 Code\ -\ OSS/*
