@@ -1,10 +1,11 @@
 # nord bspwm polybar config
 
 [colors]
+alpha = #00000000
 background = #2E3440
 foreground = #D8DEE9
 dark-gray = #4C566A
-light-gray = ##E5E9F0
+light-gray = #E5E9F0
 red = #BF616A
 green = #A3BE8C
 yellow = #EBCB8B
@@ -27,7 +28,7 @@ line-size = 3
 offset-x = 24
 offset-y = 12
 border-size = 0
-border-color = #00000000
+border-color = ${colors.alpha}
 padding-left = 1
 padding-right = 2
 module-margin-left = 1
@@ -63,12 +64,13 @@ label-urgent-font = 2
 
 label-empty = %icon%
 label-empty-background = ${colors.background}
-label-empty-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.dark-gray}
 label-empty-padding = 1
 label-empty-font = 2
 
 ws-icon-default = ﱢ
 ws-icon-default-font = 2
+
 
 [module/wlan]
 type = internal/network
