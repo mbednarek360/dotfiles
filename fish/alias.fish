@@ -180,3 +180,11 @@ function wttr
     curl wttr.in/$argv[1]
     echo
 end
+
+function dt
+    abduco -n $argv[1] $argv[1]
+end
+
+function at
+    abduco -a $argv[1]
+end

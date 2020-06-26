@@ -1,3 +1,4 @@
+abduco
 android-tools
 arduino
 autoconf
@@ -41,6 +42,7 @@ gimp
 git
 gnu-netcat
 gnuplot
+go-ipfs
 gotop-bin
 gperftools
 graphviz
@@ -102,11 +104,13 @@ python
 python-pip
 ranger
 redshift
+reptyr
 rofi
 rofi-calc
 rsync
 rust-racer
 rustup
+screen
 spicetify-cli
 spotify
 sqlmap
@@ -114,6 +118,7 @@ steam
 sudo
 sxhkd
 texinfo
+tmux
 unzip
 vi
 vim-plug
@@ -173,6 +178,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xpra
 xss-lock
 yay
 zoom

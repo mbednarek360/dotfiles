@@ -10,7 +10,7 @@ set -x theme_color_scheme nord
 
 # greeting
 function fish_greeting
-    if test $TERM = "xterm-kitty" 
+    if test $TERM = "xterm-kitty"
         neofetch\
         --disable 'icons' --disable 'title'\
         --disable 'uptime' --disable 'theme'\
