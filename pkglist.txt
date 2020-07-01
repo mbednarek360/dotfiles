@@ -110,6 +110,7 @@ rofi-calc
 rsync
 rust-racer
 rustup
+scrcpy
 screen
 spicetify-cli
 spotify
@@ -181,4 +182,3 @@ xorg-xwud
 xpra
 xss-lock
 yay
-zoom
