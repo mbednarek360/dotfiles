@@ -39,6 +39,7 @@ set smartcase
 set hlsearch
 set spell
 set virtualedit=all 
+set mouse=a
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
