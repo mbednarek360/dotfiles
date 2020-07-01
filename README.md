@@ -43,6 +43,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - silver
 - spicetify
 - sxhkd
+- tmux
 - yay
 
  
@@ -53,7 +54,6 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - gotop
 - mpv
 - maim
-- neofetch
 - networkmanager
 - nerd-fonts-jetbrains-mono
 

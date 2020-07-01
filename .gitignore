@@ -41,6 +41,7 @@ spicetify/*
 !spicetify/Themes/
 !sxhkd/
 !screenshots/
+!tmux/
 !userchrome/
 !wallpaper.png
 !README.md
