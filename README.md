@@ -32,6 +32,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - code-oss
 - dunst
 - fish
+- glava
 - kitty
 - neovim
 - osync

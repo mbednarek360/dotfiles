@@ -20,6 +20,9 @@
     "files.exclude": {
         "**/.osync_workdir": true
     },
+    "cSpell.userWords": [
+        "coord"
+    ],
 }
 
 /* Extensions:

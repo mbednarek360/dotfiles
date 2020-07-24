@@ -26,6 +26,10 @@ Code\ -\ OSS/User/*
 fish/*
 !fish/*.fish
 !fish/dir_colors
+!glava
+glava/*
+!glava/rc.glsl
+!glava/bars.glsl
 !kitty/
 !nvim/
 !osync/
