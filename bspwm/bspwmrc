@@ -9,7 +9,7 @@ export DISCORD="discord"
 export EDIT="code-oss"
 export GAME="steam"
 export MUSIC="spotify"
-export SYNC="$TERM -e fish -i -c 'code-sync -x'"
+export SYNC="nextcloud"
 export FILE="$TERM -e ranger"
 export SYS="$TERM -e gotop -p"
 export NET="$TERM -e sh -c 'bspc node -t floating; sleep 0.1; nmtui-connect'"
@@ -21,7 +21,6 @@ killall dunst
 killall sxhkd
 killall polybar
 killall glava
-killall xss-lock
 
 # Autostart
 xss-lock -l -- betterlockscreen --lock dimblur &
@@ -33,7 +32,7 @@ for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done
 glava -d &
-
+nextcloud &
 
 # Monitor
 if [ "$(hostname)" = "michael-desktop" ]

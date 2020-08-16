@@ -49,7 +49,7 @@ super + alt + v
 
 # kill compositing
 super + alt + c
-    killall picom
+    killall picom; killall glava
 
 # music controls
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}

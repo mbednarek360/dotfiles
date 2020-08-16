@@ -2,7 +2,7 @@ set -x ZHOME /home/mbednarek360
 
 # main sync function
 function batch-sync
-    sudo osync.sh $ZHOME/.config/osync/sync.conf --initiator="$ZHOME/$argv[1]" --target="$ZHOME/SSD/$argv[1]"
+    osync.sh $ZHOME/.config/osync/sync.conf --initiator="$ZHOME/$argv[1]" --target="$ZHOME/SSD/$argv[1]"
 end
 
 # generic sync
@@ -12,7 +12,7 @@ function sync
     end
     clear
     ssd-mount
-    if batch-sync $argv[1]
+    if batch-sync-nas $argv[1]
         ssd-unmount
         clear
         echo "Sync completed successfully."
@@ -149,6 +149,19 @@ end
 function ssd-unmount
     sudo umount $ZHOME/SSD
     rmdir $ZHOME/SSD
+end
+
+# mount nas
+function nas-mount
+    mkdir $ZHOME/NAS
+    wdfs https://mbpw3.us.to/nextcloud/remote.php/dav/files/mbednarek360/ \
+    $ZHOME/NAS -u mbednarek360 -p (cat $ZHOME/.webdav_secret) &> /dev/null
+end
+
+# unmount nas
+function nas-unmount
+    fusermount -u $ZHOME/NAS
+    rmdir $ZHOME/NAS
 end
 
 # save screenshot

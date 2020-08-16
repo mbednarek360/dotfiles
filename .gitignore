@@ -31,6 +31,8 @@ glava/*
 !glava/rc.glsl
 !glava/bars.glsl
 !kitty/
+!Nextcloud/
+Nextcloud/*
 !nvim/
 !osync/
 !picom/

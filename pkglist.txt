@@ -3,6 +3,7 @@ android-tools
 arduino
 autoconf
 automake
+awesome
 b3sum
 base
 betterdiscordctl-git
@@ -40,6 +41,7 @@ fzf
 gcc
 gimp
 git
+glava
 gnu-netcat
 gnuplot
 go-ipfs
@@ -48,6 +50,7 @@ gperftools
 graphviz
 groff
 hydra
+inkscape
 jdk-openjdk
 jre-openjdk
 jre8-openjdk
@@ -57,6 +60,7 @@ lib32-libcurl-gnutls
 lib32-libpulse
 lib32-libva
 lib32-libvdpau
+lib32-libxinerama
 lib32-libxtst
 lib32-nvidia-utils
 libclc
@@ -65,6 +69,7 @@ libtool
 linux
 linux-firmware
 linux_logo_archcustom
+lutris
 m4
 maim
 make
@@ -125,6 +130,7 @@ vi
 vim-plug
 wget
 which
+wine
 xclip
 xdot
 xdotool
