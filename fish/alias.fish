@@ -37,8 +37,7 @@ function doc-sync
 end
 function conf-sync
     nas-mount
-    git -C ~/NAS/Config/Linux reset --hard ORIG_HEAD
-    git -C ~/NAS/Config/Linux pull origin master
+    git -C ~/NAS/Config/Linux pull -f origin master
     nas-unmount
 end
 
