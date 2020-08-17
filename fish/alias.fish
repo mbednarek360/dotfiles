@@ -36,9 +36,9 @@ function doc-sync
     sync Documents $argv[1]
 end
 function conf-sync
-    nas-mount
-    git -C ~/NAS/Config/Linux pull -f origin master
-    nas-unmount
+    ssd-mount
+    git -C ~/SSD/Config/dotfiles pull -f origin master
+    ssd-unmount
 end
 
 # scrub code dir for replacable files
