@@ -20,7 +20,7 @@ killall feh
 killall dunst
 killall sxhkd
 killall polybar
-#killall glava
+killall glava
 
 # Autostart
 xss-lock -l -- betterlockscreen --lock dimblur &
@@ -31,7 +31,7 @@ picom --experimental-backends &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done
-#glava -d &
+glava -d &
 nextcloud --background &
 
 # Monitor
