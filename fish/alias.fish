@@ -36,10 +36,10 @@ function doc-sync
     sync Documents $argv[1]
 end
 function conf-sync
-    ssd-mount
-    git -C ~/SSD/Config/dotfiles reset --hard ORIG_HEAD
-    git -C ~/SSD/Config/dotfiles pull origin master
-    ssd-unmount
+    nas-mount
+    git -C ~/NAS/Config/Linux reset --hard ORIG_HEAD
+    git -C ~/NAS/Config/Linux pull origin master
+    nas-unmount
 end
 
 # scrub code dir for replacable files
