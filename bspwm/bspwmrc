@@ -37,9 +37,9 @@ nextcloud --background &
 # Monitor
 if [ "$(hostname)" = "michael-desktop" ]
 then  
-    bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
-    bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9
-    bspc monitor DP-3 -d 1 2 3 4 5 6 7 8 9
+    bspc monitor DP-0 -d 1 2 3
+    bspc monitor HDMI-0 -d 4 5 6
+    bspc monitor DP-3 -d 7 8 9
 else
     bspc monitor -d 1 2 3 4 5 6 7 8 9
 fi
