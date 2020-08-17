@@ -20,7 +20,7 @@ killall feh
 killall dunst
 killall sxhkd
 killall polybar
-killall glava
+#killall glava
 
 # Autostart
 xss-lock -l -- betterlockscreen --lock dimblur &
@@ -31,15 +31,15 @@ picom --experimental-backends &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done
-glava -d &
+#glava -d &
 nextcloud --background &
 
 # Monitor
 if [ "$(hostname)" = "michael-desktop" ]
 then  
-    bspc monitor DP-0 -d 1 2 3
-    bspc monitor HDMI-0 -d 4 5 6
-    bspc monitor DP-3 -d 7 8 9
+    bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
+    bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9
+    bspc monitor DP-3 -d 1 2 3 4 5 6 7 8 9
 else
     bspc monitor -d 1 2 3 4 5 6 7 8 9
 fi

@@ -16,9 +16,9 @@ background-alt = ${colors.dark-gray}
 foreground-alt = ${colors.light-gray}
 alert = ${colors.yellow}
 
-[bar/main]
+[bar/left]
 monitor = ${env:MONITOR:}
-width = 100%:-48
+width = 9.5%
 height = 30
 radius = 0
 fixed-center = true
@@ -29,19 +29,31 @@ offset-x = 24
 offset-y = 12
 border-size = 0
 border-color = ${colors.alpha}
+border-transparent = true
 padding-left = 1
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 font-0 = JetBrainsMono Nerd Font:pixelsize=12;3
 font-1 = JetBrainsMono Nerd Font:pixelsize=10;3
-modules-left = bspwm
-modules-center = time
-modules-right = pulseaudio updates wlan eth battery temperature date
+modules-center = bspwm
 wm-restack = bspwm
 override-redirect = false
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/center]
+width = 3.5%;
+# 50% - (w / 2)
+offset-x = 48.25% 
+inherit = bar/left
+modules-center = time
+
+[bar/right]
+inherit = bar/left
+width = 18%
+offset-x = 82%:-24
+modules-center = pulseaudio updates wlan eth battery temperature date
 
 [module/bspwm]
 type = internal/bspwm
