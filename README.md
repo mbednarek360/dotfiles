@@ -35,6 +35,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - glava
 - kitty
 - neovim
+- nextcloud
 - osync
 - picom
 - polybar
@@ -57,6 +58,5 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - maim
 - networkmanager
 - nerd-fonts-jetbrains-mono
-- nextcloud
 
 **A complete list of programs can be found [here](pkglist.txt).**

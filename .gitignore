@@ -33,6 +33,7 @@ glava/*
 !kitty/
 !Nextcloud/
 Nextcloud/*
+!Nextcloud/nextcloud.cfg
 !nvim/
 !osync/
 !picom/
