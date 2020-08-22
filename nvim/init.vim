@@ -1,5 +1,4 @@
 " plugins
-let g:goyo_linenr = 0
 call plug#begin('~/.cache/nvim/plugged')
     Plug 'bling/vim-airline'
     Plug 'arcticicestudio/nord-vim'
@@ -29,8 +28,7 @@ map <PageUp> :bnext<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <A-1> :Goyo!<CR> :Defx<CR>
 map <A-2> :Goyo!<CR> :TagbarToggle<CR>
-map <A-9> :Limelight!!<CR>
-map <A-0> :Goyo<CR>
+map <A-3> :Goyo<CR>
 map <A-Backspace> :Startify<CR>
 map <C-down> 5j
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -43,6 +41,8 @@ nmap / :BLines<CR>
 
 " editor config
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd InsertEnter * Limelight
+autocmd InsertLeave * Limelight!
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set tabstop=4
