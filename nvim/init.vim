@@ -1,10 +1,10 @@
 " plugins
 call plug#begin('~/.cache/nvim/plugged')
-    Plug 'bling/vim-airline'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'itchyny/lightline.vim'   
     Plug 'junegunn/fzf.vim'
     Plug 'majutsushi/tagbar'
-    Plug 'airblade/vim-gitgutter'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}   
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -26,18 +26,19 @@ map <A-c> \c
 map <PageDown> :bprevious<CR>
 map <PageUp> :bnext<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
-map <A-1> :Goyo!<CR> :Defx<CR>
-map <A-2> :Goyo!<CR> :TagbarToggle<CR>
-map <A-3> :Goyo<CR>
-map <A-Backspace> :Startify<CR>
+nmap <F1> :Goyo!<CR> :Defx<CR>
+nmap <F2> :Goyo!<CR> :TagbarToggle<CR>
+nmap s :Startify<CR>
+nmap f :Goyo<CR>
+nmap ; :Limelight!!<CR>
 map <C-down> 5j
 imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-map ; :Files<CR>
-nmap / :BLines<CR>
+nmap / :Files<CR>
+nmap <Space> :BLines<CR>
 
 " editor config
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -48,6 +49,9 @@ set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" coc
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " defx
 let loaded_netrwPlugin = 1
@@ -117,12 +121,12 @@ let g:tagbar_compact = 1
 let g:tagbar_width = 30
 
 " startify
+autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
         \ {'d': 'Defx'},
         \ {'f': 'Files'},
         \ {'p': 'PlugUpdate'},
-        \ {'l': 'Limelight!!'},
         \ {'g': 'Goyo'}
         \ ]
 let g:startify_lists = [
@@ -133,7 +137,6 @@ let g:startify_lists = [
         \ ]
 
 " fzf
-autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5 } }
 let g:fzf_preview_window = ''
 
@@ -141,6 +144,7 @@ let g:fzf_preview_window = ''
 filetype plugin on
 set number rnu
 syntax on
+set signcolumn=yes
 set nofoldenable
 set linebreak
 set showmatch
@@ -154,14 +158,11 @@ set spell
 set virtualedit=all 
 set mouse=a
 
-" airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 0
-
-" style config
+" theming
+autocmd! BufReadPre * if exists('t:goyo_disabled_lightline') == 0 | call lightline#enable()   
+let g:lightline = { 'colorscheme': 'nord' }
 autocmd! User GoyoEnter call feedkeys("\<C-U>\<C-U>") 
 hi! Normal ctermbg=NONE guibg=NONE
 let g:limelight_conceal_ctermfg = 0 
 colorscheme nord
-autocmd! VimEnter * Goyo
 
