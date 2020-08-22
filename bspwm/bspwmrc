@@ -6,7 +6,7 @@ export LAUNCH="rofi -show drun"
 export CALC="rofi -show calc -modi calc -no-show-match -no-sort -lines 2"
 export BROWSE="firefox-developer-edition"
 export DISCORD="discord"
-export EDIT="code-oss"
+export EDIT="$TERM -e nvim"
 export GAME="steam"
 export MUSIC="spotify"
 export SYNC="nextcloud"
@@ -31,7 +31,7 @@ picom --experimental-backends &
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar main &
 done
-glava -d &
+#glava -d &
 nextcloud --background &
 
 # Monitor
