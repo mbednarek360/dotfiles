@@ -26,8 +26,8 @@ map <A-c> \c
 map <PageDown> :bprevious<CR>
 map <PageUp> :bnext<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
-nmap <F1> :Goyo!<CR> :Defx<CR>
-nmap <F2> :Goyo!<CR> :TagbarToggle<CR>
+map <F1> :Goyo!<CR>:Defx<CR>
+map <F2> :Goyo!<CR>:TagbarToggle<CR>
 nmap s :Startify<CR>
 nmap f :Goyo<CR>
 nmap ; :Limelight!!<CR>
@@ -124,10 +124,10 @@ let g:tagbar_width = 30
 autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
-        \ {'d': 'Defx'},
-        \ {'f': 'Files'},
+        \ {'F1': 'Defx'},
+        \ {'/': 'Files'},
         \ {'p': 'PlugUpdate'},
-        \ {'g': 'Goyo'}
+        \ {'f': 'Goyo'}
         \ ]
 let g:startify_lists = [
         \ { 'type': 'dir',       'header': ['   '.getcwd()]      },
