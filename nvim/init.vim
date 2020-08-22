@@ -27,12 +27,13 @@ map <A-Tab> :bprevious<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <F1> :Goyo!<CR>:Defx<CR>
 map <F2> :Goyo!<CR>:TagbarToggle<CR>
-map <F3> :Startify<CR>
-map <A-f> :Goyo<CR>
+map <F3> :Goyo<CR>
+map <F4> :Startify<CR>
 map <A-l> :Limelight!!<CR>
 map <C-down> 5j
 map <silent> <A-[> <Plug>(coc-diagnostic-prev)
 map <silent> <A-]> <Plug>(coc-diagnostic-next)
+nmap <A-p> :PlugUpdate<CR><ESC>:PlugClean<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
 nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
 nmap <Space> :BLines<CR>
@@ -118,17 +119,18 @@ let g:tagbar_compact = 1
 let g:tagbar_width = 30
 
 " startify
-autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
-autocmd User GoyoLeave if @% == "" | bprevious
+autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify | pwd
+autocmd User try | GoyoLeave if @% == "" | bprevious
+let g:startify_custom_header = startify#fortune#boxed()
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
         \ {'F1': 'Defx'},
         \ {'/': 'Files'},
-        \ {'p': 'PlugUpdate'},
-        \ {'f': 'Goyo'}
+        \ {'A-p': 'PlugUpdate'},
+        \ {'A-f': 'Goyo'}
         \ ]
 let g:startify_lists = [
-        \ { 'type': 'dir',       'header': ['   '.getcwd()]      },
+        \ { 'type': 'dir',       'header': ['   Files']      },
         \ { 'type': 'sessions',  'header': ['   Sessions']       },
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
         \ { 'type': 'commands',  'header': ['   Commands']       },
@@ -150,8 +152,8 @@ set noshowmode
 set smartindent
 set smarttab
 set smartcase
-set hlsearch
 set hidden
+set hlsearch
 set virtualedit=all 
 set mouse=a
 
