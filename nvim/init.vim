@@ -23,8 +23,9 @@ map <A-t> :silent !kitty &<CR>
 map <A-q> :q<CR>
 map <A-k> :bd<CR>
 map <A-c> \c 
-map <A-Tab> :bprevious<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
+map <A-f> za
+map <A-Tab> :bprevious<CR>
 map <F1> :Goyo!<CR>:Defx<CR>
 map <F2> :Goyo!<CR>:TagbarToggle<CR>
 map <F3> :Goyo<CR>
@@ -33,7 +34,7 @@ map <A-l> :Limelight!!<CR>
 map <C-down> 5j
 map <silent> <A-[> <Plug>(coc-diagnostic-prev)
 map <silent> <A-]> <Plug>(coc-diagnostic-next)
-nmap <A-p> :PlugUpdate<CR><ESC>:PlugClean<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
+nmap <A-p> :PlugUpdate<CR><ESC>:PlugClean!<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
 nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
 nmap <Space> :BLines<CR>
@@ -47,9 +48,6 @@ set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" coc
-inoremap <silent><expr> <c-space> coc#refresh()
 
 " defx
 let loaded_netrwPlugin = 1
@@ -151,6 +149,9 @@ set showmatch
 set noshowmode
 set smartindent
 set smarttab
+set foldmethod=syntax
+set nofoldenable
+set foldlevel=1000
 set smartcase
 set hidden
 set hlsearch
