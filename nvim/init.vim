@@ -5,6 +5,7 @@ call plug#begin('~/.cache/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'majutsushi/tagbar'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}   
+    Plug 'preservim/nerdcommenter'
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -22,7 +23,7 @@ map <A-s> :vsp<CR>
 map <A-t> :silent !kitty &<CR>
 map <A-q> :q<CR>
 map <A-k> :bd<CR>
-map <A-c> \c 
+map <A-c> <plug>NERDCommenterToggle
 map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <A-f> za
 map <A-Tab> :bprevious<CR>
@@ -36,7 +37,7 @@ map <C-down> 5j
 map <silent> <A-[> <Plug>(coc-diagnostic-prev)
 map <silent> <A-]> <Plug>(coc-diagnostic-next)
 nmap <A-n> <Plug>(coc-rename)
-nmap <A-p> :PlugUpdate<CR><ESC>:PlugClean!<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
+nmap <A-p> :PlugUpdate<CR><ESC>:PlugInstall<CR><ESC>:PlugClean!<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
 nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
 nmap <Space> :BLines<CR>
@@ -120,8 +121,8 @@ let g:tagbar_width = 30
 
 " startify
 autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify | pwd
-autocmd User try | GoyoLeave if @% == "" | bprevious
-let g:startify_custom_header = startify#fortune#boxed()
+autocmd User GoyoLeave if @% == "" | try | bprevious
+let g:startify_custom_header = 'startify#pad(startify#fortune#boxed())'
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
         \ {'F1': 'Defx'},
