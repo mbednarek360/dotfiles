@@ -31,9 +31,11 @@ map <F2> :Goyo!<CR>:TagbarToggle<CR>
 map <F3> :Goyo<CR>
 map <F4> :Startify<CR>
 map <A-l> :Limelight!!<CR>
+map <C-up> 5k
 map <C-down> 5j
 map <silent> <A-[> <Plug>(coc-diagnostic-prev)
 map <silent> <A-]> <Plug>(coc-diagnostic-next)
+nmap <A-n> <Plug>(coc-rename)
 nmap <A-p> :PlugUpdate<CR><ESC>:PlugClean!<CR><ESC>:q<CR>:Goyo<CR>:Goyo<CR>
 nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
