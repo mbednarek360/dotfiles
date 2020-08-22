@@ -23,20 +23,17 @@ map <A-t> :silent !kitty &<CR>
 map <A-q> :q<CR>
 map <A-k> :bd<CR>
 map <A-c> \c 
-map <PageDown> :bprevious<CR>
-map <PageUp> :bnext<CR>
+map <A-Tab> :bprevious<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <F1> :Goyo!<CR>:Defx<CR>
 map <F2> :Goyo!<CR>:TagbarToggle<CR>
-nmap s :Startify<CR>
-nmap f :Goyo<CR>
-nmap ; :Limelight!!<CR>
+map <F3> :Startify<CR>
+map <A-f> :Goyo<CR>
+map <A-l> :Limelight!!<CR>
 map <C-down> 5j
-imap <C-l> <Plug>(coc-snippets-expand)
-vmap <C-j> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+map <silent> <A-[> <Plug>(coc-diagnostic-prev)
+map <silent> <A-]> <Plug>(coc-diagnostic-next)
+nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
 nmap <Space> :BLines<CR>
 
@@ -122,6 +119,7 @@ let g:tagbar_width = 30
 
 " startify
 autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
+autocmd User GoyoLeave if @% == "" | bprevious
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
         \ {'F1': 'Defx'},
@@ -137,7 +135,7 @@ let g:startify_lists = [
         \ ]
 
 " fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5 } }
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.4 } }
 let g:fzf_preview_window = ''
 
 " misc
@@ -154,7 +152,6 @@ set smarttab
 set smartcase
 set hlsearch
 set hidden
-set spell
 set virtualedit=all 
 set mouse=a
 
@@ -165,4 +162,4 @@ autocmd! User GoyoEnter call feedkeys("\<C-U>\<C-U>")
 hi! Normal ctermbg=NONE guibg=NONE
 let g:limelight_conceal_ctermfg = 0 
 colorscheme nord
-
+autocmd! VimEnter * call lightline#enable() | Goyo
