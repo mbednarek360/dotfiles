@@ -1,13 +1,17 @@
 " plugins
+let g:goyo_linenr = 0
 call plug#begin('~/.cache/nvim/plugged')
     Plug 'bling/vim-airline'
     Plug 'arcticicestudio/nord-vim'
     Plug 'junegunn/fzf.vim'
     Plug 'majutsushi/tagbar'
     Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/limelight.vim'
+    Plug 'junegunn/goyo.vim'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'kristijanhusak/defx-icons'
     Plug 'kristijanhusak/defx-git'
+    Plug 'mhinz/vim-startify'
 call plug#end()
 
 " key bindings
@@ -23,15 +27,19 @@ map <A-c> \c
 map <PageDown> :bprevious<CR>
 map <PageUp> :bnext<CR>
 map <A-b> :silent !$BROWSE "%:p" &<CR>
-map <F1> :Defx<CR>
-map <F2> :TagbarToggle<CR>
-
+map <A-1> :Goyo!<CR> :Defx<CR>
+map <A-2> :Goyo!<CR> :TagbarToggle<CR>
+map <A-9> :Limelight!!<CR>
+map <A-0> :Goyo<CR>
+map <A-Backspace> :Startify<CR>
 map <C-down> 5j
 imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+map ; :Files<CR>
+nmap / :BLines<CR>
 
 " editor config
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -42,10 +50,9 @@ set shiftwidth=4
 set expandtab
 
 " defx
-autocmd VimEnter * Defx
+let loaded_netrwPlugin = 1
 autocmd BufWritePost * call defx#redraw()
 autocmd FileType defx call <SID>defx_mappings()
-autocmd BufEnter * call defx#do_action('cd', getcwd())
 let g:defx_icons_enable_syntax_highlight = 1
 let g:defx_icons_column_length = 1
 call defx#custom#column('git', {
@@ -69,6 +76,7 @@ call defx#custom#option('_', {
             \ 'root_marker': '$PWD: ',
             \ 'ignored_files': '*.swp,.git,.svn,.DS_Store',
             \ 'show_ignored_files': 0,
+            \ 'auto_cd': 1,
             \ 'toggle': 1,
             \ 'resume': 1
             \ })
@@ -83,16 +91,14 @@ endfunction
 function! s:defx_mappings() abort
 	setlocal signcolumn=no expandtab
 
-    nnoremap <silent><buffer><expr> <CR>  defx#do_action('multi', ['drop', 'change_vim_cwd'])
-	nnoremap <silent><buffer><expr> o     <sid>defx_toggle_tree()
+    nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
+	nnoremap <silent><buffer><expr> <Space>     <sid>defx_toggle_tree()
     nnoremap <silent><buffer><expr> s     defx#do_action('open', 'botright vsplit')
-	nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
-	nnoremap <silent><buffer><expr> dd    defx#do_action('remove_trash')
 	nnoremap <silent><buffer><expr> r     defx#do_action('rename')
 	nnoremap <silent><buffer><expr> x     defx#do_action('execute_system')
 	nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
 	nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
-	nnoremap <silent><buffer><expr> <Tab> winnr('$') != 1 ?
+    nnoremap <silent><buffer><expr> <Tab> winnr('$') != 1 ?
 		\ ':<C-u>wincmd w<CR>' :
 		\ ':<C-u>Defx -buffer-name=temp -split=vertical<CR>'
 	nnoremap <silent><buffer><expr><nowait> c  defx#do_action('copy')
@@ -102,14 +108,33 @@ function! s:defx_mappings() abort
 	nnoremap <silent><buffer><expr> dd defx#do_action('remove_trash')
 	nnoremap <silent><buffer><expr> K  defx#do_action('new_directory')
 	nnoremap <silent><buffer><expr> N  defx#do_action('new_multiple_files')
-	nnoremap <silent><buffer><expr> u  defx#do_action('multi', [['cd', '..'], 'change_vim_cwd'])
+	nnoremap <silent><buffer><expr> u  defx#do_action('cd', ['..'])
+	nnoremap <silent><buffer> <Esc> :q<CR>
 endfunction
 
 " tagbar
 let g:tagbar_compact = 1
 let g:tagbar_width = 30
 
+" startify
+let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
+let g:startify_commands = [
+        \ {'d': 'Defx'},
+        \ {'f': 'Files'},
+        \ {'p': 'PlugUpdate'},
+        \ {'l': 'Limelight!!'},
+        \ {'g': 'Goyo'}
+        \ ]
+let g:startify_lists = [
+        \ { 'type': 'dir',       'header': ['   '.getcwd()]      },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
+
 " fzf
+autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5 } }
 let g:fzf_preview_window = ''
 
 " misc
@@ -134,5 +159,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
 
 " style config
-colorscheme nord
+autocmd! User GoyoEnter call feedkeys("\<C-U>\<C-U>") 
 hi! Normal ctermbg=NONE guibg=NONE
+let g:limelight_conceal_ctermfg = 0 
+colorscheme nord
+autocmd! VimEnter * Goyo
+

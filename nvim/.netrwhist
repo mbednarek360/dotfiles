@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/mbednarek360/Code'
 let g:netrw_dirhist_7='/home/mbednarek360/.config/nvim'
 let g:netrw_dirhist_6='/home/mbednarek360/Arduino'
 let g:netrw_dirhist_5='/home/mbednarek360/.config/nvim'

@@ -1,5 +1,11 @@
 set -x ZHOME /home/mbednarek360
 
+# for fzf
+function list
+    rg --hidden -g '!*.git' --files &
+    dirname (rg --hidden -g '!*.git' --files) | grep -vF '.' | sort | uniq
+end
+
 # main sync function
 function batch-sync
     osync.sh $ZHOME/.config/osync/sync.conf --initiator="$ZHOME/$argv[1]" --target="$ZHOME/SSD/$argv[1]"
