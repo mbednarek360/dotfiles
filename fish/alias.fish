@@ -2,8 +2,8 @@ set -x ZHOME /home/mbednarek360
 
 # for fzf
 function list
-    rg --hidden -g '!*.git' --files &
-    dirname (rg --hidden -g '!*.git' --files) | grep -vF '.' | sort | uniq
+    rg --hidden -g '!*.git/' --files &
+    dirname (rg --hidden -g '!*.git/' --files) | grep -vF '.' | sort | uniq
 end
 
 # main sync function

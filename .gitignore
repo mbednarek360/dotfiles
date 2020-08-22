@@ -15,12 +15,6 @@ blender/2.83/scripts/*
 blender/2.83/config/*
 !blender/2.83/config/userpref.blend
 !bspwm/
-!Code\ -\ OSS/
-Code\ -\ OSS/*
-!Code\ -\ OSS/User
-Code\ -\ OSS/User/*
-!Code\ -\ OSS/User/keybindings.json
-!Code\ -\ OSS/User/settings.json
 !dunst/
 !fish/
 fish/*

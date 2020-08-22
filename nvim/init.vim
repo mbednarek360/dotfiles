@@ -21,7 +21,7 @@ map <A-up> <C-w>k
 map <A-right> <C-w>l
 map <A-s> :vsp<CR>
 map <A-t> :silent !kitty &<CR>
-map <A-q> :q<CR>
+map <A-q> :call Killbuff()<CR>
 map <A-k> :bd<CR>
 map <A-c> <plug>NERDCommenterToggle
 map <A-b> :silent !$BROWSE "%:p" &<CR>
@@ -41,6 +41,19 @@ nmap <A-p> :PlugUpdate<CR><ESC>:PlugInstall<CR><ESC>:PlugClean!<CR><ESC>:q<CR>:G
 nmap <Esc> :call coc#util#float_hide()<CR>
 nmap / :Files<CR>
 nmap <Space> :BLines<CR>
+
+" quit current buffer
+function Killbuff()
+    let gopen = 0
+    if exists('t:goyo_disabled_lightline') 
+        let gopen = 1
+        Goyo        
+    endif    
+    q
+    if gopen == 1  
+        Goyo        
+    endif 
+endfunction
 
 " editor config
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -121,7 +134,7 @@ let g:tagbar_width = 30
 
 " startify
 autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify | pwd
-autocmd User GoyoLeave if @% == "" | try | bprevious
+autocmd User GoyoLeave if @% == "" | silent! bprevious
 let g:startify_custom_header = 'startify#pad(startify#fortune#boxed())'
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
