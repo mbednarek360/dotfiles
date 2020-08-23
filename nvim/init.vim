@@ -134,6 +134,7 @@ let g:tagbar_width = 30
 " startify
 autocmd BufEnter * if isdirectory(expand('%')) | cd % | Startify | pwd
 autocmd User GoyoLeave if @% == "" | silent! bprevious | set nornu | set nonu
+autocmd User GoyoLeave if @% != "" | set rnu
 let g:startify_custom_header = 'startify#pad(startify#fortune#boxed())'
 let g:startify_bookmarks = [ '~/Code', '~/.config', '~/Documents']
 let g:startify_commands = [
@@ -150,7 +151,7 @@ let g:startify_lists = [
         \ ]
 
 " fzf
-let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.4 } }
+let g:fzf_layout = { 'down': '2' }
 let g:fzf_preview_window = ''
 
 " misc
