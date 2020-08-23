@@ -26,6 +26,7 @@ map <A-k> :bd<CR>
 map <A-c> <plug>NERDCommenterToggle
 map <A-b> :silent !$BROWSE "%:p" &<CR>
 map <A-f> za
+map <Tab> :CocCommand actions.open<CR>
 map <A-Tab> :bprevious<CR>
 map <F1> :Goyo!<CR>:Defx<CR>
 map <F2> :Goyo!<CR>:TagbarToggle<CR>
