@@ -96,7 +96,6 @@ call defx#custom#option('_', {
             \ 'toggle': 1,
             \ 'resume': 1
             \ })
- 
 function! s:defx_toggle_tree() abort
 	if defx#is_directory()
 		return defx#do_action('open_or_close_tree')

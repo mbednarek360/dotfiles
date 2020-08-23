@@ -11,7 +11,7 @@
 ![banner](https://img.shields.io/static/v1?label=Font&message=JetBrainsMono&style=flat-square&colorA=434c5e&colorB=81a1c1)
 ![banner](https://img.shields.io/static/v1?label=Term&message=Kitty&style=flat-square&colorA=434c5e&colorB=81a1c1)
 ![banner](https://img.shields.io/static/v1?label=Shell&message=Fish&style=flat-square&colorA=434c5e&colorB=81a1c1)
-![banner](https://img.shields.io/static/v1?label=Editor&message=VSCode&style=flat-square&colorA=434c5e&colorB=81a1c1)
+![banner](https://img.shields.io/static/v1?label=Editor&message=Neovim&style=flat-square&colorA=434c5e&colorB=81a1c1)
 
 </center>
 
