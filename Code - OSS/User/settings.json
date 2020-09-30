@@ -5,7 +5,6 @@
     "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "hidden",
     "window.enableMenuBarMnemonics": false,
-    "vim.useSystemClipboard": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "editor.lineNumbers": "relative",
@@ -28,6 +27,7 @@
         "toml"
     ],
     "editor.fontSize": 15,
+    "vim.useSystemClipboard": true,
 }
 
 /* Extensions:

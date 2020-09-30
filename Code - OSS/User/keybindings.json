@@ -225,5 +225,15 @@
     {
         "key": "ctrl+=",
         "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "alt+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
