@@ -33,11 +33,11 @@
         "command": "workbench.action.moveEditorToLeftGroup"
     },
     {
-        "key": "ctrl+[",
+        "key": "alt+[",
         "command": "workbench.action.previousEditorInGroup"
     },
     {
-        "key": "ctrl+]",
+        "key": "alt+]",
         "command": "workbench.action.nextEditorInGroup"
     },
     {
@@ -87,7 +87,7 @@
         "command": "workbench.action.navigateLast"
     },
     {
-        "key": "alt+]",
+        "key": "ctrl+]",
         "command": "editor.action.marker.next",
         "when": "editorFocus"
     },
@@ -97,7 +97,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "alt+p",
+        "key": "ctrl+[",
         "command": "editor.action.marker.prev",
         "when": "editorFocus"
     },
