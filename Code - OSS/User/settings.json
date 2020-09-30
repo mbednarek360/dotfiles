@@ -23,6 +23,11 @@
     "cSpell.userWords": [
         "coord"
     ],
+    "cSpell.enableFiletypes": [
+        "fish",
+        "toml"
+    ],
+    "editor.fontSize": 15,
 }
 
 /* Extensions:

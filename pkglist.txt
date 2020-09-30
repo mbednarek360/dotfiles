@@ -1,11 +1,14 @@
 abduco
+android-file-transfer
 android-tools
+ant
 arduino
 autoconf
 automake
 awesome
 b3sum
 base
+bash-pipes
 betterdiscordctl-git
 betterlockscreen
 binutils
@@ -24,6 +27,7 @@ brother-hll2370dw
 bspwm
 bsync-git
 clang
+code-minimap
 ctags
 dhcpcd
 dialog
@@ -34,11 +38,11 @@ exfat-utils
 f2fs-tools
 fakeroot
 feh
-firefox-developer-edition
 fish
 fisher
 flex
 flite
+fuse3
 fzf
 gcc
 gimp
@@ -54,6 +58,7 @@ groff
 hydra
 inkscape
 jdk-openjdk
+jdk8-openjdk
 jre-openjdk
 jre8-openjdk
 kitty
@@ -65,6 +70,7 @@ lib32-libvdpau
 lib32-libxinerama
 lib32-libxtst
 lib32-nvidia-utils
+libappimage
 libclc
 libnotify
 libtool
@@ -110,6 +116,7 @@ parted
 patch
 pavucontrol
 picom-ibhagwan-git
+piper
 pkgconf
 playerctl
 polybar
@@ -127,9 +134,11 @@ rofi-calc
 rsync
 rust-racer
 rustup
+s-tui
 scrcpy
 screen
 simplescreenrecorder
+sound-of-sorting-git
 spicetify-cli
 spotify
 sqlmap
@@ -137,13 +146,13 @@ steam
 sudo
 sxhkd
 texinfo
-tmux
 unzip
 vi
+vivaldi-codecs-ffmpeg-extra-bin
+vlang-bin
 wdfs
 wget
 which
-wine
 xclip
 xdot
 xdotool
@@ -202,3 +211,4 @@ xpra
 xss-lock
 yarn
 yay
+zoom

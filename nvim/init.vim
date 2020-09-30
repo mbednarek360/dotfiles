@@ -103,7 +103,6 @@ function! s:defx_toggle_tree() abort
 	endif
 	return defx#do_action('multi', ['drop'])
 endfunction
-
 function! s:defx_mappings() abort
 	setlocal signcolumn=no expandtab
 
@@ -128,7 +127,7 @@ function! s:defx_mappings() abort
 endfunction
 
 " tagbar
-let g:tagbar_compact = 1
+let g:tagbar_autofocus = 1 
 let g:tagbar_width = 30
 
 " startify
@@ -158,12 +157,9 @@ let g:fzf_preview_window = ''
 filetype plugin on
 syntax on
 set signcolumn=yes
-set nofoldenable
 set linebreak
 set showmatch
 set noshowmode
-set smartindent
-set smarttab
 set foldmethod=syntax
 set nofoldenable
 set foldlevel=1000
@@ -172,6 +168,7 @@ set hidden
 set hlsearch
 set virtualedit=all 
 set mouse=a
+set showtabline=2
 
 " theming
 autocmd! BufReadPre * if exists('t:goyo_disabled_lightline') == 0 | call lightline#enable() | set rnu   
