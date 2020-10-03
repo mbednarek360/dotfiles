@@ -27,6 +27,7 @@ This repo holds the configuration for most of my programs configured in the `~/.
 - betterdiscord
 - betterlockscreen
 - blender
+- bpytop
 - bspwm
 - cava
 - code-oss
@@ -51,9 +52,8 @@ This repo holds the configuration for most of my programs configured in the `~/.
  
 **Additional programs used:**
 - feh
-- firefox
+- vivaldi
 - fisher
-- gotop
 - mpv
 - maim
 - networkmanager

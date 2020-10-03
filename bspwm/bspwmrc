@@ -11,7 +11,7 @@ export GAME="steam"
 export MUSIC="spotify"
 export SYNC="nextcloud"
 export FILE="$TERM -e ranger"
-export SYS="$TERM -e gotop -p"
+export SYS="$TERM -e bpytop"
 export NET="$TERM -e sh -c 'bspc node -t floating; sleep 0.1; nmtui-connect'"
 
 # Kill

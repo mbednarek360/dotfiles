@@ -27,6 +27,7 @@ brother-hll2370dw
 bspwm
 bsync-git
 clang
+code
 code-minimap
 ctags
 dhcpcd
@@ -45,9 +46,11 @@ flite
 fuse3
 fzf
 gcc
+geary
 gimp
 git
 glava
+gnome-keyring
 gnu-netcat
 gnuplot
 go-ipfs
@@ -106,6 +109,7 @@ obs-streamfx
 obs-studio
 ocl-icd
 oculus-udev
+onivim2
 ookla-speedtest-bin
 opencl-nvidia
 openssh
@@ -137,6 +141,7 @@ rustup
 s-tui
 scrcpy
 screen
+signal-desktop
 simplescreenrecorder
 sound-of-sorting-git
 spicetify-cli

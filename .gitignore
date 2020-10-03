@@ -14,6 +14,7 @@ blender/2.83/scripts/*
 !blender/2.83/config
 blender/2.83/config/*
 !blender/2.83/config/userpref.blend
+!bpytop/
 !bspwm/
 !Code\ -\ OSS/
 Code\ -\ OSS/*
