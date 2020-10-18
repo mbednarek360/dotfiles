@@ -191,6 +191,11 @@ function rec-rm
     rm /tmp/rec.mp4
 end
 
+# host directory on 8080
+function host
+    python3 -m http.server -d $argv[1] $argv[2]
+end
+
 # weather
 function wttr
     clear
