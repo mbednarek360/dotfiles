@@ -18,7 +18,7 @@ function sync
     end
     clear
     ssd-mount
-    if batch-sync-nas $argv[1]
+    if batch-sync $argv[1]
         ssd-unmount
         clear
         echo "Sync completed successfully."
