@@ -42,9 +42,9 @@ function doc-sync
     sync Documents $argv[1]
 end
 function conf-sync
-    nas-mount
+    ssd-mount
     git -C ~/NAS/Config/Linux reset --hard origin/master
-    nas-unmount
+    ssd-unmount
 end
 
 # scrub code dir for replacable files
