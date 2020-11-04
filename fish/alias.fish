@@ -200,6 +200,6 @@ end
 function wttr
     clear
     echo
-    curl wttr.in/$argv[1]
+    curl wttr.in
     echo
 end
