@@ -16,15 +16,18 @@ function sync
     if test $argv[2] = "-x"
         bspc node -t floating
     end
+    notify-send --icon="dirsync" --app-name="Sync" "Sync Started."
     clear
     ssd-mount
     if batch-sync $argv[1]
         ssd-unmount
         clear
+        notify-send --icon="dirsync" --app-name="Sync" "Sync Completed successfully."
         echo "Sync completed successfully."
     else
         ssd-unmount
         #clear
+        notify-send --icon="dirsync" --app-name="Sync" "Errors during sync!"
         echo "Error during sync!"
     end
     if test $argv[2] = "-x"
@@ -147,12 +150,12 @@ end
 # mount ssd
 function ssd-mount
     mkdir $ZHOME/SSD
-    sudo mount (blkid -L MB-SSD) $ZHOME/SSD
+    mount (blkid -L MB-SSD)
 end
 
 # unmount ssd
 function ssd-unmount
-    sudo umount $ZHOME/SSD
+    umount $ZHOME/SSD
     rmdir $ZHOME/SSD
 end
 
