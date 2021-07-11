@@ -38,13 +38,12 @@ vim.o.mouse = 'a'
 vim.cmd('au GuiEnter * EnableFocus')
 vim.cmd('au FocusLost * silent! w')
 vim.cmd('au FileType * setlocal fo-=c fo-=r fo-=o')    
+vim.cmd('au VimEnter * if @% != "" | doautocmd BufRead')
 vim.g.capabilities = vim.lsp.protocol.make_client_capabilities()
 vim.g.capabilities.textDocument.completion.completionItem.snippetSupport = true
 vim.g.capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    'documentation',
-    'detail',
-    'additionalTextEdits',
-  }
-}
-
+    properties = {
+        'documentation',
+        'detail',
+        'additionalTextEdits'
+}}
