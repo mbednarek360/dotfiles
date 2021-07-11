@@ -34,6 +34,7 @@ vim.o.foldlevel = 1000
 vim.o.mouse = 'a'
 
 vim.cmd('au GuiEnter * EnableFocus')
+vim.cmd('au FocusLost * silent! w')
 vim.cmd('au FileType * setlocal fo-=c fo-=r fo-=o')    
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
