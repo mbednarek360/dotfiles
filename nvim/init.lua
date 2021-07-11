@@ -4,7 +4,7 @@ require('style')
 require('keybinds')
 
 -- editor config
-   
+
 vim.o.nu = true
 vim.o.rnu = true
 

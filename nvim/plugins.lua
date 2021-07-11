@@ -8,7 +8,7 @@ return require('packer').startup(function()
         options = vim.g.bl_opts,
         highlights = vim.g.bl_colors
     } end}
-    use { 'nvim-treesitter/nvim-treesitter' }
+    use 'nvim-treesitter/nvim-treesitter'
     use { 'hoob3rt/lualine.nvim', event = 'BufRead', config = function() require('lualine').setup{
         options = vim.g.ll_opts
     } end}
@@ -27,7 +27,7 @@ return require('packer').startup(function()
     config = function() require('compe').setup{
     enabled = true, autocomplete = true,
     documentation = true, source = {
-      path = true, buffer = true, nvim_lsp = true}} end}
+      path = true, buffer = true, nvim_lsp = true, nvim_lua = true}} end}
     use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end}
     use { 'onsails/lspkind-nvim', config = function() require('lspkind').init() end}
     use { 'terrortylor/nvim-comment', cmd = 'CommentToggle',
