@@ -5,9 +5,9 @@ return require('packer').startup(function()
     use 'akinsho/nvim-bufferline.lua'
     use 'nvim-treesitter/nvim-treesitter'
     use 'hoob3rt/lualine.nvim' 
-    use 'beauwilliams/focus.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'neovim/nvim-lspconfig'
+    use 'beauwilliams/focus.nvim'
     use 'glepnir/dashboard-nvim'
     use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup{} end} 
     use { 'romgrk/nvim-treesitter-context', config = function()

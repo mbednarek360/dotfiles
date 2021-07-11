@@ -33,7 +33,8 @@ vim.o.virtualedit = 'all'
 vim.o.foldlevel = 1000
 vim.o.mouse = 'a'
 
-vim.cmd('autocmd FileType * setlocal fo-=c fo-=r fo-=o')    
+vim.cmd('au GuiEnter * EnableFocus')
+vim.cmd('au FileType * setlocal fo-=c fo-=r fo-=o')    
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {

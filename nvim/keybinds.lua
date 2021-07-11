@@ -1,6 +1,8 @@
 vim.api.nvim_set_keymap('', '\\', ':vsp<CR>', {})
 vim.api.nvim_set_keymap('', '<A-t>', ':silent !kitty &<CR>', {})
 vim.api.nvim_set_keymap('', '<A-f>', ':hi! Folded guifg=#80a0bf<CR>za', {})
+vim.api.nvim_set_keymap('', '<A-S-a>', '<C-w>H', {})
+vim.api.nvim_set_keymap('', '<A-S-d>', '<C-w>L', {})
 vim.api.nvim_set_keymap('', '<A-a>', '<C-w>h', {})
 vim.api.nvim_set_keymap('', '<A-d>', '<C-w>l', {})
 vim.api.nvim_set_keymap('', '<A-q>', ':bp<CR>', {})
