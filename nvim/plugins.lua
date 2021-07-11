@@ -9,6 +9,7 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'beauwilliams/focus.nvim'
     use 'glepnir/dashboard-nvim'
+    use 'voldikss/vim-floaterm'
     use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup{} end} 
     use { 'romgrk/nvim-treesitter-context', config = function()
         vim.cmd('hi TreesitterContext guibg=#3b4252') end}

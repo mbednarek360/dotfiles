@@ -4,13 +4,12 @@ vim.cmd('au FileType dashboard set laststatus=1 | set showtabline=0')
 vim.cmd('au BufEnter * if &filetype != \'dashboard\' && len(&buftype) == 0 | set laststatus=2 | set showtabline=2')
 vim.cmd('au User GoyoEnter | set laststatus=0 | set showtabline=0 | sleep 2m | IndentBlanklineDisable')
 vim.cmd('au User GoyoLeave | set laststatus=2 | set showtabline=2 | set nu | set rnu | sleep 2m | IndentBlanklineEnable')
-vim.cmd('set noshowmode noruler')
+vim.cmd('set noshowmode noruler termguicolors')
 
 vim.g.limelight_conceal_guifg = '#434c5e'
 vim.g.indent_blankline_char = '│'
 vim.g.indent_blankline_filetype_exclude = {'dashboard'}
 vim.g.dashboard_disable_at_vimenter = false
-vim.o.termguicolors = true
 
 vim.o.fillchars='fold: '
 vim.o.foldtext = [[v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')]] 
