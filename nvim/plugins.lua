@@ -12,7 +12,7 @@ return require('packer').startup(function()
         options = vim.g.ll_opts
     } end}
     use { 'lukas-reineke/indent-blankline.nvim', event = 'BufRead' }
-    use { 'neovim/nvim-lspconfig', event = 'BufRead', config = function()
+    use { 'neovim/nvim-lspconfig', config = function()
         require'lspconfig'.rust_analyzer.setup { capabilities = vim.g.capabilities }
         require'lspconfig'.pyright.setup { capabilities = vim.g.capabilities }             
     end}
@@ -33,7 +33,7 @@ return require('packer').startup(function()
         config = function() require('nvim_comment').setup{} end}
     use { 'junegunn/goyo.vim', cmd = 'Goyo' } 
     use { 'junegunn/limelight.vim', cmd = 'Limelight' }
-    use { 'ahmedkhalf/lsp-rooter.nvim', config = function()
+    use { 'ahmedkhalf/lsp-rooter.nvim', event = 'BufRead', config = function()
         require("lsp-rooter").setup{} end}
     use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", event = 'BufRead', 
     config = function() require('todo-comments').setup{

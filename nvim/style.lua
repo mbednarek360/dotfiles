@@ -11,7 +11,7 @@ vim.g.indent_blankline_char = '│'
 vim.g.indent_blankline_filetype_exclude = {'dashboard'}
 vim.g.dashboard_disable_at_vimenter = false
 
-vim.o.fillchars='fold: '
+vim.o.fillchars = 'fold: '
 vim.o.foldtext = [[v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')]] 
 vim.fn.sign_define("LspDiagnosticsSignError", {text = '▍', numhl = "LspDiagnosticsDefaultError"})
 vim.fn.sign_define("LspDiagnosticsSignWarning", {text = '▍', numhl = "LspDiagnosticsDefaultWarning"})
