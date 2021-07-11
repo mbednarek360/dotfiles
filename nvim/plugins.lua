@@ -2,6 +2,7 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'shaunsingh/nord.nvim'
     use 'kyazdani42/nvim-web-devicons'
+    use 'voldikss/vim-floaterm'
     use { 'akinsho/nvim-bufferline.lua', event = 'BufRead', 
     config = function() require('bufferline').setup{
         options = vim.g.bl_opts,
@@ -14,11 +15,11 @@ return require('packer').startup(function()
     use { 'lukas-reineke/indent-blankline.nvim', event = 'BufRead' }
     use { 'neovim/nvim-lspconfig', config = function()
         require'lspconfig'.rust_analyzer.setup { capabilities = vim.g.capabilities }
-        require'lspconfig'.pyright.setup { capabilities = vim.g.capabilities }             
+        require'lspconfig'.jedi_language_server.setup { capabilities = vim.g.capabilities }             
     end}
     use { 'beauwilliams/focus.nvim', event = 'BufRead' }
     use 'glepnir/dashboard-nvim'
-    use { 'voldikss/vim-floaterm', cmd = 'FloatermToggle' }
+    use { 'andweeb/presence.nvim', event = 'BufRead' }
     use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup{} end} 
     use { 'romgrk/nvim-treesitter-context', config = function()
         vim.cmd('hi TreesitterContext guibg=#3b4252') end}
