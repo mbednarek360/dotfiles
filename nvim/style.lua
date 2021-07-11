@@ -33,10 +33,10 @@ vim.g.dashboard_custom_header = {
     ' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇⠄⠛⠻⢷⣄ ',
     '      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
     '       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
-    '','           Neovim v'
+    '','          [Neovim v'
    ..vim.version()['major']..'.'
    ..vim.version()['minor']..'.'
-   ..vim.version()['patch']
+   ..vim.version()['patch']..']'
 }
 
 require('todo-comments').setup{
