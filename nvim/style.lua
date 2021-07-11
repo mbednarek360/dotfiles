@@ -38,43 +38,57 @@ vim.g.dashboard_custom_header = {
    ..vim.version()['patch']..']'
 }
 
-require('todo-comments').setup{
-    colors = {
+vim.g.td_colors = {
         error = { '#BF616A' },
         warning = { '#EBCB9B' },
         info = { '#81A1C1' },
         hint = { '#A3BE8C' },
         default = { '#B48EAD' }
-    },
-     keywords = {
+}
+vim.g.td_keywords = {
         FIX =  { icon = '▍', color = 'error', },
         TODO = { icon = '▍', color = 'info' },
         HACK = { icon = '▍', color = 'warning' },
         WARN = { icon = '▍', color = 'warning' },
         PERF = { icon = '▍', alt = { 'OPT' } },
-        NOTE = { icon = '▍', color = 'hint', alt = { 'INFO' } },
-    }
+        NOTE = { icon = '▍', color = 'hint', alt = { 'INFO' } }
 }
 
 local nord = require('lualine.themes.nord')
 nord.normal.c.bg='#2e3440'
-require('lualine').setup{
-    options={
+vim.g.ll_opts = {
         theme=nord,
         section_separators = {'',''},
         component_separators = {'',''},
         disabled_filetypes = {'NvimTree', 'dashboard'}
-    }
 }
-
-require('bufferline').setup{
-    options={
+local bg = "#2e3440"
+local bg2 = "#3b4252"
+local bg3 = "#282c34"
+local fg = "#CACed6"
+local accent = "#81a1c1"
+local accent2 = "#BF616A"
+local accent3 = "#EBCB8B"
+vim.g.bl_colors = {
+        fill={guibg=bg},background={guibg=bg},
+        buffer_selected={guifg=fg,guibg=bg2,gui="bold"},
+        separator={guifg=bg3,guibg=bg},
+        separator_selected={guifg=bg3,guibg=bg2},
+        separator_visible={guifg=bg2,guibg=bg2},
+        indicator_selected={guifg=accent,guibg=bg2},
+        tab={guifg=fg,guibg=bg},
+        tab_selected={guifg=accent,guibg=bg2},
+        tab_close={guifg=accent,guibg=bg2},
+        modified_selected={guifg=accent2,guibg=bg2},
+        modified={guifg=accent3,guibg=bg},
+        modified_visible={guifg=accent,guibg=bg}
+}
+vim.g.bl_opts = {
         show_close_icon = false,
         show_buffer_close_icons = false,
         show_tab_indicators = false,
         seperator_style = 'thin',
-        offsets = {{filetype = 'dashboard'}, {filetype = 'NvimTree', text = ''}},
-    }
+        offsets = {{filetype = 'dashboard'}, {filetype = 'NvimTree', text = ''}}
 }
 
 vim.cmd('autocmd InsertEnter * Limelight')

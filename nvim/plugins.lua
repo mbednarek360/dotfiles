@@ -2,18 +2,27 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'shaunsingh/nord.nvim'
     use 'kyazdani42/nvim-web-devicons'
-    use 'akinsho/nvim-bufferline.lua'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'hoob3rt/lualine.nvim' 
-    use 'lukas-reineke/indent-blankline.nvim'
-    use 'neovim/nvim-lspconfig'
-    use 'beauwilliams/focus.nvim'
+    use { 'akinsho/nvim-bufferline.lua', event = 'BufRead', 
+    config = function() require('bufferline').setup{
+        options = vim.g.bl_opts,
+        highlights = vim.g.bl_colors
+    } end}
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'hoob3rt/lualine.nvim', event = 'BufRead', config = function() require('lualine').setup{
+        options = vim.g.ll_opts
+    } end}
+    use { 'lukas-reineke/indent-blankline.nvim', event = 'BufRead' }
+    use { 'neovim/nvim-lspconfig', event = 'BufRead', config = function()
+        require'lspconfig'.rust_analyzer.setup { capabilities = vim.g.capabilities }
+        require'lspconfig'.pyright.setup { capabilities = vim.g.capabilities }             
+    end}
+    use { 'beauwilliams/focus.nvim', event = 'BufRead' }
     use 'glepnir/dashboard-nvim'
-    use 'voldikss/vim-floaterm'
+    use { 'voldikss/vim-floaterm', cmd = 'FloatermToggle' }
     use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup{} end} 
     use { 'romgrk/nvim-treesitter-context', config = function()
         vim.cmd('hi TreesitterContext guibg=#3b4252') end}
-    use { 'hrsh7th/nvim-compe', 
+    use { 'hrsh7th/nvim-compe', event = 'BufRead', 
     config = function() require('compe').setup{
     enabled = true, autocomplete = true,
     documentation = true, source = {
@@ -26,7 +35,11 @@ return require('packer').startup(function()
     use { 'junegunn/limelight.vim', cmd = 'Limelight' }
     use { 'ahmedkhalf/lsp-rooter.nvim', config = function()
         require("lsp-rooter").setup{} end}
-    use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
+    use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", event = 'BufRead', 
+    config = function() require('todo-comments').setup{
+        colors = vim.g.td_colors,
+        keywords = vim.g.td_keywords
+    } end}
     use { 'nvim-telescope/telescope.nvim', cmd = 'Telescope',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
         config = function() require('telescope').setup{
