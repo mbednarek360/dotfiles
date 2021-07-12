@@ -1,4 +1,4 @@
--- vim.api.nvim_set_keymap('', '\\', ':vsp<CR>', {})
+vim.api.nvim_set_keymap('', '\\', ':vsp<CR>', {})
 vim.api.nvim_set_keymap('', '<A-esc>', ':Dashboard<CR>', {})
 vim.api.nvim_set_keymap('', '<A-f>', ':set foldmethod=expr | hi! Folded guifg=#80a0bf guibg=#3b4252<CR>za', {})
 vim.api.nvim_set_keymap('', '<A-S-a>', '<C-w>H', {})
