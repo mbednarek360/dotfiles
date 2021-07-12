@@ -10,7 +10,9 @@ return require('packer').startup(function()
     } end}
     use 'nvim-treesitter/nvim-treesitter'
     use { 'hoob3rt/lualine.nvim', event = 'BufRead', config = function() require('lualine').setup{
-        options = vim.g.ll_opts
+        options = vim.g.ll_opts, sections = {
+        lualine_x = {'filetype'}
+        }
     } end}
     use { 'lukas-reineke/indent-blankline.nvim', event = 'BufRead' }
     use { 'neovim/nvim-lspconfig', config = function()

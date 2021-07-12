@@ -58,8 +58,8 @@ local nord = require('lualine.themes.nord')
 nord.normal.c.bg='#2e3440'
 vim.g.ll_opts = {
         theme=nord,
-        section_separators = {'',''},
-        component_separators = {'',''},
+        section_separators = {'', ''},
+        component_separators = {'',''},
         disabled_filetypes = {'dashboard'}
 }
 local bg = "#2e3440"
