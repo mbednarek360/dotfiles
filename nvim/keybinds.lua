@@ -26,5 +26,6 @@ vim.g.dashboard_custom_section = {
     a = {description = {' All Files                 /'}, command = 'Telescope fd'},
     b = {description = {' Recent Files        Alt + R'}, command = 'Telescope oldfiles'},
     c = {description = {' New File            Alt + N'}, command = 'doautocmd BufRead | enew'},
+    d = {description = {' Open Terminal       Alt + T'}, command = 'FloatermToggle'},
     e = {description = {' Search Text           Space'}, command = 'Telescope live_grep'},
 }
