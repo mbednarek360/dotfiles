@@ -2,8 +2,8 @@ vim.cmd('colorscheme nord')
 vim.cmd('hi! Normal guibg=NONE')
 vim.cmd('au FileType dashboard set laststatus=1 | set showtabline=0')
 vim.cmd('au BufEnter * if &filetype != \'dashboard\' && len(&buftype) == 0 | set laststatus=2 | set showtabline=2')
-vim.cmd('au User GoyoEnter | set laststatus=0 | set showtabline=0 | sleep 2m | IndentBlanklineDisable')
-vim.cmd('au User GoyoLeave | set laststatus=2 | set showtabline=2 | set nu | set rnu | sleep 2m | IndentBlanklineEnable')
+vim.cmd('au User GoyoEnter | set laststatus=0 | set showtabline=0 | sleep 3m | IndentBlanklineDisable')
+vim.cmd('au User GoyoLeave | set laststatus=2 | set showtabline=2 | set nu | set rnu | IndentBlanklineEnable')
 vim.cmd('set noshowmode noruler termguicolors')
 
 vim.g.limelight_conceal_guifg = '#434c5e'
@@ -60,7 +60,7 @@ vim.g.ll_opts = {
         theme=nord,
         section_separators = {'',''},
         component_separators = {'',''},
-        disabled_filetypes = {'NvimTree', 'dashboard'}
+        disabled_filetypes = {'dashboard'}
 }
 local bg = "#2e3440"
 local bg2 = "#3b4252"
@@ -88,7 +88,6 @@ vim.g.bl_opts = {
         show_buffer_close_icons = false,
         show_tab_indicators = false,
         seperator_style = 'thin',
-        offsets = {{filetype = 'dashboard'}, {filetype = 'NvimTree', text = ''}}
 }
 
 vim.cmd('autocmd InsertEnter * Limelight')
