@@ -19,7 +19,7 @@ return require('packer').startup(function()
         require'lspconfig'.rust_analyzer.setup { capabilities = vim.g.capabilities }
         require'lspconfig'.jedi_language_server.setup { capabilities = vim.g.capabilities }             
     end}
-    use { 'beauwilliams/focus.nvim', event = 'BufRead', config = function() vim.cmd('')  end}
+    use { 'beauwilliams/focus.nvim', event = 'BufRead' }
     use 'glepnir/dashboard-nvim'
     use { 'andweeb/presence.nvim', event = 'BufRead' }
     use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup{} end} 

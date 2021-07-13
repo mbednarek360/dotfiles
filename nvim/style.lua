@@ -92,4 +92,3 @@ vim.g.bl_opts = {
 
 vim.cmd('autocmd InsertEnter * Limelight')
 vim.cmd('autocmd InsertLeave * Limelight!')
--- vim.cmd('autocmd User GoyoEnter if @% == "" | silent! bprevious | set nornu | else | set rnu | endif')
