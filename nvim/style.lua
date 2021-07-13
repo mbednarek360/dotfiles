@@ -8,7 +8,7 @@ vim.cmd('set noshowmode noruler termguicolors')
 
 vim.g.limelight_conceal_guifg = '#434c5e'
 vim.g.indent_blankline_char = '│'
-vim.g.indent_blankline_filetype_exclude = {'dashboard'}
+vim.g.indent_blankline_filetype_exclude = {'dashboard', 'terminal'}
 vim.g.dashboard_disable_at_vimenter = false
 
 vim.o.fillchars = 'fold: '
