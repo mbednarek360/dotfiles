@@ -1,6 +1,6 @@
 vim.cmd('colorscheme nord')
 vim.cmd('hi! Normal guibg=NONE')
-vim.cmd('au FileType dashboard set laststatus=1 | set showtabline=0')
+vim.cmd('au FileType dashboard set laststatus=0 | set showtabline=0')
 vim.cmd('au BufEnter * if &filetype != \'dashboard\' && len(&buftype) == 0 | set laststatus=2 | set showtabline=2')
 vim.cmd('au User GoyoEnter | set laststatus=0 | set showtabline=0 | sleep 3m | IndentBlanklineDisable')
 vim.cmd('au User GoyoLeave | set laststatus=2 | set showtabline=2 | set nu | set rnu | IndentBlanklineEnable')
