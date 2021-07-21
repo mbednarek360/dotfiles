@@ -18,7 +18,8 @@ vim.api.nvim_set_keymap('', '<A-r>', ':Telescope oldfiles<CR>', {})
 vim.api.nvim_set_keymap('n', '/', ':Telescope fd<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Space>', ':Telescope live_grep<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Tab>', ':Telescope lsp_code_actions<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '`', ':Telescope lsp_workspace_diagnostics<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-`>', ':Telescope lsp_workspace_diagnostics<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '`', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {})
 vim.g.floaterm_keymap_toggle = '<A-t>'
 vim.g.floaterm_keymap_kill = '<A-S-t>'
 

@@ -26,6 +26,10 @@ vim.g.indent_blankline_show_current_context = true
 vim.g.indent_blankline_use_treesitter = true
 vim.g.indent_blankline_context_patterns = {'class', 'function', 'method', '^if', '^while', '^for', '^object', '^table', 'block', 'arguments'}
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+virtual_text = false })
+
 vim.o.completeopt = 'menuone,noselect'
 vim.o.clipboard = 'unnamedplus'
 vim.o.signcolumn = 'yes'
